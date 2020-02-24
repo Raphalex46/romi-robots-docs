@@ -42,7 +42,7 @@
     
     
       
-        <title>Hardware Documentation</title>
+        <title>Hardware - Romi Robot Docs</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#the-main-structure" tabindex="1" class="md-skip">
+      <a href="#hardware-documentation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -150,7 +150,7 @@
                 Romi Robot Docs
               </span>
               <span class="md-header-nav__topic">
-                Hardware Documentation
+                Hardware
               </span>
             
           
@@ -541,9 +541,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../developer/" title="Developer Documentation"
+    <a href="../developer/" title="Developer"
         class="md-nav__link">
-      Developer Documentation
+      Developer
     </a>
   </li>
 
@@ -589,16 +589,18 @@
 
     <!-- Hack: see partials/toc.html for more information -->
     
+      
+    
 
     <!-- Render table of contents, if not empty -->
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Hardware Documentation
+        Hardware
       </label>
     
-    <a href="./" title="Hardware Documentation"
+    <a href="./" title="Hardware"
         class="md-nav__link md-nav__link--active">
-      Hardware Documentation
+      Hardware
     </a>
 
     <!-- Show table of contents -->
@@ -606,6 +608,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -823,9 +827,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../software/" title="Software Installation"
+    <a href="../software/" title="Software"
         class="md-nav__link">
-      Software Installation
+      Software
     </a>
   </li>
 
@@ -1176,6 +1180,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1327,13 +1333,12 @@
               
                 
                 
-                  <h1>Hardware Documentation</h1>
-                
-                <p>This document describes the hardware, both the mechanical parts and
+                <h1 id="hardware-documentation">Hardware Documentation<a class="headerlink" href="#hardware-documentation" title="Permanent link">Link</a></h1>
+<p>This document describes the hardware, both the mechanical parts and
 the electronics..</p>
 <h2 id="the-main-structure">The main structure<a class="headerlink" href="#the-main-structure" title="Permanent link">Link</a></h2>
 <p>The figure below gives an overview of the main components.</p>
-<p><img alt="" src="images/rover-overview.svg" /></p>
+<p><img alt="" src="/assets/images/rover-overview.svg" /></p>
 <h2 id="the-mechanical-components">The mechanical components<a class="headerlink" href="#the-mechanical-components" title="Permanent link">Link</a></h2>
 <h3 id="the-frame">The frame<a class="headerlink" href="#the-frame" title="Permanent link">Link</a></h3>
 <h3 id="the-wheels">The wheels<a class="headerlink" href="#the-wheels" title="Permanent link">Link</a></h3>
@@ -1344,7 +1349,7 @@ the electronics..</p>
 <h3 id="the-cover">The cover<a class="headerlink" href="#the-cover" title="Permanent link">Link</a></h3>
 <h2 id="the-electronics">The electronics<a class="headerlink" href="#the-electronics" title="Permanent link">Link</a></h2>
 <h3 id="the-basic-architecture-of-the-control-modules">The basic architecture of the control modules<a class="headerlink" href="#the-basic-architecture-of-the-control-modules" title="Permanent link">Link</a></h3>
-<p><img alt="" src="images/schema-hardware-modules.svg" /></p>
+<p><img alt="" src="/assets/images/schema-hardware-modules.svg" /></p>
 <div class="todo">
 <b>NOTE</b>: The current rovers don't implements the schema above, yet:
 <ul>
@@ -1372,27 +1377,27 @@ status information on the character display.</p>
 <tr>
 <td>Controller</td>
 <td><a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino Uno</a> or equivalent</td>
-<td><img alt="" src="images/ext/a000066_front_1_1_1.jpg" /></td>
+<td><img alt="" src="/assets/images/ext/a000066_front_1_1_1.jpg" /></td>
 </tr>
 <tr>
 <td>Proto shield</td>
 <td>The shield allows you to solder the wires securely</td>
-<td><a href="https://www.adafruit.com/product/2077">Adafruit</a> <img alt="" src="images/ext/2077-03.jpg" /> <br> <a href="https://www.sparkfun.com/products/13820">Sparkfun</a> <img alt="" src="images/ext/13820-SparkFun_ProtoShield_Kit-04.jpg" /> <br> <a href="https://www.amazon.com/s?k=arduino+proto+shield">Amazon</a></td>
+<td><a href="https://www.adafruit.com/product/2077">Adafruit</a> <img alt="" src="/assets/images/ext/2077-03.jpg" /> <br> <a href="https://www.sparkfun.com/products/13820">Sparkfun</a> <img alt="" src="/assets/images/ext/13820-SparkFun_ProtoShield_Kit-04.jpg" /> <br> <a href="https://www.amazon.com/s?k=arduino+proto+shield">Amazon</a></td>
 </tr>
 <tr>
 <td>Relay (2x)</td>
 <td>TODO</td>
-<td><a href="https://www.sparkfun.com/products/13815">Sparkfun</a> <img alt="" src="images/ext/13815-04a.jpg" /></td>
+<td><a href="https://www.sparkfun.com/products/13815">Sparkfun</a> <img alt="" src="/assets/images/ext/13815-04a.jpg" /></td>
 </tr>
 <tr>
 <td>Push button with LEDS (2x)</td>
 <td>One green and one red</td>
-<td><a href="https://www.adafruit.com/product/3489">Adafruit</a> <img alt="" src="images/ext/3489-00.jpg" /></td>
+<td><a href="https://www.adafruit.com/product/3489">Adafruit</a> <img alt="" src="/assets/images/ext/3489-00.jpg" /></td>
 </tr>
 <tr>
 <td>LCD Character Display</td>
 <td>Comptable with XXX</td>
-<td><a href="https://uk.farnell.com/midas/mc21609ab6w-fptlw-v2/display-alphanumeric-16x2-white/dp/2675622">Farnell</a> <img alt="" src="images/ext/o2218965-40.jpg" /></td>
+<td><a href="https://uk.farnell.com/midas/mc21609ab6w-fptlw-v2/display-alphanumeric-16x2-white/dp/2675622">Farnell</a> <img alt="" src="/assets/images/ext/o2218965-40.jpg" /></td>
 </tr>
 </tbody>
 </table>
@@ -1407,7 +1412,7 @@ status information on the character display.</p>
 <li><strong>Logic circuit</strong>: This circuits powers the embedded PC and other control circuits.</li>
 <li><strong>Power circuit</strong>: This circuit drives all the motors. This is the circuit that is cut when the security switch (the big red button) is pressed.  </li>
 </ol>
-<p><img alt="" src="images/power-circuit.svg" /></p>
+<p><img alt="" src="/assets/images/power-circuit.svg" /></p>
 <p>The control panel actuates two relays (Relay 1 &amp; 2) according to the
 two start-up phases (the PC and the logic circuits start up first,
 then the motors are powered up). The third relay is designed to handle
@@ -1430,12 +1435,12 @@ can find more information on this in the section on the CNC below.</p>
 <tr>
 <td>Relay</td>
 <td>Non-Latching, protection against sparks and back-current (TODO: be more precise)</td>
-<td><a href="https://uk.rs-online.com/web/p/non-latching-relays/8002843/">RS Online</a> <img alt="" src="images/ext/F8002843-01.jpeg" /></td>
+<td><a href="https://uk.rs-online.com/web/p/non-latching-relays/8002843/">RS Online</a> <img alt="" src="/assets/images/ext/F8002843-01.jpeg" /></td>
 </tr>
 <tr>
 <td>Security switch</td>
 <td></td>
-<td>Farnell: <a href="https://fr.farnell.com/omron/a22em01/arret-d-urgence-spst-nc-110v-a/dp/2811980">button</a> and <a href="https://fr.farnell.com/omron/a22zb101y/corps-de-bouton-poussoir-arret/dp/2811984">housing</a> <img alt="" src="images/ext/2811980-40.jpg" /> <img alt="" src="images/ext/2811984-40.jpg" /></td>
+<td>Farnell: <a href="https://fr.farnell.com/omron/a22em01/arret-d-urgence-spst-nc-110v-a/dp/2811980">button</a> and <a href="https://fr.farnell.com/omron/a22zb101y/corps-de-bouton-poussoir-arret/dp/2811984">housing</a> <img alt="" src="/assets/images/ext/2811980-40.jpg" /> <img alt="" src="/assets/images/ext/2811984-40.jpg" /></td>
 </tr>
 </tbody>
 </table>
@@ -1446,7 +1451,7 @@ control fairly straight-forward and the components are easy to source.
 The navigation module can also receive input from a remote control to
 steer the rover.</p>
 <p>The main components are shown below:</p>
-<p><img alt="" src="images/schema-navigation-modules.svg" /></p>
+<p><img alt="" src="/assets/images/schema-navigation-modules.svg" /></p>
 <h4 id="components">Components<a class="headerlink" href="#components" title="Permanent link">Link</a></h4>
 <table>
 <thead>
@@ -1460,42 +1465,42 @@ steer the rover.</p>
 <tr>
 <td>Motors</td>
 <td><a href="https://en.wikipedia.org/wiki/Brushed_DC_electric_motor">Brushed DC motors</a>, 24 V, minimum 200 W</td>
-<td>We are using wheel chair motors for now. We bought a set at <a href="https://www.superdroidrobots.com/shop/item.aspx/lst10-24vdc-120-rpm-wheel-chair-motor-pair/2599/">Superdroid Robots</a>. <img alt="" src="images/ext/TD-291-120.jpg" /></td>
+<td>We are using wheel chair motors for now. We bought a set at <a href="https://www.superdroidrobots.com/shop/item.aspx/lst10-24vdc-120-rpm-wheel-chair-motor-pair/2599/">Superdroid Robots</a>. <img alt="" src="/assets/images/ext/TD-291-120.jpg" /></td>
 </tr>
 <tr>
 <td>Encoders</td>
 <td><a href="https://en.wikipedia.org/wiki/Incremental_encoder">Incremental encoders</a></td>
-<td>US Digital E2 <img alt="" src="images/ext/e2_webproduct_01.jpg" /> (Available from <a href="https://www.superdroidrobots.com/shop/item.aspx?itemid=2315">Superdroid Robotics</a>).</td>
+<td>US Digital E2 <img alt="" src="/assets/images/ext/e2_webproduct_01.jpg" /> (Available from <a href="https://www.superdroidrobots.com/shop/item.aspx?itemid=2315">Superdroid Robotics</a>).</td>
 </tr>
 <tr>
 <td>Controller</td>
 <td><a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino Uno</a> or equivalent</td>
-<td><img alt="" src="images/ext/a000066_front_1_1_1.jpg" /></td>
+<td><img alt="" src="/assets/images/ext/a000066_front_1_1_1.jpg" /></td>
 </tr>
 <tr>
 <td>Proto shield</td>
 <td>The shield allows you to solder the wires securely</td>
-<td><a href="https://www.adafruit.com/product/2077">Adafruit</a> <img alt="" src="images/ext/2077-03.jpg" /> <br> <a href="https://www.sparkfun.com/products/13820">Sparkfun</a> <img alt="" src="images/ext/13820-SparkFun_ProtoShield_Kit-04.jpg" /> <br> <a href="https://www.amazon.com/s?k=arduino+proto+shield">Amazon</a></td>
+<td><a href="https://www.adafruit.com/product/2077">Adafruit</a> <img alt="" src="/assets/images/ext/2077-03.jpg" /> <br> <a href="https://www.sparkfun.com/products/13820">Sparkfun</a> <img alt="" src="/assets/images/ext/13820-SparkFun_ProtoShield_Kit-04.jpg" /> <br> <a href="https://www.amazon.com/s?k=arduino+proto+shield">Amazon</a></td>
 </tr>
 <tr>
 <td>Motor driver</td>
 <td>Preferably one board that can drive two motors. Two drivers, one for each motor, is possible, too. Power input: 24V, Maximum output current: &gt; 15 A per motor, Control signals: two <a href="https://en.wikipedia.org/wiki/Servo_control">PWM</a> signals (similar to RC input) for the left and right motor. The driver implements a standard H-bridge to control to power supplied to the motors (both forward and backward rotation).</td>
-<td><a href="https://www.dimensionengineering.com/products/sabertooth2x60">Sabertooth 2x60A</a> <img alt="" src="images/ext/Sabertooth2X60.jpg" /> <br> <a href="https://www.dimensionengineering.com/products/sabertooth2x32">Sabertooth 2x32A</a> <img alt="" src="images/ext/Sabertooth2x32Small.jpg" /> <br> <a href="https://www.basicmicro.com/RoboClaw-2x60A-Motor-Controller_p_8.html">RoboClaw 2x60A</a> <img alt="" src="images/ext/MC60A_Right_Small2.jpg" /></td>
+<td><a href="https://www.dimensionengineering.com/products/sabertooth2x60">Sabertooth 2x60A</a> <img alt="" src="/assets/images/ext/Sabertooth2X60.jpg" /> <br> <a href="https://www.dimensionengineering.com/products/sabertooth2x32">Sabertooth 2x32A</a> <img alt="" src="/assets/images/ext/Sabertooth2x32Small.jpg" /> <br> <a href="https://www.basicmicro.com/RoboClaw-2x60A-Motor-Controller_p_8.html">RoboClaw 2x60A</a> <img alt="" src="/assets/images/ext/MC60A_Right_Small2.jpg" /></td>
 </tr>
 <tr>
 <td>RC controller and receiver</td>
 <td>A standard RC receiver that outputs a PWM signal. Powered by 5V.</td>
-<td>We've succesfully used the remote controllers for <a href="https://www.spektrumrc.com">Spektrum</a>, <a href="https://www.spektrumrc.com/Products/Default.aspx?ProdID=SPM2335">this one</a> for example or similar <img alt="" src="images/ext/SPM2335_a3.jpg" /> <img alt="" src="images/ext/SPMSR310-450.jpg" /></td>
+<td>We've succesfully used the remote controllers for <a href="https://www.spektrumrc.com">Spektrum</a>, <a href="https://www.spektrumrc.com/Products/Default.aspx?ProdID=SPM2335">this one</a> for example or similar <img alt="" src="/assets/images/ext/SPM2335_a3.jpg" /> <img alt="" src="/assets/images/ext/SPMSR310-450.jpg" /></td>
 </tr>
 <tr>
 <td>Wheels</td>
 <td>You will need those, too.</td>
-<td>We are using the wheel <a href="https://www.superdroidrobots.com/shop/item.aspx/direct-drive-wheelchair-motor-wheel-and-shaft-set-pair-13-inch-traction-lug/2237/">provided by Superdroid Robotics</a> for now <img alt="" src="images/ext/TD-178-000.jpg" /></td>
+<td>We are using the wheel <a href="https://www.superdroidrobots.com/shop/item.aspx/direct-drive-wheelchair-motor-wheel-and-shaft-set-pair-13-inch-traction-lug/2237/">provided by Superdroid Robotics</a> for now <img alt="" src="/assets/images/ext/TD-178-000.jpg" /></td>
 </tr>
 </tbody>
 </table>
 <h4 id="wiring-diagram">Wiring diagram<a class="headerlink" href="#wiring-diagram" title="Permanent link">Link</a></h4>
-<p><img alt="" src="images/navigation-wiring.svg" /></p>
+<p><img alt="" src="/assets/images/navigation-wiring.svg" /></p>
 <h3 id="the-tool-positioning">The tool positioning<a class="headerlink" href="#the-tool-positioning" title="Permanent link">Link</a></h3>
 <p>A CNC is adapted for use in the rover. We replaced the spindle that is
 normally used to carve wooden pieces, with a rotating weeding hoe. We
@@ -1525,12 +1530,12 @@ Uno+gShield combo.</p>
 <tr>
 <td>Optional: Controller board</td>
 <td>Must run grbl interpreter</td>
-<td><a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino Uno</a> <img alt="" src="images/ext/a000066_front_1_1_1.jpg" /></td>
+<td><a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino Uno</a> <img alt="" src="/assets/images/ext/a000066_front_1_1_1.jpg" /></td>
 </tr>
 <tr>
 <td>Optional: Stepper drivers (3 steppers)</td>
 <td>The driver must use the STEP/DIR control signals</td>
-<td><a href="https://synthetos.myshopify.com/products/gshield-v5">gShield</a> <img alt="" src="images/ext/10699531753_e00472237e_b_1_1024x1024.jpg" /> <br> [Arduino CNC Shield] <a href="https://www.ebay.com/str/protoneer">eBay</a> and <a href="https://www.reprap.me/arduino-cnc-shield.html">RepRap</a> <img alt="" src="images/ext/sku165456-2.jpg" /></td>
+<td><a href="https://synthetos.myshopify.com/products/gshield-v5">gShield</a> <img alt="" src="/assets/images/ext/10699531753_e00472237e_b_1_1024x1024.jpg" /> <br> [Arduino CNC Shield] <a href="https://www.ebay.com/str/protoneer">eBay</a> and <a href="https://www.reprap.me/arduino-cnc-shield.html">RepRap</a> <img alt="" src="/assets/images/ext/sku165456-2.jpg" /></td>
 </tr>
 </tbody>
 </table>
@@ -1540,12 +1545,12 @@ Uno+gShield combo.</p>
 <li><a href="http://x-carve-instructions.inventables.com/xcarve2015/step14/">http://x-carve-instructions.inventables.com/xcarve2015/step14/</a> </li>
 </ul>
 <p>Notable, the following two diagrams are of interest:</p>
-<p><img alt="" src="images/ext/xcarve-wiring-diagram2.jpg" /></p>
-<p><img alt="" src="images/ext/xcarve-wiring-diagram-limit-switches.jpg" /></p>
+<p><img alt="" src="/assets/images/ext/xcarve-wiring-diagram2.jpg" /></p>
+<p><img alt="" src="/assets/images/ext/xcarve-wiring-diagram-limit-switches.jpg" /></p>
 <p>The yellow wire marked "spinle" in the image above is used to turn the
 weeding hoe on or off, as shown in the figure below (see also the
 figure in the section on the power circuit).</p>
-<p><img alt="" src="images/relay-hoe.svg" /></p>
+<p><img alt="" src="/assets/images/relay-hoe.svg" /></p>
                 
                   
                 
@@ -1595,7 +1600,7 @@ figure in the section on the power circuit).</p>
         <!-- Link to previous page -->
         
           <a href="../developer/"
-              title="Developer Documentation"
+              title="Developer"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1608,7 +1613,7 @@ figure in the section on the power circuit).</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Developer Documentation
+                Developer
               </span>
             </div>
           </a>
