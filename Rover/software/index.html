@@ -1,0 +1,1258 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Robots for Microfarms Robotic Documentation">
+      
+      
+        <link rel="canonical" href="https://docs.romi-project.eu/Rover/software/">
+      
+      
+        <meta name="author" content="ROMI Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Software Installation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="yelllow">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+<header class="md-header" data-md-component="header">
+
+  <!-- Top-level navigation -->
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+
+      <!-- Link to home -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.romi-project.eu/"
+            title="Romi Robot Docs"
+            class="md-header-nav__button md-logo">
+          
+            <img style="margin-top: -5px;" src="../../assets/images/logo.svg" height="32" />
+          
+        </a>
+      </div>
+
+      <!-- Button to toggle drawer -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button"
+            for="__drawer"></label>
+      </div>
+
+      <!-- Header title -->
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title"
+            data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Romi Robot Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Software Installation
+              </span>
+            
+          
+        </div>
+      </div>
+
+      <!-- Button to open search dialogue -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button"
+                for="__search"></label>
+
+            <!-- Search interface -->
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+
+      <!-- Repository containing source -->
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Cable/" class="md-tabs__link">
+          Cable
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          Rover
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.romi-project.eu/" title="Romi Robot Docs" class="md-nav__button md-logo">
+      
+        <img src="../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    Romi Robot Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home"
+        class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2"
+          type="checkbox" id="nav-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-2">
+      Cable
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Cable
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Cable/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3"
+          type="checkbox" id="nav-3" checked />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3">
+      Rover
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Rover
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../developer/" title="Developer Documentation"
+        class="md-nav__link">
+      Developer Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../hardware/" title="Hardware Documentation"
+        class="md-nav__link">
+      Hardware Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="__toc" />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Software Installation
+      </label>
+    
+    <a href="./" title="Software Installation"
+        class="md-nav__link md-nav__link--active">
+      Software Installation
+    </a>
+
+    <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-raspberry-pi-from-scratch" class="md-nav__link">
+    Installing a Raspberry Pi from scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-romi-rover-apps" class="md-nav__link">
+    Installing the romi-rover apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-picamera-app" class="md-nav__link">
+    Compiling the picamera app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-realsense-app" class="md-nav__link">
+    Compiling the realsense app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-romi-rover-apps" class="md-nav__link">
+    Configuring the romi-rover apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-apps-on-boot" class="md-nav__link">
+    Starting the apps on boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-image-uploads" class="md-nav__link">
+    Configuring the image uploads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annex-the-apps-and-their-options" class="md-nav__link">
+    Annex: the apps and their options
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+<!-- Main navigation item -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-raspberry-pi-from-scratch" class="md-nav__link">
+    Installing a Raspberry Pi from scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-romi-rover-apps" class="md-nav__link">
+    Installing the romi-rover apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-picamera-app" class="md-nav__link">
+    Compiling the picamera app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-realsense-app" class="md-nav__link">
+    Compiling the realsense app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-romi-rover-apps" class="md-nav__link">
+    Configuring the romi-rover apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-apps-on-boot" class="md-nav__link">
+    Starting the apps on boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-image-uploads" class="md-nav__link">
+    Configuring the image uploads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annex-the-apps-and-their-options" class="md-nav__link">
+    Annex: the apps and their options
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Software Installation</h1>
+                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">Link</a></h2>
+<p>This document describes how to run and compile the software for the
+ROMI Rover. If you are a developer looking for details on the source
+code then have a look at the separate <a href="developer.html">Developer
+Documentation</a>.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">Link</a></h2>
+<p>The software of the rover runs on Linux. It is not tied to a specific
+Linux distribution but we have tested it mostly on recent versions of
+Debian (includin Raspian) and Ubuntu.</p>
+<p>The software is mostly writen in C and depends on the following
+libraries:</p>
+<p><img alt="" src="images/software-dependencies.svg" /></p>
+<ul>
+<li>
+<p><strong>libr</strong>: Common code for the rcom and the libromi libraries. It
+  provides some OS abstraction (for example for threads, memory
+  allocation, file system, networking), some core functionality
+  (logging, time), and some base classes (variable-size memory
+  buffers, json parser, lists, serial
+  connections). <a href="https://github.com/romi/libr">Code</a></p>
+</li>
+<li>
+<p><strong>rcom</strong>: An inter-process communication framework. It provides
+  real-time communication using UDP messages and high-level
+  communication based on web protocols (HTTP, Websockets). It also
+  includes several utilities to develop and manage rcom applications.
+  <a href="https://github.com/romi/rcom">Code</a></p>
+</li>
+<li>
+<p><strong>libromi</strong>: Base classes for the romi rover: fsdb (database with
+  filesystem back-end), image loading and manipulations, …)
+  <a href="https://github.com/romi/libromi">Code</a></p>
+</li>
+<li>
+<p><strong>romi-brush-motor-controller</strong>: The motor
+    controller. <a href="https://github.com/romi/romi-brush-motor-controller">Code</a></p>
+</li>
+<li>
+<p><strong>romi-rover</strong>: All of the apps for the Romi rover. 
+  <a href="https://github.com/romi/romi-rover">Code</a></p>
+</li>
+</ul>
+<p>By default, the rover uses a USB camera. It is possible to use the
+Intel Realsense camera on the Picamera instead. In that case, you will
+have to install additional libraries (see XXX).</p>
+<h2 id="installing-a-raspberry-pi-from-scratch">Installing a Raspberry Pi from scratch<a class="headerlink" href="#installing-a-raspberry-pi-from-scratch" title="Permanent link">Link</a></h2>
+<p>We use the <em>Lite</em> version of Raspbian. You can download it at
+<a href="">https://www.raspberrypi.org/downloads/raspbian/</a>. There are several
+ways to prepare the disk image for the RPi. Check the page at
+<a href="">https://www.raspberrypi.org/documentation/installation/installing-images/</a>
+(there’s lots of information available on this topic online) and
+follow the instructions that suit you best.</p>
+<p>Once you have the SD card, connect RPi to screen, keyboard and network
+(ethernet), power up the board and log in (user <em>pi</em>, password
+<em>raspberry</em>). The first thing you want to do is change some of the
+default settings using the raspi-config tool. In the console type:</p>
+<div class="codehilite"><pre><span></span>$ sudo raspi-config
+</pre></div>
+
+<p>The list of settings that you may want to look at includes:</p>
+<div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="n">Change</span> <span class="k">User</span> <span class="n">Password</span>
+<span class="mi">2</span> <span class="n">Network</span> <span class="k">Options</span>
+   <span class="n">Hostname</span>
+   <span class="n">WiFi</span>
+<span class="mi">4</span> <span class="n">Localisation</span> <span class="k">Options</span>
+   <span class="n">Change</span> <span class="n">locales</span>
+   <span class="n">Change</span> <span class="n">keyboard</span> <span class="n">layout</span>
+<span class="mi">5</span> <span class="n">Interfacing</span> <span class="k">Options</span>
+   <span class="n">Enable</span> <span class="n">Camera</span>
+   <span class="n">Enable</span> <span class="n">SSH</span>
+<span class="mi">8</span> <span class="k">Update</span>
+</pre></div>
+
+<p>Next, create the user ‘romi’: </p>
+<div class="codehilite"><pre><span></span>$ sudo adduser romi
+$ sudo adduser romi dialout
+$ sudo adduser romi video
+$ sudo adduser romi sudo
+</pre></div>
+
+<p>After that, quit the current session and login again as user ‘romi’.</p>
+<p>The <em>nano</em> text editor is installed by default but if you prefer
+anoher editor, now is a good time to install it:</p>
+<div class="codehilite"><pre><span></span>$ sudo apt install emacs-nox <span class="o">(</span>... or any editor you like :<span class="o">)</span>
+</pre></div>
+
+<p>Install the developer tools:
+<div class="codehilite"><pre><span></span>$ sudo apt install build-essential cmake git
+</pre></div></p>
+<p>Install the software dependencies: 
+<div class="codehilite"><pre><span></span>$ sudo apt install libpng-dev libjpeg9-dev
+</pre></div>
+That's it. You should be ready.</p>
+<div class="admonition tips">
+<p class="admonition-title">Quick install</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Install the dependencies</span>
+sudo apt install build-essential cmake git libpng-dev libjpeg9-dev
+
+<span class="c1"># Download, compile and install the libraries &amp; apps</span>
+<span class="k">for</span> id in libr rcom libromi romi-rover<span class="p">;</span> <span class="k">do</span>
+    <span class="nb">echo</span> ----------------------------------------------
+    <span class="nb">echo</span> Compiling <span class="nv">$id</span>
+
+    <span class="c1"># Download or update the github repository</span>
+    <span class="k">if</span> <span class="o">[</span> -d <span class="nv">$id</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">cd</span> <span class="nv">$id</span>
+        git pull
+    <span class="k">else</span>
+        git clone https://github.com/romi/<span class="nv">$id</span>.git
+        <span class="nb">cd</span> <span class="nv">$id</span>
+    <span class="k">fi</span>
+
+    <span class="c1"># Standard cmake build sequence</span>
+    mkdir -p build
+    <span class="nb">cd</span> build
+    cmake ..
+    make
+    sudo make install
+    sudo ldconfig
+
+    <span class="c1"># Get ready for the next component</span>
+    <span class="nb">cd</span> ../..
+<span class="k">done</span>
+</pre></div>
+
+</div>
+<h2 id="installing-the-romi-rover-apps">Installing the romi-rover apps<a class="headerlink" href="#installing-the-romi-rover-apps" title="Permanent link">Link</a></h2>
+<p>You should first install the <a href="https://github.com/romi/libr">libr</a>,
+<a href="https://github.com/romi/rcom">rcom</a>, and
+<a href="https://github.com/romi/libromi">libromi</a> libraries. Check out their
+the Github pages for the installation instruction and the API
+documentation.</p>
+<p>You should also flash the motor controller to the Arduino
+(instructions are available on
+<a href="https://github.com/romi/romi-brush-motor-controller">Github</a>) too.</p>
+<p>Once that is done, the installation of the romi-rover apps is
+straight-forward. First, check out the code:</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/romi/romi-rover.git 
+</pre></div>
+
+<p>Then proceed to the compilation and installation:
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> romi-rover
+$ mkdir build
+$ <span class="nb">cd</span> build
+$ cmake ..
+$ make
+$ sudo make install
+</pre></div></p>
+<h2 id="compiling-the-picamera-app">Compiling the picamera app<a class="headerlink" href="#compiling-the-picamera-app" title="Permanent link">Link</a></h2>
+<p>Although not currently used by the ROMI Rover, we have an Rcom app to
+access the Picamera. To get it working, you will first have to install
+the <em>raspicam</em> library:</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/cedricve/raspicam.git
+$ <span class="nb">cd</span> raspicam/
+$ mkdir build
+$ <span class="nb">cd</span> build/
+$ cmake ..
+$ make
+$ sudo make install
+$ sudo ldconfig
+</pre></div>
+
+<p>Once raspicam is installed, you must re-run cmake to enable the
+compilation of the picamera app:</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> romi-rover/build/
+$ rm CMakeCache.txt
+$ cmake .. -DWITH_PICAMERA<span class="o">=</span>ON
+$ make
+$ sudo make install
+</pre></div>
+
+<h2 id="compiling-the-realsense-app">Compiling the realsense app<a class="headerlink" href="#compiling-the-realsense-app" title="Permanent link">Link</a></h2>
+<p>The fonctionality of the Realsense camera app is not complete. You can
+use it to obtain RGB images and depth images (as BW PNG images). You
+will first have to install
+<a href="https://github.com/IntelRealSense/librealsense/"><em>librealsense2</em></a>.</p>
+<p>When librealsense is installed, re-run cmake to enable the compilation
+of the realsense app:</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> romi-rover/build/
+$ rm CMakeCache.txt
+$ cmake .. -DWITH_REALSENSE<span class="o">=</span>ON
+$ make
+$ sudo make install
+</pre></div>
+
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">Link</a></h2>
+<h3 id="configuring-the-romi-rover-apps">Configuring the romi-rover apps<a class="headerlink" href="#configuring-the-romi-rover-apps" title="Permanent link">Link</a></h3>
+<p>In the directory /home/romi, create the following directories and copy
+the default configuration and script files:</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /home/romi
+$ mkdir sessions
+$ mkdir config
+$ cp &lt;romi-rover&gt;/config/config-romi-rover.json config/
+$ mkdir scripts
+$ cp &lt;romi-rover&gt;/script/config-default.json scripts/
+</pre></div>
+
+<div class="codehilite"><pre><span></span>    <span class="ss">&quot;html&quot;</span><span class="p">:</span> <span class="ss">&quot;&lt;romi-rover&gt;/interface/html&quot;</span><span class="p">,</span>
+</pre></div>
+
+
+<h3 id="starting-the-apps-on-boot">Starting the apps on boot<a class="headerlink" href="#starting-the-apps-on-boot" title="Permanent link">Link</a></h3>
+<p>Currently we are still using the old rc.local mechanism. The file
+/etc/rc.local is no longer included in more recent Ubuntu versions. If
+<code class="codehilite"><span class="n">ls</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="p">.</span><span class="k">local</span></code> returns an error, you will have to create the file
+as follows:</p>
+<div class="codehilite"><pre><span></span>$ sudo nano /etc/rc.local
+</pre></div>
+
+<p>Copy the following contents:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/bin/sh -e</span>
+<span class="c1">#</span>
+<span class="c1"># rc.local</span>
+<span class="c1">#</span>
+<span class="c1"># This script is executed at the end of each multiuser runlevel.</span>
+<span class="c1"># Make sure that the script will &quot;exit 0&quot; on success or any other</span>
+<span class="c1"># value on error.</span>
+<span class="c1">#</span>
+<span class="c1"># In order to enable or disable this script just change the execution</span>
+<span class="c1"># bits.</span>
+<span class="c1">#</span>
+<span class="c1"># By default this script does nothing.</span>
+
+<span class="nb">exit</span> <span class="m">0</span>
+</pre></div>
+
+<p>Finally, make the script executable.
+<div class="codehilite"><pre><span></span>$ sudo chmod +x /etc/rc.local
+</pre></div></p>
+<p>To enable the apps on start-up, add the following line in
+/etc/rc.local, above the <code class="codehilite"><span class="k">exit</span> <span class="mi">0</span></code> line:</p>
+<div class="codehilite"><pre><span></span>/usr/local/bin/rclaunch /home/romi/config/config-romi-rover.json <span class="p">&amp;</span>
+</pre></div>
+
+<h3 id="configuring-the-image-uploads">Configuring the image uploads<a class="headerlink" href="#configuring-the-image-uploads" title="Permanent link">Link</a></h3>
+<h2 id="annex-the-apps-and-their-options">Annex: the apps and their options<a class="headerlink" href="#annex-the-apps-and-their-options" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span>    <span class="ss">&quot;fake_camera&quot;</span><span class="p">:</span> <span class="err">{</span>
+        <span class="ss">&quot;image&quot;</span><span class="p">:</span> <span class="ss">&quot;data/camera.jpg&quot;</span>
+    <span class="err">}</span><span class="p">,</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
+        
+          <a href="../manual/"
+              title="User Manual"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                User Manual
+              </span>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+            <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div>
+		        <img style="margin-top: 20px" alt="The ROMI project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 773875." src="/assets/images/eu-flag.png">
+         		<p class="md-footer-copyright__highlight">The ROMI project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 773875.</p>
+            <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+                <a class="github-button" href="https://github.com/fablabbcn/smartcitizen-docs" aria-label="Check the source code">Check the documentation source code</a>
+      </div>
+
+      <!-- Social links -->
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/ROMI_EU_PROJECT" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/ROMIEUProject" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+  </body>
+</html>
