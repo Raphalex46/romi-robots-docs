@@ -35,4 +35,39 @@
      <lastmod>2020-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/conda/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/data/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/docker/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/hardware/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/overview/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.romi-project.eu/Scanner/reconstruct/</loc>
+     <lastmod>2020-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>
