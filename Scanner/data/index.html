@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#data-storage" tabindex="0" class="md-skip">
+      <a href="#getting-started" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -252,7 +252,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../" class="md-tabs__link md-tabs__link--active">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Scanner
         </a>
       
@@ -748,82 +748,6 @@
 <!-- Determine class according to level -->
 
 
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../" title="Index"
-        class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../conda/" title="Conda"
-        class="md-nav__link">
-      Conda
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
   
 
 
@@ -838,10 +762,12 @@
 
     <!-- Hack: see partials/toc.html for more information -->
     
-      
-    
 
     <!-- Render table of contents, if not empty -->
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data
+      </label>
     
     <a href="./" title="Data"
         class="md-nav__link md-nav__link--active">
@@ -850,47 +776,154 @@
 
     <!-- Show table of contents -->
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-editable-mode" class="md-nav__link">
+    Non-editable mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editable-mode" class="md-nav__link">
+    Editable mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-working-example" class="md-nav__link">
+    Basic working example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initialize-database" class="md-nav__link">
+    1 - Initialize database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-new-datasets" class="md-nav__link">
+    2 - Create a new datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-images-as-new-fileset" class="md-nav__link">
+    3 - Add images as new fileset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-image-files-in-a-fileset" class="md-nav__link">
+    4 - Access image files in a fileset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folders-structure" class="md-nav__link">
+    Folders structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-root-folder" class="md-nav__link">
+    Database root folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets-folders" class="md-nav__link">
+    Datasets folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images-folders" class="md-nav__link">
+    Images folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
 <!-- Main navigation item -->
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../docker/" title="Docker"
-        class="md-nav__link">
-      Docker
-    </a>
-  </li>
 
         
           
@@ -962,9 +995,99 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../how-to/" title="How to"
+    <a href="../home/" title="Home"
         class="md-nav__link">
-      How to
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4"
+          type="checkbox" id="nav-4-4" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-4">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../Developer/conda/" title="Conda"
+        class="md-nav__link">
+      Conda
     </a>
   </li>
 
@@ -1000,11 +1123,267 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../reconstruct/" title="Reconstruct"
+    <a href="../Developer/docker/" title="Docker"
         class="md-nav__link">
-      Reconstruct
+      Docker
     </a>
   </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5"
+          type="checkbox" id="nav-4-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-5">
+      How To
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        How To
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../How-To/basics/" title="Basics"
+        class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../How-To/hardware_scan/" title="Hardware scan"
+        class="md-nav__link">
+      Hardware scan
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../How-To/reconstruct_scan/" title="Reconstruct scan"
+        class="md-nav__link">
+      Reconstruct scan
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../How-To/virtual_scan/" title="Virtual scan"
+        class="md-nav__link">
+      Virtual scan
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../How-To/visualizer/" title="Visualizer"
+        class="md-nav__link">
+      Visualizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
 
         
       </ul>
@@ -1028,8 +1407,144 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-editable-mode" class="md-nav__link">
+    Non-editable mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editable-mode" class="md-nav__link">
+    Editable mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-working-example" class="md-nav__link">
+    Basic working example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initialize-database" class="md-nav__link">
+    1 - Initialize database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-new-datasets" class="md-nav__link">
+    2 - Create a new datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-images-as-new-fileset" class="md-nav__link">
+    3 - Add images as new fileset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-image-files-in-a-fileset" class="md-nav__link">
+    4 - Access image files in a fileset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folders-structure" class="md-nav__link">
+    Folders structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-root-folder" class="md-nav__link">
+    Database root folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets-folders" class="md-nav__link">
+    Datasets folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images-folders" class="md-nav__link">
+    Images folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1042,22 +1557,110 @@
               
                 
                 
-                <h1 id="data-storage">Data storage<a class="headerlink" href="#data-storage" title="Permanent link">Link</a></h1>
-<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h1>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">Link</a></h2>
-<p>Install from github using pip:</p>
-<p>romidata:
+                  <h1>Data</h1>
+                
+                <p>This page describe how to use the romi package <code class="codehilite"><span class="err">data-storage</span></code> accessible <a href="https://github.com/romi/data-storage">here</a>.</p>
+<p>A shared example datasets is accessible <a href="https://db.romi-project.eu/models/test_db.tar.gz">here</a>.</p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">Link</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you intend to contribute to the development of <code class="codehilite"><span class="err">data-storage</span></code> or want to be able to edit the code and test your changes, you should choose <em>editable mode</em>.</p>
+</div>
+<h4 id="non-editable-mode">Non-editable mode<a class="headerlink" href="#non-editable-mode" title="Permanent link">Link</a></h4>
+<p>Install from github using <code class="codehilite"><span class="err">pip</span></code>:
 <div class="codehilite"><pre><span></span><code><span class="err">pip install git+ssh://git@github.com/romi/data-storage.git#dev</span>
 </code></pre></div></p>
-<h2 id="basic-working-example">Basic working example<a class="headerlink" href="#basic-working-example" title="Permanent link">Link</a></h2>
-<p>Assume you have a list of images you want to create a database,
-and add some images to a scan in this database.</p>
-<p>First create the folder for the database and add the <code class="codehilite"><span class="err">romidb</span></code> marker to it:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">mkdir mydb</span>
-<span class="err">touch mydb/romidb</span>
+<h4 id="editable-mode">Editable mode<a class="headerlink" href="#editable-mode" title="Permanent link">Link</a></h4>
+<p>Clone from github and install using <code class="codehilite"><span class="err">pip</span></code>:
+<div class="codehilite"><pre><span></span><code><span class="err">git clone https://github.com/romi/data-storage.git</span>
+<span class="err">cd data-storage</span>
+<span class="err">pip install -e .</span>
+</code></pre></div></p>
+<h3 id="basic-working-example">Basic working example<a class="headerlink" href="#basic-working-example" title="Permanent link">Link</a></h3>
+<p>Assume you have a list of images you want to create a database, and add some images to a scan in this database.</p>
+<h4 id="1-initialize-database">1 - Initialize database<a class="headerlink" href="#1-initialize-database" title="Permanent link">Link</a></h4>
+<p>First create the folder for the database and add the <code class="codehilite"><span class="err">romidb</span></code> marker to it:
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">mkdtemp</span>
+<span class="n">mydb</span> <span class="o">=</span> <span class="n">mkdtemp</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;romidb_&#39;</span><span class="p">)</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">mydb</span><span class="p">,</span> <span class="s1">&#39;romidb&#39;</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+<p>Npw you can initialize a ROMI <code class="codehilite"><span class="err">FSDB</span></code> database object:
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">romidata.fsdb</span> <span class="kn">import</span> <span class="n">FSDB</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">FSDB</span><span class="p">(</span><span class="n">mydb</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="c1"># Locks the database and allows access</span>
+</code></pre></div></p>
+<h4 id="2-create-a-new-datasets">2 - Create a new datasets<a class="headerlink" href="#2-create-a-new-datasets" title="Permanent link">Link</a></h4>
+<p>To create a new datasets, here named <code class="codehilite"><span class="err">myscan_001</span></code>, do:
+<div class="codehilite"><pre><span></span><code><span class="n">scan</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">create_scan</span><span class="p">(</span><span class="s2">&quot;myscan_001&quot;</span><span class="p">)</span>
+</code></pre></div>
+To add <em>scan metadata</em> (<em>eg.</em> camera settings, biological metadata, hardware metadata...), do:
+<div class="codehilite"><pre><span></span><code><span class="n">scan</span><span class="o">.</span><span class="n">set_metadata</span><span class="p">({</span><span class="s2">&quot;scanner&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;harware&quot;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">}})</span>
+</code></pre></div>
+This will results in several changes in the local database:</p>
+<ol>
+<li>Add a <code class="codehilite"><span class="err">myscan_001</span></code> sub-folder in the database root folder;</li>
+<li>Add a <code class="codehilite"><span class="err">metadata</span></code> sub-folder in <code class="codehilite"><span class="err">myscan_001</span></code> and a <code class="codehilite"><span class="err">metadata.json</span></code> gathering the given <em>scan metadata</em>.</li>
+</ol>
+<h4 id="3-add-images-as-new-fileset">3 - Add images as new fileset<a class="headerlink" href="#3-add-images-as-new-fileset" title="Permanent link">Link</a></h4>
+<ol>
+<li>
+<p>OPTIONAL - create a list of RGB images
+If you do not have a scan datasets available, either download a shared datasets <a href="https://db.romi-project.eu/models/test_db.tar.gz">here</a> or generate a list of images as follows:
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># Generate random noise images</span>
+<span class="n">n_images</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="n">imgs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_images</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="mi">256</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="n">imgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a new <code class="codehilite"><span class="err">fileset</span></code>:
+<div class="codehilite"><pre><span></span><code><span class="n">fileset</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">create_fileset</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the images to the fileset:
+Load the file list (or skip if you generated random images):
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="n">imgs</span> <span class="o">=</span> <span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;&lt;/path/to/my/scan/images&gt;&quot;</span><span class="p">)</span>
+</code></pre></div>
+Then loop the images list and add them to the <code class="codehilite"><span class="err">fileset</span></code>, optionally attach some metadata to each image:
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">romidata</span> <span class="kn">import</span> <span class="n">io</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">imgs</span><span class="p">):</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">fileset</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">set_metadata</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%i</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p>This will results in several changes in the local database:</p>
+<ol>
+<li>Reference the image by its file name by adding an entry in <code class="codehilite"><span class="err">files.json</span></code>;</li>
+<li>Write a <code class="codehilite"><span class="err">scan_img_1.jpeg</span></code> image in the <code class="codehilite"><span class="err">images</span></code> sub-folder of the scan <code class="codehilite"><span class="err">&quot;myscan&quot;</span></code>.</li>
+<li>Add an <code class="codehilite"><span class="err">images</span></code> sub-folder in the <code class="codehilite"><span class="err">metadata</span></code> sub-folder, and JSON files with the image <code class="codehilite"><span class="err">id</span></code> as name to store the <em>image metadata</em>.</li>
+</ol>
+<h4 id="4-access-image-files-in-a-fileset">4 - Access image files in a fileset<a class="headerlink" href="#4-access-image-files-in-a-fileset" title="Permanent link">Link</a></h4>
+<p>To access the image files in a fileset (in a datasets, itself in an existing and accessible database), procced as follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">romidata.fsdb</span> <span class="kn">import</span> <span class="n">FSDB</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">FSDB</span><span class="p">(</span><span class="n">mydb</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="c1"># Locks the database and allows access</span>
+
+<span class="n">scan</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="s2">&quot;myscan&quot;</span><span class="p">)</span>
+<span class="n">fileset</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_fileset</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fileset</span><span class="o">.</span><span class="n">get_files</span><span class="p">():</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_image</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="c1"># reads image data</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">))</span> <span class="c1"># i</span>
+
+
+<span class="n">db</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
 </code></pre></div>
 
-<p>Then in you python code:</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">romidata.fsdb</span> <span class="kn">import</span> <span class="n">FSDB</span>
 <span class="kn">from</span> <span class="nn">romidata</span> <span class="kn">import</span> <span class="n">io</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1070,11 +1673,29 @@ and add some images to a scan in this database.</p>
     <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
     <span class="n">imgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">mkdtemp</span>
+<span class="c1"># Create a temporary DB folder:</span>
+<span class="n">mydb</span> <span class="o">=</span> <span class="n">mkdtemp</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;romidb_&#39;</span><span class="p">)</span>
+<span class="c1"># Create the `romidb` file in previously created temporary DB folder:</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">mydb</span><span class="p">,</span> <span class="s1">&#39;romidb&#39;</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">listdir</span><span class="p">(</span><span class="n">mydb</span><span class="p">)</span>
 
-<span class="n">db</span> <span class="o">=</span> <span class="n">FSDB</span><span class="p">(</span><span class="s2">&quot;mydb&quot;</span><span class="p">)</span>
+<span class="c1"># Connect to the DB:</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">FSDB</span><span class="p">(</span><span class="n">mydb</span><span class="p">)</span>
 <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="c1"># Locks the database and allows access</span>
-<span class="n">scan</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">create_scan</span><span class="p">(</span><span class="s2">&quot;myscan&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a scan datasets to the DB:</span>
+<span class="n">scan</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">create_scan</span><span class="p">(</span><span class="s2">&quot;myscan_001&quot;</span><span class="p">)</span>
+<span class="n">listdir</span><span class="p">(</span><span class="n">mydb</span><span class="p">)</span>
+<span class="c1"># Add metadata to a scan datasets:</span>
+<span class="n">scan</span><span class="o">.</span><span class="n">set_metadata</span><span class="p">({</span><span class="s2">&quot;scanner&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;harware&quot;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">}})</span>
+<span class="n">listdir</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">mydb</span><span class="p">,</span> <span class="s2">&quot;myscan_001&quot;</span><span class="p">))</span>
+<span class="n">listdir</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">mydb</span><span class="p">,</span> <span class="s2">&quot;myscan_001&quot;</span><span class="p">,</span> <span class="s2">&quot;metadata&quot;</span><span class="p">))</span>
+
 <span class="n">fileset</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">create_fileset</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
+<span class="n">listdir</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">mydb</span><span class="p">,</span> <span class="s2">&quot;myscan_001&quot;</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">imgs</span><span class="p">):</span>
     <span class="n">file</span> <span class="o">=</span> <span class="n">fileset</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span><span class="p">)</span>
@@ -1088,8 +1709,133 @@ and add some images to a scan in this database.</p>
     <span class="n">im</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_image</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="c1"># reads image data</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">))</span> <span class="c1"># i</span>
 
-
 <span class="n">db</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+</code></pre></div>
+
+<h2 id="folders-structure">Folders structure<a class="headerlink" href="#folders-structure" title="Permanent link">Link</a></h2>
+<h3 id="database-root-folder">Database root folder<a class="headerlink" href="#database-root-folder" title="Permanent link">Link</a></h3>
+<p>A <em>root database</em> folder is defined, <em>eg.</em> <code class="codehilite"><span class="err">mydb</span></code>.
+Inside this folder we need to defines (add) the <code class="codehilite"><span class="err">romidb</span></code> marker so it may be used by <code class="codehilite"><span class="err">fsdb</span></code>.
+We may also find the <code class="codehilite"><span class="err">lock</span></code> file used to limit the access to the database to only one user. </p>
+<p>Note that this part is manual, you have to create these manually:
+<div class="codehilite"><pre><span></span><code>mkdir mydb
+touch mydb/romidb
+</code></pre></div></p>
+<p>Once you have created this root folder and file, you can initialize a ROMI <code class="codehilite"><span class="err">FSDB</span></code> database object:
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">romidata.fsdb</span> <span class="kn">import</span> <span class="n">FSDB</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">FSDB</span><span class="p">(</span><span class="s2">&quot;mydb&quot;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+The method <code class="codehilite"><span class="err">FSDB.connect()</span></code> locks the database with a <code class="codehilite"><span class="err">lock</span></code> file at root directory and allows access.
+You may remove the <code class="codehilite"><span class="err">lock</span></code> file if you are sure no one else is using the database. </p>
+<p>Within this <em>root database</em> folder you will find other folders corresponding to <em>datasets</em>.</p>
+<h3 id="datasets-folders">Datasets folders<a class="headerlink" href="#datasets-folders" title="Permanent link">Link</a></h3>
+<p>At the next level, we find the <em>datasets</em> folder(s), <em>eg.</em> named <code class="codehilite"><span class="err">myscan_001</span></code>.
+Their names must be uniques and you create them as follow:
+<div class="codehilite"><pre><span></span><code><span class="n">scan</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">create_scan</span><span class="p">(</span><span class="s2">&quot;myscan_001&quot;</span><span class="p">)</span>
+</code></pre></div>
+If you add <em>scan metadata</em> (<em>eg.</em> camera settings, biological metadata, hardware metadata...) with <code class="codehilite"><span class="err">scan.set_metadata()</span></code>, you get another folder <code class="codehilite"><span class="err">metadata</span></code> with a <code class="codehilite"><span class="err">metadata.json</span></code> file.</p>
+<p>We now have the following tree structure:
+<div class="codehilite"><pre><span></span><code><span class="err">mydb/</span>
+<span class="err">├── myscan_001/</span>
+<span class="err">│   ├── metadata/</span>
+<span class="err">│   │   └── metadata.json</span>
+<span class="err">└── romidb</span>
+</code></pre></div></p>
+<h3 id="images-folders">Images folders<a class="headerlink" href="#images-folders" title="Permanent link">Link</a></h3>
+<p>Inside <code class="codehilite"><span class="err">myscan_001/</span></code>, we find the datasets or <em>fileset</em> in <code class="codehilite"><span class="err">romidb</span></code> terminology.
+In the case of the "plant scanner", this is a list of RGB image files acquired by a camera moving around the plant.
+To store the datasets, we thus name the created <em>fileset</em> "images":
+<div class="codehilite"><pre><span></span><code><span class="n">fileset</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">create_fileset</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
+</code></pre></div>
+Inside this <code class="codehilite"><span class="err">images/</span></code> folder will reside the images added to the database.
+At the same time you added images with <strong>REF_TO_TUTO</strong>, you created an entry in a JSON file referencing the files.
+If you added metadata along with the files (<em>eg.</em> camera poses, jpeg metadata...) it should be referenced in <code class="codehilite"><span class="err">metadata/images/</span></code> <em>eg.</em> <code class="codehilite"><span class="err">metadata/images/&lt;scan_img_01&gt;.json</span></code>.
+<div class="codehilite"><pre><span></span><code><span class="err">mydb/</span>
+<span class="err">├── myscan_001/</span>
+<span class="err">│   ├── files.json</span>
+<span class="err">│   ├── images/</span>
+<span class="err">│   │   ├── scan_img_01.jpg</span>
+<span class="err">│   │   ├── scan_img_02.jpg</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   └── scan_img_99.jpg</span>
+<span class="err">│   ├── metadata/</span>
+<span class="err">│   │   ├── images</span>
+<span class="err">│   │   │   ├── scan_img_01.json</span>
+<span class="err">│   │   │   ├── scan_img_02.json</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   │   └── scan_img_99.json</span>
+<span class="err">│   │   └── metadata.json</span>
+<span class="err">└── romidb</span>
+</code></pre></div></p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">Link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">mydb/</span>
+<span class="err">├── myscan_001/</span>
+<span class="err">│   ├── AnglesAndInternodes_1_0_2_0_0_1_dd8d67653a</span>
+<span class="err">│   │   └── AnglesAndInternodes.json</span>
+<span class="err">│   ├── Colmap_True____feature_extrac_3bbfcb1413</span>
+<span class="err">│   │   ├── cameras.json</span>
+<span class="err">│   │   ├── images.json</span>
+<span class="err">│   │   ├── points3d.json</span>
+<span class="err">│   │   └── sparse.ply</span>
+<span class="err">│   ├── CurveSkeleton_out__TriangleMesh_6a92751c20</span>
+<span class="err">│   │   └── CurveSkeleton.json</span>
+<span class="err">│   ├── db.db</span>
+<span class="err">│   ├── db.db-shm</span>
+<span class="err">│   ├── db.db-wal</span>
+<span class="err">│   ├── files.json</span>
+<span class="err">│   ├── images</span>
+<span class="err">│   │   ├── pict20190201_110110_0.jpg</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   └── pict20190201_111209_0.jpg</span>
+<span class="err">│   ├── Masks_True_5_out_9adb9db801</span>
+<span class="err">│   │   ├── pict20190201_110110_0.jpg</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   └── pict20190201_111209_0.jpg</span>
+<span class="err">│   ├── measures.csv</span>
+<span class="err">│   ├── metadata</span>
+<span class="err">│   │   ├── AnglesAndInternodes_1_0_2_0_0_1_dd8d67653a.json</span>
+<span class="err">│   │   ├── Colmap_True____feature_extrac_3bbfcb1413.json</span>
+<span class="err">│   │   ├── CurveSkeleton_out__TriangleMesh_6a92751c20.json</span>
+<span class="err">│   │   ├── images</span>
+<span class="err">│   │   │   ├── pict20190201_110110_0.json</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   │   └── pict20190201_111209_0.json</span>
+<span class="err">│   │   ├── images.json</span>
+<span class="err">│   │   ├── Masks_True_5_out_9adb9db801</span>
+<span class="err">│   │   │   ├── pict20190201_110110_0.json</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   │   └── pict20190201_111209_0.json</span>
+<span class="err">│   │   ├── Masks_True_5_out_e90d1804eb.json</span>
+<span class="err">│   │   ├── metadata.json</span>
+<span class="err">│   │   ├── PointCloud_1_0_1_0_False_9ab5a15d9b</span>
+<span class="err">│   │   │   └── PointCloud.json</span>
+<span class="err">│   │   ├── PointCloud_1_0_1_0_False_9ab5a15d9b.json</span>
+<span class="err">│   │   ├── PointCloud__200_0_1_0_False_4ce2e46446.json</span>
+<span class="err">│   │   ├── TreeGraph_out__CurveSkeleton_5dca9a2821.json</span>
+<span class="err">│   │   ├── TriangleMesh_out__PointCloud_80dc94ac81.json</span>
+<span class="err">│   │   ├── Undistorted_out_____fb3e3fa0ff</span>
+<span class="err">│   │   │   ├── pict20190201_110110_0.json</span>
+<span class="err">│   │   ├── [...]</span>
+<span class="err">│   │   │   └── pict20190201_111209_0.json</span>
+<span class="err">│   │   ├── Undistorted_out_____fb3e3fa0ff.json</span>
+<span class="err">│   │   ├── Voxels_False____False_567dc7f48b</span>
+<span class="err">│   │   │   └── Voxels.json</span>
+<span class="err">│   │   ├── Voxels_False____False_567dc7f48b.json</span>
+<span class="err">│   │   ├── Voxels_False____True_af037e876e.json</span>
+<span class="err">│   │   └── Voxels_False____True_cd9a5ff06b.json</span>
+<span class="err">│   ├── pipeline.toml</span>
+<span class="err">│   ├── PointCloud_1_0_1_0_False_9ab5a15d9b</span>
+<span class="err">│   │   └── PointCloud.ply</span>
+<span class="err">│   ├── TreeGraph_out__CurveSkeleton_5dca9a2821</span>
+<span class="err">│   │   └── TreeGraph.p</span>
+<span class="err">│   ├── TriangleMesh_out__PointCloud_80dc94ac81</span>
+<span class="err">│   │   └── TriangleMesh.ply</span>
+<span class="err">│   └── Voxels_False____False_567dc7f48b</span>
+<span class="err">│       └── Voxels.npz</span>
+<span class="err">├── colmap_log.txt</span>
+<span class="err">├── lock</span>
+<span class="err">└── romidb</span>
 </code></pre></div>
                 
                   
@@ -1140,8 +1886,8 @@ and add some images to a scan in this database.</p>
 
         <!-- Link to previous page -->
         
-          <a href="../conda/"
-              title="Conda"
+          <a href="../../Rover/software/"
+              title="Software"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1154,7 +1900,7 @@ and add some images to a scan in this database.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Conda
+                Software
               </span>
             </div>
           </a>
@@ -1162,8 +1908,8 @@ and add some images to a scan in this database.</p>
 
         <!-- Link to next page -->
         
-          <a href="../docker/"
-              title="Docker"
+          <a href="../hardware/"
+              title="Hardware"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1172,7 +1918,7 @@ and add some images to a scan in this database.</p>
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker
+                Hardware
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
