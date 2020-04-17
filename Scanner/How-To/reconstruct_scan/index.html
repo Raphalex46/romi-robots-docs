@@ -1266,6 +1266,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reconstruction-pipeline" class="md-nav__link">
+    Reconstruction pipeline
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-database" class="md-nav__link">
+    Test database:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-pipeline" class="md-nav__link">
+    Geometric pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-pipeline" class="md-nav__link">
+    Machine Learning pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1450,6 +1484,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reconstruction-pipeline" class="md-nav__link">
+    Reconstruction pipeline
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-database" class="md-nav__link">
+    Test database:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-pipeline" class="md-nav__link">
+    Geometric pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-pipeline" class="md-nav__link">
+    Machine Learning pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1504,11 +1572,6 @@ python setup.py install
 <p>Since we will need an active database to performs the reconstruction, we install it as follows:
 <div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/data-storage.git@dev
 </code></pre></div></p>
-<p>To quickly create an example DB you can use:
-<div class="codehilite"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
-tar -xf test_db.tar.gz
-</code></pre></div>
-This will create a <code class="codehilite"><span class="err">integration_tests</span></code> folder with a ready to use test database. </p>
 <h4 id="install-romiscanner-sources">Install <code class="codehilite"><span class="err">romiscanner</span></code> sources:<a class="headerlink" href="#install-romiscanner-sources" title="Permanent link">Link</a></h4>
 <div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/romiscanner
 </code></pre></div>
@@ -1531,6 +1594,31 @@ This will create a <code class="codehilite"><span class="err">integration_tests<
 For example, for CUDA 9.2, use:
 <div class="codehilite"><pre><span></span><code>pip install <span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 </code></pre></div></p>
+</div>
+<h2 id="reconstruction-pipeline">Reconstruction pipeline<a class="headerlink" href="#reconstruction-pipeline" title="Permanent link">Link</a></h2>
+<h3 id="test-database">Test database:<a class="headerlink" href="#test-database" title="Permanent link">Link</a></h3>
+<p>To quickly create an example DB you can use:
+<div class="codehilite"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
+tar -xf test_db.tar.gz
+</code></pre></div>
+This will create a <code class="codehilite"><span class="err">integration_tests</span></code> folder with a ready to use test database. </p>
+<h3 id="geometric-pipeline">Geometric pipeline<a class="headerlink" href="#geometric-pipeline" title="Permanent link">Link</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This example uses a real scan dataset from the test database.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This example uses a virtual scan dataset from the test database.</p>
+</div>
+<h3 id="machine-learning-pipeline">Machine Learning pipeline<a class="headerlink" href="#machine-learning-pipeline" title="Permanent link">Link</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This example uses a real scan dataset from the test database.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This example uses a virtual scan dataset from the test database.</p>
 </div>
                 
                   

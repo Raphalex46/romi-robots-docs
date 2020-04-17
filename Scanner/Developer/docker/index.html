@@ -1136,16 +1136,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visualizer" class="md-nav__link">
-    Visualizer
+  <a href="#plantviewer" class="md-nav__link">
+    plantviewer
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencies_4" class="md-nav__link">
-    Dependencies:
+  <a href="#build-docker-image" class="md-nav__link">
+    Build docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-built-docker-image" class="md-nav__link">
+    Use pre-built docker image
   </a>
   
 </li>
@@ -1580,16 +1587,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visualizer" class="md-nav__link">
-    Visualizer
+  <a href="#plantviewer" class="md-nav__link">
+    plantviewer
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencies_4" class="md-nav__link">
-    Dependencies:
+  <a href="#build-docker-image" class="md-nav__link">
+    Build docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-built-docker-image" class="md-nav__link">
+    Use pre-built docker image
   </a>
   
 </li>
@@ -1649,7 +1663,7 @@
  - [ ] Scanner
  - [ ] SmartInterpreter
  - [ ] VirtualScanner
- - [ ] Visualizer</p>
+ - [x] Visualizer</p>
 <h2 id="romidb">romiDB<a class="headerlink" href="#romidb" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">continuumio/miniconda3</span>
 </code></pre></div>
@@ -1701,19 +1715,38 @@
 <p>External dependencies:
  - <code class="codehilite"><span class="err">blender</span></code>
  - <code class="codehilite"><span class="err">lpy</span></code></p>
-<h3 id="visualizer">Visualizer<a class="headerlink" href="#visualizer" title="Permanent link">Link</a></h3>
-<p>The plant visualizer.</p>
-<p>Webapp that dialog with the database to display images &amp; some quantitative traits.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">alpine:3.10</span>
+<h3 id="plantviewer">plantviewer<a class="headerlink" href="#plantviewer" title="Permanent link">Link</a></h3>
+<p>The plant visualizer is a webapp that dialog with the database to display images &amp; some quantitative traits.</p>
+<h4 id="build-docker-image">Build docker image<a class="headerlink" href="#build-docker-image" title="Permanent link">Link</a></h4>
+<p>To build the image, clone the ROMI <code class="codehilite"><span class="err">docker</span></code> repository:
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/docker.git
 </code></pre></div>
-
-<h4 id="dependencies_4">Dependencies:<a class="headerlink" href="#dependencies_4" title="Permanent link">Link</a></h4>
-<p>Internal dependencies:
- - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.</p>
-<p>External dependencies:
- - <code class="codehilite"><span class="err">sony_visualiseur-plantes-3d</span></code></p>
-<p>Notes:
-<code class="codehilite"><span class="err">scanner-rest-api</span></code> &amp; <code class="codehilite"><span class="err">npm start</span></code> are two distinct process to start !</p>
+Then you can build the image with:
+<div class="codehilite"><pre><span></span><code>docker build -t visualizer Visualizer/
+</code></pre></div>
+To run it:
+<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 visualizer
+</code></pre></div>
+Once it's up, you should be able to access the viewer here: <a href="http://localhost:3000/">http://localhost:3000/</a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Use <code class="codehilite"><span class="err">chrome</span></code> as <code class="codehilite"><span class="err">firefox</span></code> has some issues with the used JavaScript libraries!</p>
+</div>
+<p>Push it ot docker hub:
+<div class="codehilite"><pre><span></span><code>docker push jlegrand62/romi_plantviewer:latest
+</code></pre></div>
+This require a valid token on docker hub!</p>
+<h4 id="use-pre-built-docker-image">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image" title="Permanent link">Link</a></h4>
+<p>First you need to pull the docker image:
+<div class="codehilite"><pre><span></span><code>docker pull jlegrand62/romi_plantviewer
+</code></pre></div>
+Then you can run it with:
+<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_plantviewer
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ROMI does not have a docker repo yet!</p>
+</div>
 <h2 id="dockerhub">DockerHub<a class="headerlink" href="#dockerhub" title="Permanent link">Link</a></h2>
 <h3 id="colmap">Colmap<a class="headerlink" href="#colmap" title="Permanent link">Link</a></h3>
 <p>Docker images for the COLMAP open source project:</p>

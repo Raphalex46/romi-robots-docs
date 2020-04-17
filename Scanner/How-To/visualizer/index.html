@@ -1290,6 +1290,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pre-requisite" class="md-nav__link">
+    Pre-requisite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-romi-packages-their-dependencies" class="md-nav__link">
     Install ROMI packages &amp; their dependencies:
   </a>
@@ -1385,6 +1392,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pre-requisite" class="md-nav__link">
+    Pre-requisite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-romi-packages-their-dependencies" class="md-nav__link">
     Install ROMI packages &amp; their dependencies:
   </a>
@@ -1444,25 +1458,30 @@
                 <h1 id="how-to-use-the-romi-visualizer">How to use the ROMI Visualizer?<a class="headerlink" href="#how-to-use-the-romi-visualizer" title="Permanent link">Link</a></h1>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
 <p>To follows this guide you should have a <code class="codehilite"><span class="err">conda</span></code> or a Python <code class="codehilite"><span class="err">venv</span></code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
+<h3 id="pre-requisite">Pre-requisite<a class="headerlink" href="#pre-requisite" title="Permanent link">Link</a></h3>
+<p>Install <code class="codehilite"><span class="err">node</span></code> and <code class="codehilite"><span class="err">npm</span></code>, on ubuntu:
+<div class="codehilite"><pre><span></span><code>sudo apt install npm
+</code></pre></div>
+The packaged version ot <code class="codehilite"><span class="err">npm</span></code> is probably out of date (require <code class="codehilite"><span class="err">npm&gt;=5</span></code>), to update it:
+<div class="codehilite"><pre><span></span><code>npm install npm@latest -g
+</code></pre></div></p>
 <h3 id="install-romi-packages-their-dependencies">Install ROMI packages &amp; their dependencies:<a class="headerlink" href="#install-romi-packages-their-dependencies" title="Permanent link">Link</a></h3>
 <p>Clone the visualizer git repository :
-<div class="codehilite"><pre><span></span><code>git clone git@github.com:romi/sony_visualiseur-plantes-3d.git
-<span class="nb">cd</span> sony_visualiseur-plantes-3d
-</code></pre></div></p>
-<p>Install node packages and build the pages:
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/3d-plantviewer.git
+<span class="nb">cd</span> 3d-plantviewer
+</code></pre></div>
+Install node packages and build the pages:
 <div class="codehilite"><pre><span></span><code>npm install
 </code></pre></div></p>
 <h2 id="running-a-development-server-for-the-visualizer">Running a development server for the visualizer<a class="headerlink" href="#running-a-development-server-for-the-visualizer" title="Permanent link">Link</a></h2>
-<p>Set the DB location using the <code class="codehilite"><span class="err">DB_LOCATION</span></code> environment variable:
+<p>Set the DB location using the <code class="codehilite"><span class="err">DB_LOCATION</span></code> environment variable and launch the flask server:
 <div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">DB_LOCATION</span><span class="o">=</span>/path/to/the/db
-</code></pre></div></p>
-<p>Launch the flask development server:
-<div class="codehilite"><pre><span></span><code>scanner-rest-api
-</code></pre></div></p>
-<p>Finally, start the frontend development server:
+romi_scanner_rest_api
+</code></pre></div>
+Finally, start the frontend visualization server (from <code class="codehilite"><span class="err">3d-plantviewer/</span></code> folder?):
 <div class="codehilite"><pre><span></span><code>npm start
-</code></pre></div></p>
-<p>You can now access the visualizer on <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+</code></pre></div>
+You should now be able to access the visualizer on <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 <h2 id="running-a-production-server-for-the-visualizer">Running a production server for the visualizer<a class="headerlink" href="#running-a-production-server-for-the-visualizer" title="Permanent link">Link</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
