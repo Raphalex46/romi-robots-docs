@@ -1611,6 +1611,15 @@ This will create a <code class="codehilite"><span class="err">integration_tests<
 <p class="admonition-title">Note</p>
 <p>This example uses a virtual scan dataset from the test database.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you get something like this during the <code class="codehilite"><span class="err">Voxel</span></code> tasks:
+<div class="codehilite"><pre><span></span><code><span class="err">Choose platform:</span>
+<span class="err">[0] &lt;pyopencl.Platform &#39;NVIDIA CUDA&#39; at 0x55d904d5af50&gt;</span>
+<span class="err">Choice [0]:</span>
+</code></pre></div>
+that mean you need to specify the environment variable <code class="codehilite"><span class="err">PYOPENCL_CTX=&#39;0&#39;</span></code></p>
+</div>
 <h3 id="machine-learning-pipeline">Machine Learning pipeline<a class="headerlink" href="#machine-learning-pipeline" title="Permanent link">Link</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
