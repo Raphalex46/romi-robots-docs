@@ -1041,15 +1041,22 @@
       
         <li class="md-nav__item">
   <a href="#romidb" class="md-nav__link">
-    romiDB
+    romidb
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies:
+  <a href="#build-docker-image" class="md-nav__link">
+    Build docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-built-docker-image" class="md-nav__link">
+    Use pre-built docker image
   </a>
   
 </li>
@@ -1070,7 +1077,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_1" class="md-nav__link">
+  <a href="#dependencies" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1097,7 +1104,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_2" class="md-nav__link">
+  <a href="#dependencies_1" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1124,7 +1131,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_3" class="md-nav__link">
+  <a href="#dependencies_2" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1144,14 +1151,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-docker-image" class="md-nav__link">
+  <a href="#build-docker-image_1" class="md-nav__link">
     Build docker image
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-pre-built-docker-image" class="md-nav__link">
+  <a href="#use-pre-built-docker-image_1" class="md-nav__link">
     Use pre-built docker image
   </a>
   
@@ -1492,15 +1499,22 @@
       
         <li class="md-nav__item">
   <a href="#romidb" class="md-nav__link">
-    romiDB
+    romidb
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies:
+  <a href="#build-docker-image" class="md-nav__link">
+    Build docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-built-docker-image" class="md-nav__link">
+    Use pre-built docker image
   </a>
   
 </li>
@@ -1521,7 +1535,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_1" class="md-nav__link">
+  <a href="#dependencies" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1548,7 +1562,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_2" class="md-nav__link">
+  <a href="#dependencies_1" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1575,7 +1589,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencies_3" class="md-nav__link">
+  <a href="#dependencies_2" class="md-nav__link">
     Dependencies:
   </a>
   
@@ -1595,14 +1609,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-docker-image" class="md-nav__link">
+  <a href="#build-docker-image_1" class="md-nav__link">
     Build docker image
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-pre-built-docker-image" class="md-nav__link">
+  <a href="#use-pre-built-docker-image_1" class="md-nav__link">
     Use pre-built docker image
   </a>
   
@@ -1659,20 +1673,52 @@
 <h2 id="list-of-docker-containers">List of docker containers<a class="headerlink" href="#list-of-docker-containers" title="Permanent link">Link</a></h2>
 <p>We hereafter list the docker containers, their use and list the installed libraries:</p>
 <p>Progress:
- - [X] DB
+ - [ ] DB
  - [ ] Scanner
  - [ ] SmartInterpreter
  - [ ] VirtualScanner
  - [x] Visualizer</p>
-<h2 id="romidb">romiDB<a class="headerlink" href="#romidb" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">continuumio/miniconda3</span>
+<h2 id="romidb">romidb<a class="headerlink" href="#romidb" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
 </code></pre></div>
 
-<h4 id="dependencies">Dependencies:<a class="headerlink" href="#dependencies" title="Permanent link">Link</a></h4>
-<p>Internal dependencies:
- - <code class="codehilite"><span class="err">data-storage</span></code></p>
-<p>External dependencies:
- - <code class="codehilite"><span class="err">opencv</span></code> ??</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is not working YET, but almost!</p>
+</div>
+<h4 id="build-docker-image">Build docker image<a class="headerlink" href="#build-docker-image" title="Permanent link">Link</a></h4>
+<p>To build the image, clone the ROMI <code class="codehilite"><span class="err">docker</span></code> repository:
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/docker.git
+<span class="nb">cd</span> docker
+</code></pre></div>
+Then you can build the image with:
+<div class="codehilite"><pre><span></span><code>docker docker build -t romidb romiDB/
+</code></pre></div>
+To run it, you need to have a local database first, look <a href="https://db.romi-project.eu/models/test_db.tar.gz">here</a> for an example.
+Assuming you extracted it in your home folder (<code class="codehilite"><span class="err">/home/$USER/integration_tests</span></code>), you can start the <code class="codehilite"><span class="err">romidb</span></code> docker image with:
+<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">5000</span>:5000 -v /home/<span class="nv">$USER</span>/integration_tests:/home/romi/integration_tests romidb
+</code></pre></div>
+Once it's up, you should be able to access the REST API here: <a href="http://localhost:5000/">http://localhost:5000/</a></p>
+<p>For example to get a list of the scans: <a href="http://localhost:5000/scans">http://localhost:5000/scans</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="codehilite"><span class="err">-v /home/$USER/integration_tests:/home/romi/integration_tests</span></code> performs a <strong>bind mount</strong> to enable access to the local database by the docker image. See the official <a href="https://docs.docker.com/storage/bind-mounts/">documentation</a>.</p>
+</div>
+<p>Push it ot docker hub:
+<div class="codehilite"><pre><span></span><code>docker push jlegrand62/romi_database:latest
+</code></pre></div>
+This require a valid account, token and existing repository (<code class="codehilite"><span class="err">romi_database</span></code>) on docker hub!</p>
+<h4 id="use-pre-built-docker-image">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image" title="Permanent link">Link</a></h4>
+<p>First you need to pull the docker image:
+<div class="codehilite"><pre><span></span><code>docker pull jlegrand62/romi_database
+</code></pre></div>
+Then you can run it with:
+<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_database
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ROMI does not have a docker repo yet!</p>
+</div>
 <h3 id="scanner">Scanner<a class="headerlink" href="#scanner" title="Permanent link">Link</a></h3>
 <p>The database container. </p>
 <h4 id="aim">Aim<a class="headerlink" href="#aim" title="Permanent link">Link</a></h4>
@@ -1680,7 +1726,7 @@
 <div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">continuumio/miniconda3</span>
 </code></pre></div>
 
-<h4 id="dependencies_1">Dependencies:<a class="headerlink" href="#dependencies_1" title="Permanent link">Link</a></h4>
+<h4 id="dependencies">Dependencies:<a class="headerlink" href="#dependencies" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
  - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.</p>
 <p>External dependencies:
@@ -1692,7 +1738,7 @@
 <div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">colmap/colmap</span>
 </code></pre></div>
 
-<h4 id="dependencies_2">Dependencies:<a class="headerlink" href="#dependencies_2" title="Permanent link">Link</a></h4>
+<h4 id="dependencies_1">Dependencies:<a class="headerlink" href="#dependencies_1" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
  - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.
  - <code class="codehilite"><span class="err">Segmentation</span></code>, virtual plant segmentation methods using 2D images generated from the virtual scanner and neural networks.
@@ -1709,7 +1755,7 @@
 <div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">alpine:3.10</span>
 </code></pre></div>
 
-<h4 id="dependencies_3">Dependencies:<a class="headerlink" href="#dependencies_3" title="Permanent link">Link</a></h4>
+<h4 id="dependencies_2">Dependencies:<a class="headerlink" href="#dependencies_2" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
  - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.</p>
 <p>External dependencies:
@@ -1717,9 +1763,13 @@
  - <code class="codehilite"><span class="err">lpy</span></code></p>
 <h3 id="plantviewer">plantviewer<a class="headerlink" href="#plantviewer" title="Permanent link">Link</a></h3>
 <p>The plant visualizer is a webapp that dialog with the database to display images &amp; some quantitative traits.</p>
-<h4 id="build-docker-image">Build docker image<a class="headerlink" href="#build-docker-image" title="Permanent link">Link</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
+</code></pre></div>
+
+<h4 id="build-docker-image_1">Build docker image<a class="headerlink" href="#build-docker-image_1" title="Permanent link">Link</a></h4>
 <p>To build the image, clone the ROMI <code class="codehilite"><span class="err">docker</span></code> repository:
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/docker.git
+<span class="nb">cd</span> docker
 </code></pre></div>
 Then you can build the image with:
 <div class="codehilite"><pre><span></span><code>docker build -t visualizer Visualizer/
@@ -1735,8 +1785,8 @@ Once it's up, you should be able to access the viewer here: <a href="http://loca
 <p>Push it ot docker hub:
 <div class="codehilite"><pre><span></span><code>docker push jlegrand62/romi_plantviewer:latest
 </code></pre></div>
-This require a valid token on docker hub!</p>
-<h4 id="use-pre-built-docker-image">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image" title="Permanent link">Link</a></h4>
+This require a valid account, token and existing repository (<code class="codehilite"><span class="err">romi_plantviewer</span></code>) on docker hub!</p>
+<h4 id="use-pre-built-docker-image_1">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image_1" title="Permanent link">Link</a></h4>
 <p>First you need to pull the docker image:
 <div class="codehilite"><pre><span></span><code>docker pull jlegrand62/romi_plantviewer
 </code></pre></div>
