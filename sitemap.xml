@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.romi-project.eu/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Cable/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Rover/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Rover/developer/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Rover/hardware/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Rover/manual/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Rover/software/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/data/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/hardware/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/home/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/pipelines/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/Developer/conda/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/Developer/docker/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/How-To/basics/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/How-To/hardware_scan/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/How-To/reconstruct_scan/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/How-To/virtual_scan/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.romi-project.eu/Scanner/How-To/visualizer/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
