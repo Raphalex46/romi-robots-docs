@@ -1480,25 +1480,25 @@
 <p>Do this only if you want to control the hardware and scan plants with the open-source scanner!</p>
 </div>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
-<p>To follows this guide you should have a <code class="codehilite"><span class="err">conda</span></code> or a Python <code class="codehilite"><span class="err">venv</span></code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
-<h3 id="install-romi-packages-with-pip">Install ROMI packages with <code class="codehilite"><span class="err">pip</span></code>:<a class="headerlink" href="#install-romi-packages-with-pip" title="Permanent link">Link</a></h3>
-<h4 id="install-romidata">Install <code class="codehilite"><span class="err">romidata</span></code>:<a class="headerlink" href="#install-romidata" title="Permanent link">Link</a></h4>
+<p>To follows this guide you should have a <code>conda</code> or a Python <code>venv</code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
+<h3 id="install-romi-packages-with-pip">Install ROMI packages with <code>pip</code>:<a class="headerlink" href="#install-romi-packages-with-pip" title="Permanent link">Link</a></h3>
+<h4 id="install-romidata">Install <code>romidata</code>:<a class="headerlink" href="#install-romidata" title="Permanent link">Link</a></h4>
 <p>Since we will need an active database to performs the reconstruction, we install it as follows:
-<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/data-storage.git@dev
+<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/data-storage.git@dev
 </code></pre></div></p>
 <p>To quickly create an example DB you can use:
-<div class="codehilite"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
+<div class="highlight"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
 tar -xf test_db.tar.gz
 </code></pre></div>
-This will create a <code class="codehilite"><span class="err">integration_tests</span></code> folder with a ready to use test database. </p>
-<h4 id="install-lettucethink">Install <code class="codehilite"><span class="err">lettucethink</span></code>:<a class="headerlink" href="#install-lettucethink" title="Permanent link">Link</a></h4>
-<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/lettucethink-python@dev
+This will create a <code>integration_tests</code> folder with a ready to use test database. </p>
+<h4 id="install-lettucethink">Install <code>lettucethink</code>:<a class="headerlink" href="#install-lettucethink" title="Permanent link">Link</a></h4>
+<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/lettucethink-python@dev
 </code></pre></div>
 
 <h2 id="running-scans">Running scans<a class="headerlink" href="#running-scans" title="Permanent link">Link</a></h2>
-<p><code class="codehilite"><span class="err">Scan</span></code> is the basic task for running a task with the scanner.</p>
+<p><code>Scan</code> is the basic task for running a task with the scanner.</p>
 <p>A sample configuration file for the (real) scanner is as follows:
-<div class="codehilite"><pre><span></span><code><span class="k">[Scan.scanner]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Scan.scanner]</span>
 <span class="n">camera_firmware</span> <span class="o">=</span> <span class="s">&quot;sony_wifi&quot;</span>
 <span class="n">cnc_firmware</span> <span class="o">=</span> <span class="s">&quot;grbl-v1.1&quot;</span>
 <span class="n">gimbal_firmware</span> <span class="o">=</span> <span class="s">&quot;blgimbal&quot;</span>
@@ -1546,26 +1546,26 @@ This will create a <code class="codehilite"><span class="err">integration_tests<
 <span class="k">[Scan.metadata]</span>
 <span class="n">key</span> <span class="o">=</span> <span class="n">value</span> <span class="c1"># Any metadata you want to add to the scan</span>
 </code></pre></div></p>
-<p>To see available parameters for scanner, camera, CNC, check the <code class="codehilite"><span class="err">romiscanner</span></code> module.</p>
+<p>To see available parameters for scanner, camera, CNC, check the <code>romiscanner</code> module.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>Add a link to the <code class="codehilite"><span class="err">romiscanner</span></code> documentation!</p>
+<p>Add a link to the <code>romiscanner</code> documentation!</p>
 </div>
 <h3 id="1-create-a-configuration-file">1. Create a configuration file<a class="headerlink" href="#1-create-a-configuration-file" title="Permanent link">Link</a></h3>
-<p>Create a file named <code class="codehilite"><span class="err">scanner.toml</span></code> with the following text, adjusting parameters as needed for the actual configuration of the scanner.
-Check the <code class="codehilite"><span class="err">lettucethink</span></code> documentation for additional information.</p>
+<p>Create a file named <code>scanner.toml</code> with the following text, adjusting parameters as needed for the actual configuration of the scanner.
+Check the <code>lettucethink</code> documentation for additional information.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>Add a link to the <code class="codehilite"><span class="err">lettucethink</span></code> documentation!</p>
+<p>Add a link to the <code>lettucethink</code> documentation!</p>
 </div>
-<h3 id="2-launch-the-scan-task">2. Launch the <code class="codehilite"><span class="err">Scan</span></code> task<a class="headerlink" href="#2-launch-the-scan-task" title="Permanent link">Link</a></h3>
-<p>Assuming you have an active database, you can nom run a scan using <code class="codehilite"><span class="err">romi_run_task</span></code>:
-<div class="codehilite"><pre><span></span><code>romi_run_task --config scanner.toml Scan /path/to/db/scan_id/ --local-scheduler
+<h3 id="2-launch-the-scan-task">2. Launch the <code>Scan</code> task<a class="headerlink" href="#2-launch-the-scan-task" title="Permanent link">Link</a></h3>
+<p>Assuming you have an active database, you can nom run a scan using <code>romi_run_task</code>:
+<div class="highlight"><pre><span></span><code>romi_run_task --config scanner.toml Scan /path/to/db/scan_id/ --local-scheduler
 </code></pre></div>
 where:</p>
 <ul>
-<li><code class="codehilite"><span class="err">/path/to/db</span></code> must be an existing FSDB database</li>
-<li><code class="codehilite"><span class="err">scan_id</span></code> must not already exist in the database.</li>
+<li><code>/path/to/db</code> must be an existing FSDB database</li>
+<li><code>scan_id</code> must not already exist in the database.</li>
 </ul>
 <p>This will create the corresponding folder and fill it with images from the scan.</p>
                 
