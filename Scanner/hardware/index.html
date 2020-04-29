@@ -1470,29 +1470,29 @@
 <p>We start by introducing the general network design of the ROMI Plant Phenotyper:</p>
 <p><img src="/assets/images/scanner_network.png" alt="Plant Phenotyper - Network overview" width="800" /></p>
 <h2 id="hardware-configuration-files">Hardware configuration files<a class="headerlink" href="#hardware-configuration-files" title="Permanent link">Link</a></h2>
-<p>To gather configuration information of the hardware we use <code>toml</code> files to define variables.
+<p>To gather configuration information of the hardware we use <code class="codehilite"><span class="err">toml</span></code> files to define variables.
 This allows for easy import in python.</p>
-<p>For example, saving the following lines in a <code>config.toml</code>:
-<div class="highlight"><pre><span></span><code><span class="k">[Scan.scanner]</span>
+<p>For example, saving the following lines in a <code class="codehilite"><span class="err">config.toml</span></code>:
+<div class="codehilite"><pre><span></span><code><span class="k">[Scan.scanner]</span>
 <span class="n">camera_firmware</span> <span class="o">=</span> <span class="s">&quot;sony_wifi&quot;</span>
 <span class="n">cnc_firmware</span> <span class="o">=</span> <span class="s">&quot;grbl-v1.1&quot;</span>
 <span class="n">gimbal_firmware</span> <span class="o">=</span> <span class="s">&quot;blgimbal&quot;</span>
 </code></pre></div></p>
 <p>In python:
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">toml</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">toml</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">toml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;config.toml&#39;</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
 <span class="p">{</span><span class="s1">&#39;Scan&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;scanner&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;camera_firmware&#39;</span><span class="p">:</span> <span class="s1">&#39;sony_wifi&#39;</span><span class="p">,</span> <span class="s1">&#39;cnc_firmware&#39;</span><span class="p">:</span> <span class="s1">&#39;grbl-v1.1&#39;</span><span class="p">,</span> <span class="s1">&#39;gimbal_firmware&#39;</span><span class="p">:</span> <span class="s1">&#39;blgimbal&#39;</span><span class="p">}}}</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;Scan&quot;</span><span class="p">][</span><span class="s2">&quot;scanner&quot;</span><span class="p">][</span><span class="s2">&quot;camera_firmware&quot;</span><span class="p">])</span>
 <span class="s2">&quot;sony_wifi&quot;</span>
 </code></pre></div></p>
-<h2 id="pizero-camera-rovercam">PiZero camera <code>rovercam</code><a class="headerlink" href="#pizero-camera-rovercam" title="Permanent link">Link</a></h2>
+<h2 id="pizero-camera-rovercam">PiZero camera <code class="codehilite"><span class="err">rovercam</span></code><a class="headerlink" href="#pizero-camera-rovercam" title="Permanent link">Link</a></h2>
 <p><strong>WORK IN PROGRESS!!!!!</strong></p>
 <h3 id="configuring-the-access-point-host-software-hostapd">Configuring the access point host software (hostapd)<a class="headerlink" href="#configuring-the-access-point-host-software-hostapd" title="Permanent link">Link</a></h3>
 <p>Source: Raspberry Foundation <a href="https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md">website</a>.</p>
 <h4 id="1-general-setup">1. General setup<a class="headerlink" href="#1-general-setup" title="Permanent link">Link</a></h4>
-<p>Switch over to <code>systemd-networkd</code>:
-<div class="highlight"><pre><span></span><code><span class="c1"># deinstall classic networking</span>
+<p>Switch over to <code class="codehilite"><span class="err">systemd-networkd</span></code>:
+<div class="codehilite"><pre><span></span><code><span class="c1"># deinstall classic networking</span>
 sudo apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common
 rm -r /etc/network /etc/dhcp
 
@@ -1505,41 +1505,41 @@ apt --autoremove purge avahi-daemon
 apt install libnss-resolve
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 </code></pre></div></p>
-<h4 id="2-configure-wpa_supplicant-as-access-point">2. Configure <code>wpa_supplicant</code> as access point<a class="headerlink" href="#2-configure-wpa_supplicant-as-access-point" title="Permanent link">Link</a></h4>
-<p>To configure <code>wpa_supplicant</code> as access point create this file with your settings for <code>country=</code>, <code>ssid=</code>, <code>psk=</code> and maybe <code>frequency=</code>.
+<h4 id="2-configure-wpa_supplicant-as-access-point">2. Configure <code class="codehilite"><span class="err">wpa_supplicant</span></code> as access point<a class="headerlink" href="#2-configure-wpa_supplicant-as-access-point" title="Permanent link">Link</a></h4>
+<p>To configure <code class="codehilite"><span class="err">wpa_supplicant</span></code> as access point create this file with your settings for <code class="codehilite"><span class="err">country=</span></code>, <code class="codehilite"><span class="err">ssid=</span></code>, <code class="codehilite"><span class="err">psk=</span></code> and maybe <code class="codehilite"><span class="err">frequency=</span></code>.
 You can just copy and paste this in one block to your command line beginning with cat and including both EOF (delimiter EOF will not get part of the file):
-<div class="highlight"><pre><span></span><code>cat &gt; /etc/wpa_supplicant/wpa_supplicant-wlan0.conf &lt;&lt;EOF
-country=DE
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
+<div class="codehilite"><pre><span></span><code><span class="n">cat</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">wpa_supplicant</span><span class="o">/</span><span class="n">wpa_supplicant</span><span class="o">-</span><span class="n">wlan0</span><span class="p">.</span><span class="n">conf</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="n">country</span><span class="o">=</span><span class="n">DE</span>
+<span class="n">ctrl_interface</span><span class="o">=</span><span class="n">DIR</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">wpa_supplicant</span> <span class="k">GROUP</span><span class="o">=</span><span class="n">netdev</span>
+<span class="n">update_config</span><span class="o">=</span><span class="mi">1</span>
 
-network={
-    ssid=&quot;RPiNet&quot;
-    mode=2
-    frequency=2437
-    #key_mgmt=NONE   # uncomment this for an open hotspot
-    # delete next 3 lines if key_mgmt=NONE
-    key_mgmt=WPA-PSK
-    proto=RSN WPA
-    psk=&quot;password&quot;
-}
-EOF
+<span class="n">network</span><span class="o">=</span><span class="err">{</span>
+    <span class="n">ssid</span><span class="o">=</span><span class="ss">&quot;RPiNet&quot;</span>
+    <span class="k">mode</span><span class="o">=</span><span class="mi">2</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="mi">2437</span>
+    <span class="o">#</span><span class="n">key_mgmt</span><span class="o">=</span><span class="k">NONE</span>   <span class="o">#</span> <span class="n">uncomment</span> <span class="n">this</span> <span class="k">for</span> <span class="n">an</span> <span class="k">open</span> <span class="n">hotspot</span>
+    <span class="o">#</span> <span class="k">delete</span> <span class="k">next</span> <span class="mi">3</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">key_mgmt</span><span class="o">=</span><span class="k">NONE</span>
+    <span class="n">key_mgmt</span><span class="o">=</span><span class="n">WPA</span><span class="o">-</span><span class="n">PSK</span>
+    <span class="n">proto</span><span class="o">=</span><span class="n">RSN</span> <span class="n">WPA</span>
+    <span class="n">psk</span><span class="o">=</span><span class="ss">&quot;password&quot;</span>
+<span class="err">}</span>
+<span class="n">EOF</span>
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code>chmod <span class="m">600</span> /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+<div class="codehilite"><pre><span></span><code>chmod <span class="m">600</span> /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 systemctl disable wpa_supplicant.service
 systemctl <span class="nb">enable</span> wpa_supplicant@wlan0.service
 </code></pre></div>
 
 <h4 id="setting-up-a-stand-alone-access-point">Setting up a stand alone access point<a class="headerlink" href="#setting-up-a-stand-alone-access-point" title="Permanent link">Link</a></h4>
 <p>Example for this setup:
-<div class="highlight"><pre><span></span><code>                 wifi
+<div class="codehilite"><pre><span></span><code>                 wifi
 mobile-phone &lt;~.~.~.~.~&gt; <span class="o">(</span>wlan0<span class="o">)</span>RPi<span class="o">(</span>eth0<span class="o">)</span>
             <span class="se">\ </span>            /
            <span class="o">(</span>dhcp<span class="o">)</span>   <span class="m">192</span>.168.4.1
 </code></pre></div>
-Do "General setup" then create the following file to configure <code>wlan0</code>.
+Do "General setup" then create the following file to configure <code class="codehilite"><span class="err">wlan0</span></code>.
 We only have the access point. There is no ethernet device configured.</p>
-<p><div class="highlight"><pre><span></span><code>cat &gt; /etc/systemd/network/08-wlan0.network <span class="s">&lt;&lt;EOF</span>
+<p><div class="codehilite"><pre><span></span><code>cat &gt; /etc/systemd/network/08-wlan0.network <span class="s">&lt;&lt;EOF</span>
 <span class="s">[Match]</span>
 <span class="s">Name=wlan0</span>
 <span class="s">[Network]</span>

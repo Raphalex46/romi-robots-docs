@@ -1568,68 +1568,68 @@
 <p>Follow theses instruction to build conda packages.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Conda packages should be built from the <code>base</code> environment.
-<div class="highlight"><pre><span></span><code>conda activate base
+<p>Conda packages should be built from the <code class="codehilite"><span class="err">base</span></code> environment.
+<div class="codehilite"><pre><span></span><code>conda activate base
 </code></pre></div></p>
 </div>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">Link</a></h2>
-<h3 id="install-conda-build">Install <code>conda-build</code>:<a class="headerlink" href="#install-conda-build" title="Permanent link">Link</a></h3>
-<p>Install <code>conda-build</code>, in the <code>base</code> environment, to be able to build conda package:
-<div class="highlight"><pre><span></span><code>conda install conda-build
+<h3 id="install-conda-build">Install <code class="codehilite"><span class="err">conda-build</span></code>:<a class="headerlink" href="#install-conda-build" title="Permanent link">Link</a></h3>
+<p>Install <code class="codehilite"><span class="err">conda-build</span></code>, in the <code class="codehilite"><span class="err">base</span></code> environment, to be able to build conda package:
+<div class="codehilite"><pre><span></span><code>conda install conda-build
 </code></pre></div>
-<strong>WARNING:</strong> For macOS, follow these <a href="https://docs.conda.io/projects/conda-build/en/latest/resources/compiler-tools.html#macos-sdk">instructions</a> to install the required <code>macOS 10.9 SDK</code>.</p>
-<h3 id="optional-install-anaconda-client">Optional - Install <code>anaconda-client</code>:<a class="headerlink" href="#optional-install-anaconda-client" title="Permanent link">Link</a></h3>
-<p>To be able to upload your package on anaconda cloud you need to install <code>anaconda-client</code>:
-<div class="highlight"><pre><span></span><code>conda install anaconda-client
+<strong>WARNING:</strong> For macOS, follow these <a href="https://docs.conda.io/projects/conda-build/en/latest/resources/compiler-tools.html#macos-sdk">instructions</a> to install the required <code class="codehilite"><span class="err">macOS 10.9 SDK</span></code>.</p>
+<h3 id="optional-install-anaconda-client">Optional - Install <code class="codehilite"><span class="err">anaconda-client</span></code>:<a class="headerlink" href="#optional-install-anaconda-client" title="Permanent link">Link</a></h3>
+<p>To be able to upload your package on anaconda cloud you need to install <code class="codehilite"><span class="err">anaconda-client</span></code>:
+<div class="codehilite"><pre><span></span><code>conda install anaconda-client
 </code></pre></div></p>
 <h2 id="build-conda-packages">Build conda packages:<a class="headerlink" href="#build-conda-packages" title="Permanent link">Link</a></h2>
-<h3 id="build-lettucethink">Build <code>lettucethink</code>:<a class="headerlink" href="#build-lettucethink" title="Permanent link">Link</a></h3>
-<p>Using the given recipe, it is easy to build the <code>lettucethink-python</code> conda package:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
+<h3 id="build-lettucethink">Build <code class="codehilite"><span class="err">lettucethink</span></code>:<a class="headerlink" href="#build-lettucethink" title="Permanent link">Link</a></h3>
+<p>Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">lettucethink-python</span></code> conda package:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
 conda build lettucethink/ --user romi-eu
 </code></pre></div>
 
-<h3 id="build-romidata">Build <code>romidata</code>:<a class="headerlink" href="#build-romidata" title="Permanent link">Link</a></h3>
-<p>Using the given recipe, it is easy to build the <code>romidata</code> conda package:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
+<h3 id="build-romidata">Build <code class="codehilite"><span class="err">romidata</span></code>:<a class="headerlink" href="#build-romidata" title="Permanent link">Link</a></h3>
+<p>Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">romidata</span></code> conda package:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
 conda build romidata/ -c romi-eu -c open3d-admin --user romi-eu
 </code></pre></div>
 
-<h3 id="build-romiscan">Build <code>romiscan</code>:<a class="headerlink" href="#build-romiscan" title="Permanent link">Link</a></h3>
-<p>Using the given recipe, it is easy to build the <code>romiscan</code> conda package:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
+<h3 id="build-romiscan">Build <code class="codehilite"><span class="err">romiscan</span></code>:<a class="headerlink" href="#build-romiscan" title="Permanent link">Link</a></h3>
+<p>Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">romiscan</span></code> conda package:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
 conda build romiscan/ -c romi-eu -c conda-forge -c open3d-admin --user romi-eu
 </code></pre></div>
 
-<h3 id="build-romi-plantviz">Build <code>romi-plantviz</code>:<a class="headerlink" href="#build-romi-plantviz" title="Permanent link">Link</a></h3>
-<p>Using the given recipe, it is easy to build the <code>romi-plantviz</code> conda package:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
+<h3 id="build-romi-plantviz">Build <code class="codehilite"><span class="err">romi-plantviz</span></code>:<a class="headerlink" href="#build-romi-plantviz" title="Permanent link">Link</a></h3>
+<p>Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">romi-plantviz</span></code> conda package:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes/
 conda build romi-plantviz/ -c romi-eu -c conda-forge --user romi-eu
 </code></pre></div>
 
-<h3 id="optional-build-dirsync-package">Optional - Build <code>dirsync</code> package:<a class="headerlink" href="#optional-build-dirsync-package" title="Permanent link">Link</a></h3>
-<p>To build <code>dirsync</code> you have to install <code>hgsvn</code>:
-<div class="highlight"><pre><span></span><code>sudo apt install hgsvn 
+<h3 id="optional-build-dirsync-package">Optional - Build <code class="codehilite"><span class="err">dirsync</span></code> package:<a class="headerlink" href="#optional-build-dirsync-package" title="Permanent link">Link</a></h3>
+<p>To build <code class="codehilite"><span class="err">dirsync</span></code> you have to install <code class="codehilite"><span class="err">hgsvn</span></code>:
+<div class="codehilite"><pre><span></span><code>sudo apt install hgsvn 
 </code></pre></div>
-Using the given recipe, it is easy to build the <code>dirsync</code> conda package:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes
+Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">dirsync</span></code> conda package:
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes
 conda build dirsync/recipe/ --user romi-eu
 </code></pre></div></p>
-<h3 id="optional-build-opencv-python-package">Optional - Build <code>opencv-python</code> package:<a class="headerlink" href="#optional-build-opencv-python-package" title="Permanent link">Link</a></h3>
-<p>To build <code>opencv-python</code> you have to install <code>qt4-qmake</code>:
-<div class="highlight"><pre><span></span><code>sudo apt install qt4-qmake qt4-default
+<h3 id="optional-build-opencv-python-package">Optional - Build <code class="codehilite"><span class="err">opencv-python</span></code> package:<a class="headerlink" href="#optional-build-opencv-python-package" title="Permanent link">Link</a></h3>
+<p>To build <code class="codehilite"><span class="err">opencv-python</span></code> you have to install <code class="codehilite"><span class="err">qt4-qmake</span></code>:
+<div class="codehilite"><pre><span></span><code>sudo apt install qt4-qmake qt4-default
 </code></pre></div></p>
-<p>Using the given recipe, it is easy to build the <code>opencv-python</code> conda package:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conda_recipes
+<p>Using the given recipe, it is easy to build the <code class="codehilite"><span class="err">opencv-python</span></code> conda package:
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conda_recipes
 conda build opencv-python/ -c conda-forge --user romi-eu
 </code></pre></div></p>
 <h2 id="conda-useful-commands">Conda useful commands:<a class="headerlink" href="#conda-useful-commands" title="Permanent link">Link</a></h2>
 <h3 id="purge-built-packages">Purge built packages:<a class="headerlink" href="#purge-built-packages" title="Permanent link">Link</a></h3>
-<div class="highlight"><pre><span></span><code>conda build purge
+<div class="codehilite"><pre><span></span><code>conda build purge
 </code></pre></div>
 
 <h3 id="clean-cache-unused-packages">Clean cache &amp; unused packages:<a class="headerlink" href="#clean-cache-unused-packages" title="Permanent link">Link</a></h3>
-<div class="highlight"><pre><span></span><code>conda clean --all
+<div class="codehilite"><pre><span></span><code>conda clean --all
 </code></pre></div>
                 
                   
