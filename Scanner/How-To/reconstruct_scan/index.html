@@ -1631,20 +1631,20 @@
                 
                 <h1 id="how-to-use-the-plant-reconstruction-and-analysis-pipeline">How to use the plant reconstruction and analysis pipeline?<a class="headerlink" href="#how-to-use-the-plant-reconstruction-and-analysis-pipeline" title="Permanent link">Link</a></h1>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
-<p>To follows this guide you should have a <code>conda</code> or a Python <code>venv</code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
-<h3 id="install-required-dependencies-colmap">Install required dependencies <code>colmap</code>:<a class="headerlink" href="#install-required-dependencies-colmap" title="Permanent link">Link</a></h3>
+<p>To follows this guide you should have a <code class="codehilite"><span class="err">conda</span></code> or a Python <code class="codehilite"><span class="err">venv</span></code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
+<h3 id="install-required-dependencies-colmap">Install required dependencies <code class="codehilite"><span class="err">colmap</span></code>:<a class="headerlink" href="#install-required-dependencies-colmap" title="Permanent link">Link</a></h3>
 <p>Follow the procedure from the official documentation <a href="https://colmap.github.io/install.html#">here</a>.
 Make sure to use version 3.6.</p>
 <p>TODO: use COLMAP python build <a href="https://colmap.github.io/install.html#build-script">script</a> to make conda package?</p>
-<p>Note: If you are using a conda environment, you can install <code>ceres-solver</code> dependency for COLMAP from the conda-forge channel:
-<div class="highlight"><pre><span></span><code>conda install ceres-solver -c conda-forge
+<p>Note: If you are using a conda environment, you can install <code class="codehilite"><span class="err">ceres-solver</span></code> dependency for COLMAP from the conda-forge channel:
+<div class="codehilite"><pre><span></span><code>conda install ceres-solver -c conda-forge
 </code></pre></div></p>
-<p>If you want to use NVIDIA for OpenCL in the processing pipeline, install <code>pyopencl</code> from source, and configure it to use OpenCL 1.2 (NVIDIA does not support the default OpenCL 2.0).</p>
+<p>If you want to use NVIDIA for OpenCL in the processing pipeline, install <code class="codehilite"><span class="err">pyopencl</span></code> from source, and configure it to use OpenCL 1.2 (NVIDIA does not support the default OpenCL 2.0).</p>
 <p>First, make sure you have python headers installed, on ubuntu:
-<div class="highlight"><pre><span></span><code>apt install python3.7-dev
+<div class="codehilite"><pre><span></span><code>apt install python3.7-dev
 </code></pre></div></p>
-<p>Then install <code>pyopencl</code> from source, and configure it to use OpenCL 1.2:
-<div class="highlight"><pre><span></span><code>git clone https://github.com/inducer/pyopencl
+<p>Then install <code class="codehilite"><span class="err">pyopencl</span></code> from source, and configure it to use OpenCL 1.2:
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/inducer/pyopencl
 <span class="nb">cd</span> pyopencl
 git submodule update --init
 pip install pybind11 mako
@@ -1654,62 +1654,61 @@ python setup.py install
 </code></pre></div></p>
 <p><strong>Troubeshooting:</strong></p>
 <ul>
-<li>If you have an error <code>[...] src/wrap_cl.hpp:57:10: fatal error: CL/cl.h [...]</code> you are missing the OpenCL headers: 
-     <div class="highlight"><pre><span></span><code>sudo apt install opencl-headers
+<li>If you have an error <code class="codehilite"><span class="err">[...] src/wrap_cl.hpp:57:10: fatal error: CL/cl.h [...]</span></code> you are missing the OpenCL headers: 
+     <div class="codehilite"><pre><span></span><code>sudo apt install opencl-headers
 </code></pre></div></li>
-<li>If you have an error <code>[...]compiler_compat/ld: cannot find -lOpenCL [...]</code>:
-      <code>bash
-     sudo apt install ocl-icd-libopencl1</code></li>
+<li>If you have an error <code class="codehilite"><span class="err">[...]compiler_compat/ld: cannot find -lOpenCL [...]</span></code>:
+      <code class="codehilite"><span class="err">bash</span><span class="err">     sudo apt install ocl-icd-libopencl1</span></code></li>
 </ul>
-<h3 id="install-romi-packages-with-pip">Install ROMI packages with <code>pip</code>:<a class="headerlink" href="#install-romi-packages-with-pip" title="Permanent link">Link</a></h3>
-<p>This can be done both in the Python <code>venv</code> and the <code>conda</code> environment. </p>
-<h4 id="install-data-storage-sources">Install <code>data-storage</code> sources:<a class="headerlink" href="#install-data-storage-sources" title="Permanent link">Link</a></h4>
+<h3 id="install-romi-packages-with-pip">Install ROMI packages with <code class="codehilite"><span class="err">pip</span></code>:<a class="headerlink" href="#install-romi-packages-with-pip" title="Permanent link">Link</a></h3>
+<p>This can be done both in the Python <code class="codehilite"><span class="err">venv</span></code> and the <code class="codehilite"><span class="err">conda</span></code> environment. </p>
+<h4 id="install-data-storage-sources">Install <code class="codehilite"><span class="err">data-storage</span></code> sources:<a class="headerlink" href="#install-data-storage-sources" title="Permanent link">Link</a></h4>
 <p>Since we will need an active database to performs the reconstruction, we install it as follows:
-<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/data-storage.git@dev
+<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/data-storage.git@dev
 </code></pre></div></p>
-<h4 id="install-romiscanner-sources">Install <code>romiscanner</code> sources:<a class="headerlink" href="#install-romiscanner-sources" title="Permanent link">Link</a></h4>
-<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/romiscanner
+<h4 id="install-romiscanner-sources">Install <code class="codehilite"><span class="err">romiscanner</span></code> sources:<a class="headerlink" href="#install-romiscanner-sources" title="Permanent link">Link</a></h4>
+<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/romiscanner
 </code></pre></div>
 
-<h4 id="install-cgal_bindings_skeletonization-sources">Install <code>cgal_bindings_skeletonization</code> sources:<a class="headerlink" href="#install-cgal_bindings_skeletonization-sources" title="Permanent link">Link</a></h4>
-<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/cgal_bindings_skeletonization
+<h4 id="install-cgal_bindings_skeletonization-sources">Install <code class="codehilite"><span class="err">cgal_bindings_skeletonization</span></code> sources:<a class="headerlink" href="#install-cgal_bindings_skeletonization-sources" title="Permanent link">Link</a></h4>
+<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/cgal_bindings_skeletonization
 </code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This takes some time since it has to download dependencies (<code>CGAL-0.5</code> &amp; <code>boost-1.72.0</code>) and compile them.</p>
+<p>This takes some time since it has to download dependencies (<code class="codehilite"><span class="err">CGAL-0.5</span></code> &amp; <code class="codehilite"><span class="err">boost-1.72.0</span></code>) and compile them.</p>
 </div>
-<h4 id="install-scan3d-sources">Install <code>Scan3D</code> sources:<a class="headerlink" href="#install-scan3d-sources" title="Permanent link">Link</a></h4>
-<div class="highlight"><pre><span></span><code>pip install git+https://github.com/romi/Scan3D@dev
+<h4 id="install-scan3d-sources">Install <code class="codehilite"><span class="err">Scan3D</span></code> sources:<a class="headerlink" href="#install-scan3d-sources" title="Permanent link">Link</a></h4>
+<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/romi/Scan3D@dev
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If not using CUDA 10.*, you have to install the matching <code>pytorch</code> distribution.
+<p>If not using CUDA 10.*, you have to install the matching <code class="codehilite"><span class="err">pytorch</span></code> distribution.
 For example, for CUDA 9.2, use:
-<div class="highlight"><pre><span></span><code>pip install <span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
+<div class="codehilite"><pre><span></span><code>pip install <span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 </code></pre></div></p>
 </div>
 <h2 id="reconstruction-pipeline">Reconstruction pipeline<a class="headerlink" href="#reconstruction-pipeline" title="Permanent link">Link</a></h2>
 <h3 id="test-database">Test database<a class="headerlink" href="#test-database" title="Permanent link">Link</a></h3>
 <p>To quickly create an example DB you can use:
-<div class="highlight"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
+<div class="codehilite"><pre><span></span><code>wget https://db.romi-project.eu/models/test_db.tar.gz
 tar -xf test_db.tar.gz
 </code></pre></div>
-This will create a <code>integration_tests</code> folder with a ready to use test database. </p>
+This will create a <code class="codehilite"><span class="err">integration_tests</span></code> folder with a ready to use test database. </p>
 <h3 id="cleaning-a-dataset">Cleaning a dataset<a class="headerlink" href="#cleaning-a-dataset" title="Permanent link">Link</a></h3>
-<p>If you made a mess, had a failure or just want to start fresh with your dataset, no need to save a copy on the side, you can use the <code>Clean</code> task:
-<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml Clean integration_tests/2019-02-01_10-56-33 --local-scheduler
+<p>If you made a mess, had a failure or just want to start fresh with your dataset, no need to save a copy on the side, you can use the <code class="codehilite"><span class="err">Clean</span></code> task:
+<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml Clean integration_tests/2019-02-01_10-56-33 --local-scheduler
 </code></pre></div>
-Here the config may use the <code>[Clean]</code> section where you can defines the <code>force</code> option:
-<div class="highlight"><pre><span></span><code><span class="k">[Clean]</span>
+Here the config may use the <code class="codehilite"><span class="o">[</span><span class="n">Clean</span><span class="o">]</span><span class="w"></span></code> section where you can defines the <code class="codehilite"><span class="err">force</span></code> option:
+<div class="codehilite"><pre><span></span><code><span class="k">[Clean]</span>
 <span class="n">force</span><span class="o">=</span><span class="kc">true</span>
 </code></pre></div>
-If <code>true</code> the <code>Clean</code> task will run silently, else in interactive mode.</p>
+If <code class="codehilite"><span class="err">true</span></code> the <code class="codehilite"><span class="err">Clean</span></code> task will run silently, else in interactive mode.</p>
 <h3 id="geometric-pipeline">Geometric pipeline<a class="headerlink" href="#geometric-pipeline" title="Permanent link">Link</a></h3>
 <h4 id="real-scan-dataset">Real scan dataset<a class="headerlink" href="#real-scan-dataset" title="Permanent link">Link</a></h4>
 <p>The full <em>geometric pipeline</em>, <em>ie.</em> all the way to angles and internodes measurement, can be called on real dataset with:
-<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml AnglesAndInternodes integration_tests/2019-02-01_10-56-33 --local-scheduler
+<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml AnglesAndInternodes integration_tests/2019-02-01_10-56-33 --local-scheduler
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1717,7 +1716,7 @@ If <code>true</code> the <code>Clean</code> task will run silently, else in inte
 </div>
 <h4 id="virtual-plant-dataset">Virtual plant dataset<a class="headerlink" href="#virtual-plant-dataset" title="Permanent link">Link</a></h4>
 <p>The full <em>geometric pipeline</em>, <em>ie.</em> all the way to angles and internodes measurement, can be called on a virtual dataset with:
-<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml AnglesAndInternodes integration_tests/arabidopsis_26 --local-scheduler
+<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml AnglesAndInternodes integration_tests/arabidopsis_26 --local-scheduler
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1725,12 +1724,12 @@ If <code>true</code> the <code>Clean</code> task will run silently, else in inte
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you get something like this during the <code>Voxel</code> tasks:
-<div class="highlight"><pre><span></span><code>Choose platform:
-[0] &lt;pyopencl.Platform &#39;NVIDIA CUDA&#39; at 0x55d904d5af50&gt;
-Choice [0]:
+<p>If you get something like this during the <code class="codehilite"><span class="err">Voxel</span></code> tasks:
+<div class="codehilite"><pre><span></span><code><span class="err">Choose platform:</span>
+<span class="err">[0] &lt;pyopencl.Platform &#39;NVIDIA CUDA&#39; at 0x55d904d5af50&gt;</span>
+<span class="err">Choice [0]:</span>
 </code></pre></div>
-that mean you need to specify the environment variable <code>PYOPENCL_CTX='0'</code></p>
+that mean you need to specify the environment variable <code class="codehilite"><span class="err">PYOPENCL_CTX=&#39;0&#39;</span></code></p>
 </div>
 <h3 id="machine-learning-pipeline">Machine Learning pipeline<a class="headerlink" href="#machine-learning-pipeline" title="Permanent link">Link</a></h3>
 <div class="admonition warning">
@@ -1739,11 +1738,11 @@ that mean you need to specify the environment variable <code>PYOPENCL_CTX='0'</c
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A trained model, to place under <code>&lt;dataset&gt;/models/models</code>, is accessible here: <a href="https://media.romi-project.eu/data/Resnetdataset_gl_png_896_896_epoch50.pt">https://media.romi-project.eu/data/Resnetdataset_gl_png_896_896_epoch50.pt</a></p>
+<p>A trained model, to place under <code class="codehilite"><span class="err">&lt;dataset&gt;/models/models</span></code>, is accessible here: <a href="https://media.romi-project.eu/data/Resnetdataset_gl_png_896_896_epoch50.pt">https://media.romi-project.eu/data/Resnetdataset_gl_png_896_896_epoch50.pt</a></p>
 </div>
 <h4 id="real-scan-dataset_1">Real scan dataset<a class="headerlink" href="#real-scan-dataset_1" title="Permanent link">Link</a></h4>
 <p>The full <em>geometric pipeline</em>, <em>ie.</em> all the way to angles and internodes measurement, can be called on real dataset with:
-<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/ml_pipe_vplants_3.toml PointCloud integration_tests/2019-02-01_10-56-33 --local-scheduler
+<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/ml_pipe_vplants_3.toml PointCloud integration_tests/2019-02-01_10-56-33 --local-scheduler
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1751,7 +1750,7 @@ that mean you need to specify the environment variable <code>PYOPENCL_CTX='0'</c
 </div>
 <h4 id="virtual-plant-dataset_1">Virtual plant dataset<a class="headerlink" href="#virtual-plant-dataset_1" title="Permanent link">Link</a></h4>
 <p>The full <em>geometric pipeline</em>, <em>ie.</em> all the way to angles and internodes measurement, can be called on a virtual dataset with:
-<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/ml_pipe_vplants_3.toml PointCloud integration_tests/arabidopsis_26 --local-scheduler
+<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/ml_pipe_vplants_3.toml PointCloud integration_tests/arabidopsis_26 --local-scheduler
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
