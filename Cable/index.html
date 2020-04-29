@@ -1516,7 +1516,7 @@
 <li>Resizes the file system to fill the SD card before booting following this instructions.</li>
 <li>Acces to the  raspi-config utility:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="nv">$computer</span>:~<span class="nv">$sudo</span> raspi-config
+<div class="highlight"><pre><span></span><code><span class="nv">$computer</span>:~<span class="nv">$sudo</span> raspi-config
 </code></pre></div>
 
 <ul>
@@ -1527,19 +1527,19 @@
 <p>The Ubiquityrobotics images come up as a Wifi acces point. The SSID is ubiquityrobotXXXX where XXXX is part of the MAC address. Connect to the wifi hostopost and use folowing wifi password:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code>robotseverywhere
+<div class="highlight"><pre><span></span><code>robotseverywhere
 </code></pre></div>
 
 <ol>
 <li>Once connected, it is possible to log into the Pi with ssh ubuntu@10.42.0.1 with the following password of:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>ubuntu
+<div class="highlight"><pre><span></span><code>ubuntu
 </code></pre></div>
 
 <ol>
 <li>Desable the default robots and node runing on the pi.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:<span class="nv">$sudo</span> systemctl disable magni-base
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:<span class="nv">$sudo</span> systemctl disable magni-base
 </code></pre></div>
 
 <h3 id="raspberry-pi-setting-up-the-wiredbot-to-the-network">Raspberry Pi - Setting up the WIREDBOT to the Network<a class="headerlink" href="#raspberry-pi-setting-up-the-wiredbot-to-the-network" title="Permanent link">Link</a></h3>
@@ -1547,89 +1547,89 @@
 <li>Open a new terminal window, and log in to the robot with ssh:</li>
 </ol>
 <p><strong>ATENTION</strong>: The HOSTNAME for firts time is “ubiquityrobot.local”.</p>
-<div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@ubiquityrobot.local
+<div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@ubiquityrobot.local
 </code></pre></div>
 
 <p><strong>ATENTION</strong>: The password for firts time is “ubuntu”.</p>
 <ol>
 <li>Change the hostname using pifi. Type the following command:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> pifi set-hostname wiredbot
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> pifi set-hostname wiredbot
 </code></pre></div>
 
 <ol>
 <li>Reboot the Pi.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> reboot
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> reboot
 </code></pre></div>
 
 <ol>
 <li>Log in to the robot with the new hostname "wiredbot":</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wiredbot.local
+<div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wiredbot.local
 </code></pre></div>
 
 <ol>
 <li>Use pifi to list the nearby networks:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$pifi</span> list seen
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$pifi</span> list seen
 </code></pre></div>
 
 <p><strong>ATENTION</strong>: Search for the network where the robots are connected.</p>
 <ol>
 <li>Swich to to the desire network by using the following command.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@NEWHOSTNAME:~<span class="nv">$sudo</span> pifi add localNetwork password
+<div class="highlight"><pre><span></span><code>$ ubuntu@NEWHOSTNAME:~<span class="nv">$sudo</span> pifi add localNetwork password
 </code></pre></div>
 
 <p><strong>ATTENTION</strong>: The keyword "localNetwork" on this documentation refert to the network the robot need to be connected. The keyword "pass" on this documentation refer to the password of the network.</p>
 <ol>
 <li>Reboot the Pi.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> reboot
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> reboot
 </code></pre></div>
 
 <ol>
 <li>Test the connectivity with the Pi. Open a new terminal window on a external on a diferent computer:</li>
 </ol>
-<p><div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$ping</span> wirebot.local
+<p><div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$ping</span> wirebot.local
 </code></pre></div>
 <strong>TIP</strong>: Press control-c to stop the pinging
 <strong>ADVERTENCE</strong>: If something goes wrong, the PI will come back up as access point mode. Search on the network for the name ubiquityrobot, reboot and start over.</p>
 <ol>
 <li>Log into the PI by using:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wirebot.local
+<div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wirebot.local
 </code></pre></div>
 
 <p>the output will be:
-<div class="codehilite"><pre><span></span><code>The authenticity of host ‘10.0.0.113 <span class="o">(</span><span class="m">10</span>.0.0.113<span class="o">)</span>’ can’t be established. ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc. Are you sure you want to <span class="k">continue</span> connecting <span class="o">(</span>yes/no<span class="o">)</span>?
+<div class="highlight"><pre><span></span><code>The authenticity of host ‘10.0.0.113 <span class="o">(</span><span class="m">10</span>.0.0.113<span class="o">)</span>’ can’t be established. ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc. Are you sure you want to <span class="k">continue</span> connecting <span class="o">(</span>yes/no<span class="o">)</span>?
 </code></pre></div></p>
 <p>continue by wrinting:</p>
-<div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$yes</span>
+<div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$yes</span>
 </code></pre></div>
 
 <p>the password is still.</p>
-<div class="codehilite"><pre><span></span><code>ubuntu
+<div class="highlight"><pre><span></span><code>ubuntu
 </code></pre></div>
 
 <ol>
 <li>Update and updagrade de Pi.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get update
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get update
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get upgrade
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get upgrade
 </code></pre></div>
 
 <h3 id="ros-setting-up-the-ros-nodes-and-arduino-firmware">ROS - Setting up the ROS NODES and Arduino Firmware.<a class="headerlink" href="#ros-setting-up-the-ros-nodes-and-arduino-firmware" title="Permanent link">Link</a></h3>
 <ol>
 <li>Make sure you have installed the resent updates and updagrades.</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get update
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get update
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get upgrade
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$sudo</span> apt-get upgrade
 </code></pre></div>
 
 <ol>
@@ -1640,20 +1640,20 @@
 <p>Clone the repository on the Pi, the romi/grlbl_serial into the /src folder of your catkin workspace and rebuild your workspace:</p>
 </li>
 </ol>
-<p><div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$cd</span> ~/catkin_ws/src/
+<p><div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$cd</span> ~/catkin_ws/src/
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$git</span> clone git@github.com:romi/grlbl_serial.git
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$git</span> clone git@github.com:romi/grlbl_serial.git
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$catkin_make</span>
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$catkin_make</span>
 </code></pre></div></p>
 <ol>
 <li>Clone the repository on the Pi, the romi/i2c_pca9685_driver  into the /src folder of your catkin workspace and rebuild your workspace:</li>
 </ol>
-<p><div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$cd</span> ~/catkin_ws/src/
+<p><div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$cd</span> ~/catkin_ws/src/
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$git</span> clone git@github.com:romi/i2c_pca9685_driver.git
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$git</span> clone git@github.com:romi/i2c_pca9685_driver.git
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$catkin_make</span>
+<div class="highlight"><pre><span></span><code>$ ubuntu@wiredbot:~<span class="nv">$catkin_make</span>
 </code></pre></div></p>
 <h3 id="wiring-diagram">Wiring diagram.<a class="headerlink" href="#wiring-diagram" title="Permanent link">Link</a></h3>
 <ol>
@@ -1832,51 +1832,51 @@
 <p>Log into the raspberry PI by using:</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wirebot.local
+<div class="highlight"><pre><span></span><code>$ computer:~<span class="nv">$ssh</span> ubuntu@wirebot.local
 </code></pre></div>
 
 <ul>
 <li>(OPTIONAL) Edit the path planning according to the dimensions of the field to scan and the desired length and amount of waypoints.</li>
 </ul>
-<p><div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> nano ~/catkin_ws/src/grlbl_serial/src/path_planning_action_client.py
+<p><div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$sudo</span> nano ~/catkin_ws/src/grlbl_serial/src/path_planning_action_client.py
 </code></pre></div>
 * Edit the path_planning_action_client.py by changing the variable <strong>movement_goal.xyz_position</strong> that is under the function <strong>def path_planning_client()</strong>. Here is an example of a Path planning that takes pictures of every 500mm in a distance of 10mts:
-<div class="codehilite"><pre><span></span><code><span class="err">    movement_goal.xyz_position = [&quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:1000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:1500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:2000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:2500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:3000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:3500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:4000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:4500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:5000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:5500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:6000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:6500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:7000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:7500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:8000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:8500, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:9000, &#39;delay&#39;:20}&quot;,</span>
-<span class="err">                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:9500, &#39;delay&#39;:20}&quot;]</span>
+<div class="highlight"><pre><span></span><code>    movement_goal.xyz_position = [&quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:1000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:1500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:2000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:2500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:3000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:3500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:4000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:4500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:5000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:5500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:6000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:6500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:7000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:7500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:8000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:8500, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:9000, &#39;delay&#39;:20}&quot;,
+                                  &quot;{&#39;x&#39;:0, &#39;y&#39;:0, &#39;z&#39;:9500, &#39;delay&#39;:20}&quot;]
 </code></pre></div></p>
 <ul>
 <li>Start up the nodes and the ROS master by launching the path_planning_action_server_node node under the raspberry PI:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_server_node.launch
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_server_node.launch
 </code></pre></div>
 
 <ul>
 <li><strong>(ADVERTENCE)</strong> If the ROS package is not under the autocomplete method of the terminal. The problem will be solve by sourcing the devel/setup.bash.</li>
 </ul>
-<p><div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$source</span> ~/catkin_ws/src/devel/setup.bash
+<p><div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$source</span> ~/catkin_ws/src/devel/setup.bash
 </code></pre></div>
 3. ROS Slave - Run ROS Nodes over the Remote Computer.</p>
 <ul>
 <li>Start up the nodes by launching the path_planning_action_client_node node under the remote computer:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_client_node.launch
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_client_node.launch
 </code></pre></div>
 
 <ul>
@@ -1891,13 +1891,13 @@
 <ul>
 <li>Kepp running or re start  the node and the ROS master by launching the path_planning_action_server_node node under the raspberry PI:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_server_node.launch
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$roslaunch</span> grlbl_serial path_planning_action_server_node.launch
 </code></pre></div>
 
 <ul>
 <li>Publish a 1500us to the /i2c_pca9685_driver wiredbot_PWMValues/wiredbot_PWMValues mapir_control_pwm:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$rostopic</span> pub -1 /i2c_pca9685_driver wiredbot_PWMValues/wiredbot_PWMValues 
+<div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$rostopic</span> pub -1 /i2c_pca9685_driver wiredbot_PWMValues/wiredbot_PWMValues 
 int16 mapir_control_pwm <span class="m">1500</span>
 int16 motor_A_pwm
 int16 motor_B_pwm
@@ -1906,7 +1906,7 @@ int16 motor_B_pwm
 <ul>
 <li>Once ros is publishing the message mapir_control_pwm 1500us under the topic \i2c_pca9685_driver\wiredbot_PWMValues. The camera is ready to mount. On the raspberry PI. Mount the camera by using the following commands.</li>
 </ul>
-<p><div class="codehilite"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$mkdir</span> /mapir
+<p><div class="highlight"><pre><span></span><code>$ ubuntu@ubiquityrobot.local:~<span class="nv">$mkdir</span> /mapir
 $ ubuntu@ubiquityrobot.local:~<span class="nv">$mkdir</span> sudo mount -t vfat /dev/sdb2 /mapir
 $ ubuntu@ubiquityrobot.local:~<span class="nv">$cd</span> /mapir/DCMI/Photos
 </code></pre></div>

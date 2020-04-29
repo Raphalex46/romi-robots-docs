@@ -1509,19 +1509,19 @@
                 
                 <h1 id="how-to-generate-a-virtual-scan">How to generate a virtual scan?<a class="headerlink" href="#how-to-generate-a-virtual-scan" title="Permanent link">Link</a></h1>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
-<p>To follows this guide you should have a <code class="codehilite"><span class="err">conda</span></code> or a Python <code class="codehilite"><span class="err">venv</span></code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
+<p>To follows this guide you should have a <code>conda</code> or a Python <code>venv</code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
 <h3 id="notice-for-using-the-virtual-scanner">Notice for using the virtual scanner<a class="headerlink" href="#notice-for-using-the-virtual-scanner" title="Permanent link">Link</a></h3>
 <p>If you want to use the virtual scanner, the blender and python version have to match.
 To obtain the python version bundled with your distribution of blender, type:
-<div class="codehilite"><pre><span></span><code><span class="n">blender</span> <span class="o">-</span><span class="n">b</span> <span class="o">--</span><span class="n">python</span><span class="o">-</span><span class="n">expr</span> <span class="s2">&quot;import sys; print(sys.version)&quot;</span>
+<div class="highlight"><pre><span></span><code>blender -b --python-expr &quot;import sys; print(sys.version)&quot;
 </code></pre></div></p>
 <p>It will output something like:
-<div class="codehilite"><pre><span></span><code><span class="n">Blender</span> <span class="mi">2</span><span class="p">.</span><span class="mi">82</span> <span class="p">(</span><span class="n">sub</span> <span class="mi">7</span><span class="p">)</span> <span class="p">(</span><span class="n">hash</span> <span class="mi">5</span><span class="n">b416ffb848e</span> <span class="n">built</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">ALSA</span> <span class="n">lib</span> <span class="n">pcm_dmix</span><span class="p">.</span><span class="k">c</span><span class="p">:</span><span class="mi">1089</span><span class="p">:(</span><span class="n">snd_pcm_dmix_open</span><span class="p">)</span> <span class="n">unable</span> <span class="k">to</span> <span class="k">open</span> <span class="n">slave</span>
-<span class="mi">3</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">1</span> <span class="p">(</span><span class="k">default</span><span class="p">,</span> <span class="n">Jan</span> <span class="mi">22</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">06</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">00</span><span class="p">)</span> 
-<span class="p">[</span><span class="n">GCC</span> <span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code>Blender 2.82 (sub 7) (hash 5b416ffb848e built 2020-02-14 16:19:45)
+ALSA lib pcm_dmix.c:1089:(snd_pcm_dmix_open) unable to open slave
+3.8.1 (default, Jan 22 2020, 06:38:00) 
+[GCC 9.2.0]
 
-<span class="n">Blender</span> <span class="n">quit</span>
+Blender quit
 </code></pre></div>
 In this case, this means python is using Python 3.8 and you should use python 3.8.
 The blender binaries found on their website bundle Python 3.8.
@@ -1530,7 +1530,7 @@ If not, adapt with corresponding virtualenv commands.</p>
 <h3 id="install-romi-packages-their-dependencies">Install ROMI packages &amp; their dependencies:<a class="headerlink" href="#install-romi-packages-their-dependencies" title="Permanent link">Link</a></h3>
 <h4 id="install-lpy-for-virtual-scans">Install LPY (for virtual scans)<a class="headerlink" href="#install-lpy-for-virtual-scans" title="Permanent link">Link</a></h4>
 <p>If you're using python 3.7 and conda, just install lpy from conda:
-<div class="codehilite"><pre><span></span><code><span class="err">conda install -c conda-forge -c fredboudon openalea.lpy</span>
+<div class="highlight"><pre><span></span><code>conda install -c conda-forge -c fredboudon openalea.lpy
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1538,32 +1538,32 @@ If not, adapt with corresponding virtualenv commands.</p>
 </div>
 <h2 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">Link</a></h2>
 <p>The virtual scanner works like an HTTP server using Blender.
-First, make sure you have <code class="codehilite"><span class="err">blender</span></code> (&gt;= 2.80) installed on your machine.</p>
+First, make sure you have <code>blender</code> (&gt;= 2.80) installed on your machine.</p>
 <p>Then, clone the directory and access it:
-<div class="codehilite"><pre><span></span><code>git clone git@github.com:romi/blender_virtual_scanner.git
+<div class="highlight"><pre><span></span><code>git clone git@github.com:romi/blender_virtual_scanner.git
 <span class="nb">cd</span> blender_virtual_scanner
 </code></pre></div></p>
 <p>You can obtain sample data for the scanner here, and put it in the data
 folder.
-<div class="codehilite"><pre><span></span><code>wget https://db.romi-project.eu/models/arabidopsis_data.zip
+<div class="highlight"><pre><span></span><code>wget https://db.romi-project.eu/models/arabidopsis_data.zip
 unzip arabidopsis_data.zip -d data
 </code></pre></div></p>
-<p>To use custom data, it must consist in <code class="codehilite"><span class="na">.obj</span></code> file, in which each type of organ corresponds to a distinct mesh.
+<p>To use custom data, it must consist in <code>.obj</code> file, in which each type of organ corresponds to a distinct mesh.
 This mesh must have a single material whose name is the name of the organ.
-The data dir must contain the <code class="codehilite"><span class="err">obj</span></code> and <code class="codehilite"><span class="err">mtl</span></code> files.</p>
+The data dir must contain the <code>obj</code> and <code>mtl</code> files.</p>
 <p>Additionally, background HDRI files can be downloaded from (hdri haven)[<a href="https://hdrihaven.com/">https://hdrihaven.com/</a>].
-Download <code class="codehilite"><span class="na">.hdr</span></code> files and put them in the <code class="codehilite"><span class="err">hdri</span></code> folder.</p>
+Download <code>.hdr</code> files and put them in the <code>hdri</code> folder.</p>
 <p>To start the virtual scanner, run the following script in blender:
-<div class="codehilite"><pre><span></span><code>blender <span class="o">[</span>scene/texture.blend<span class="o">]</span> -b -P scan.py
+<div class="highlight"><pre><span></span><code>blender <span class="o">[</span>scene/texture.blend<span class="o">]</span> -b -P scan.py
 </code></pre></div></p>
-<p>It will start an HTTP server on port <code class="codehilite"><span class="err">5000</span></code>.</p>
+<p>It will start an HTTP server on port <code>5000</code>.</p>
 <h3 id="preparing-data">Preparing data<a class="headerlink" href="#preparing-data" title="Permanent link">Link</a></h3>
 <p>If you have 3D models with a single mesh</p>
-<h3 id="running-a-scan-with-romiscan-and-lettucethink">Running a scan (with <code class="codehilite"><span class="err">romiscan</span></code> and <code class="codehilite"><span class="err">lettucethink</span></code>)<a class="headerlink" href="#running-a-scan-with-romiscan-and-lettucethink" title="Permanent link">Link</a></h3>
-<p>The virtual scanner is integrated in lettucethink-python, so that it can be used directly with the <code class="codehilite"><span class="err">Scan</span></code> task in <code class="codehilite"><span class="err">romi_run_task</span></code>.</p>
+<h3 id="running-a-scan-with-romiscan-and-lettucethink">Running a scan (with <code>romiscan</code> and <code>lettucethink</code>)<a class="headerlink" href="#running-a-scan-with-romiscan-and-lettucethink" title="Permanent link">Link</a></h3>
+<p>The virtual scanner is integrated in lettucethink-python, so that it can be used directly with the <code>Scan</code> task in <code>romi_run_task</code>.</p>
 <p>Here is a sample configuration for the virtual scanner creating 640x480 images with ground truth segmentation of organs.
-The server mentioned above must be running before running <code class="codehilite"><span class="err">romi_run_task</span></code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[Scan.scanner]</span>
+The server mentioned above must be running before running <code>romi_run_task</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Scan.scanner]</span>
 <span class="n">camera_firmware</span> <span class="o">=</span> <span class="s">&quot;virtual&quot;</span>
 <span class="n">cnc_firmware</span> <span class="o">=</span> <span class="s">&quot;virtual&quot;</span>
 <span class="n">gimbal_firmware</span> <span class="o">=</span> <span class="s">&quot;virtual&quot;</span>
@@ -1603,18 +1603,18 @@ The server mentioned above must be running before running <code class="codehilit
 </code></pre></div>
 
 <h3 id="running-the-pipeline-with-ground-truth-poses-without-colmap">Running the pipeline with ground-truth poses (without Colmap)<a class="headerlink" href="#running-the-pipeline-with-ground-truth-poses-without-colmap" title="Permanent link">Link</a></h3>
-<p>To run the pipeline without <code class="codehilite"><span class="err">colmap</span></code> and use the virtual scanner poses as a ground
+<p>To run the pipeline without <code>colmap</code> and use the virtual scanner poses as a ground
 truth, one must use set the following parameters:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[Voxels]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Voxels]</span>
 <span class="n">use_colmap_poses</span> <span class="o">=</span> <span class="kc">false</span>
 <span class="k">[Masks]</span>
 <span class="n">upstream_task</span> <span class="o">=</span> <span class="n">Scan</span>
 </code></pre></div>
 
-<p>Then the pipeline can be run as usual and <code class="codehilite"><span class="err">colmap</span></code> will not be run.</p>
+<p>Then the pipeline can be run as usual and <code>colmap</code> will not be run.</p>
 <h3 id="testing-the-reconstruction-pipeline-on-a-virtual-scan">Testing the reconstruction pipeline on a <em>virtual scan</em><a class="headerlink" href="#testing-the-reconstruction-pipeline-on-a-virtual-scan" title="Permanent link">Link</a></h3>
-<p>To test the plant reconstruction pipeline on an example <em>virtual scan</em> (<code class="codehilite"><span class="err">arabidopsis_26</span></code>):
-<div class="codehilite"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml PointCloud integration_tests/arabidopsis_26 --local-scheduler
+<p>To test the plant reconstruction pipeline on an example <em>virtual scan</em> (<code>arabidopsis_26</code>):
+<div class="highlight"><pre><span></span><code>romi_run_task --config Scan3D/config/original_pipe_0.toml PointCloud integration_tests/arabidopsis_26 --local-scheduler
 </code></pre></div>
 This should process all dependencies to obtain a segmented "PointCloud.ply" !</p>
                 

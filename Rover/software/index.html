@@ -1566,25 +1566,25 @@ follow the instructions that suit you best.</p>
 (ethernet), power up the board and log in (user <em>pi</em>, password
 <em>raspberry</em>). The first thing you want to do is change some of the
 default settings using the raspi-config tool. In the console type:</p>
-<div class="codehilite"><pre><span></span><code>$ sudo raspi-config
+<div class="highlight"><pre><span></span><code>$ sudo raspi-config
 </code></pre></div>
 
 <p>The list of settings that you may want to look at includes:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">1 Change User Password</span>
-<span class="err">2 Network Options</span>
-<span class="err">   Hostname</span>
-<span class="err">   WiFi</span>
-<span class="err">4 Localisation Options</span>
-<span class="err">   Change locales</span>
-<span class="err">   Change keyboard layout</span>
-<span class="err">5 Interfacing Options</span>
-<span class="err">   Enable Camera</span>
-<span class="err">   Enable SSH</span>
-<span class="err">8 Update</span>
+<div class="highlight"><pre><span></span><code>1 Change User Password
+2 Network Options
+   Hostname
+   WiFi
+4 Localisation Options
+   Change locales
+   Change keyboard layout
+5 Interfacing Options
+   Enable Camera
+   Enable SSH
+8 Update
 </code></pre></div>
 
 <p>Next, create the user ‘romi’: </p>
-<div class="codehilite"><pre><span></span><code>$ sudo adduser romi
+<div class="highlight"><pre><span></span><code>$ sudo adduser romi
 $ sudo adduser romi dialout
 $ sudo adduser romi video
 $ sudo adduser romi sudo
@@ -1593,19 +1593,19 @@ $ sudo adduser romi sudo
 <p>After that, quit the current session and login again as user ‘romi’.</p>
 <p>The <em>nano</em> text editor is installed by default but if you prefer
 anoher editor, now is a good time to install it:</p>
-<div class="codehilite"><pre><span></span><code>$ sudo apt install emacs-nox <span class="o">(</span>... or any editor you like :<span class="o">)</span>
+<div class="highlight"><pre><span></span><code>$ sudo apt install emacs-nox <span class="o">(</span>... or any editor you like :<span class="o">)</span>
 </code></pre></div>
 
 <p>Install the developer tools:
-<div class="codehilite"><pre><span></span><code>$ sudo apt install build-essential cmake git
+<div class="highlight"><pre><span></span><code>$ sudo apt install build-essential cmake git
 </code></pre></div></p>
 <p>Install the software dependencies: 
-<div class="codehilite"><pre><span></span><code>$ sudo apt install libpng-dev libjpeg9-dev
+<div class="highlight"><pre><span></span><code>$ sudo apt install libpng-dev libjpeg9-dev
 </code></pre></div>
 That's it. You should be ready.</p>
 <div class="admonition tips">
 <p class="admonition-title">Quick install</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Install the dependencies</span>
 sudo apt install build-essential cmake git libpng-dev libjpeg9-dev
@@ -1649,11 +1649,11 @@ documentation.</p>
 <a href="https://github.com/romi/romi-brush-motor-controller">Github</a>) too.</p>
 <p>Once that is done, the installation of the romi-rover apps is
 straight-forward. First, check out the code:</p>
-<div class="codehilite"><pre><span></span><code>$ git clone https://github.com/romi/romi-rover.git 
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/romi/romi-rover.git 
 </code></pre></div>
 
 <p>Then proceed to the compilation and installation:
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover
 $ mkdir build
 $ <span class="nb">cd</span> build
 $ cmake ..
@@ -1664,7 +1664,7 @@ $ sudo make install
 <p>Although not currently used by the ROMI Rover, we have an Rcom app to
 access the Picamera. To get it working, you will first have to install
 the <em>raspicam</em> library:</p>
-<div class="codehilite"><pre><span></span><code>$ git clone https://github.com/cedricve/raspicam.git
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/cedricve/raspicam.git
 $ <span class="nb">cd</span> raspicam/
 $ mkdir build
 $ <span class="nb">cd</span> build/
@@ -1676,7 +1676,7 @@ $ sudo ldconfig
 
 <p>Once raspicam is installed, you must re-run cmake to enable the
 compilation of the picamera app:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover/build/
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover/build/
 $ rm CMakeCache.txt
 $ cmake .. -DWITH_PICAMERA<span class="o">=</span>ON
 $ make
@@ -1690,7 +1690,7 @@ will first have to install
 <a href="https://github.com/IntelRealSense/librealsense/"><em>librealsense2</em></a>.</p>
 <p>When librealsense is installed, re-run cmake to enable the compilation
 of the realsense app:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover/build/
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> romi-rover/build/
 $ rm CMakeCache.txt
 $ cmake .. -DWITH_REALSENSE<span class="o">=</span>ON
 $ make
@@ -1701,7 +1701,7 @@ $ sudo make install
 <h3 id="configuring-the-romi-rover-apps">Configuring the romi-rover apps<a class="headerlink" href="#configuring-the-romi-rover-apps" title="Permanent link">Link</a></h3>
 <p>In the directory /home/romi, create the following directories and copy
 the default configuration and script files:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> /home/romi
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> /home/romi
 $ mkdir sessions
 $ mkdir config
 $ cp &lt;romi-rover&gt;/config/config-romi-rover.json config/
@@ -1716,41 +1716,41 @@ $ cp &lt;romi-rover&gt;/script/config-default.json scripts/
 <h3 id="starting-the-apps-on-boot">Starting the apps on boot<a class="headerlink" href="#starting-the-apps-on-boot" title="Permanent link">Link</a></h3>
 <p>Currently we are still using the old rc.local mechanism. The file
 /etc/rc.local is no longer included in more recent Ubuntu versions. If
-<code class="codehilite"><span class="err">ls /etc/rc.local</span></code> returns an error, you will have to create the file
+<code>ls /etc/rc.local</code> returns an error, you will have to create the file
 as follows:</p>
-<div class="codehilite"><pre><span></span><code>$ sudo nano /etc/rc.local
+<div class="highlight"><pre><span></span><code>$ sudo nano /etc/rc.local
 </code></pre></div>
 
 <p>Copy the following contents:</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh -e</span>
-<span class="c1">#</span>
-<span class="c1"># rc.local</span>
-<span class="c1">#</span>
-<span class="c1"># This script is executed at the end of each multiuser runlevel.</span>
-<span class="c1"># Make sure that the script will &quot;exit 0&quot; on success or any other</span>
-<span class="c1"># value on error.</span>
-<span class="c1">#</span>
-<span class="c1"># In order to enable or disable this script just change the execution</span>
-<span class="c1"># bits.</span>
-<span class="c1">#</span>
-<span class="c1"># By default this script does nothing.</span>
+<div class="highlight"><pre><span></span><code>#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will &quot;exit 0&quot; on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
 
-<span class="nb">exit</span> <span class="m">0</span>
+exit 0
 </code></pre></div>
 
 <p>Finally, make the script executable.
-<div class="codehilite"><pre><span></span><code>$ sudo chmod +x /etc/rc.local
+<div class="highlight"><pre><span></span><code>$ sudo chmod +x /etc/rc.local
 </code></pre></div></p>
 <p>To enable the apps on start-up, add the following line in
-/etc/rc.local, above the <code class="codehilite"><span class="err">exit 0</span></code> line:</p>
-<div class="codehilite"><pre><span></span><code>/usr/local/bin/rclaunch /home/romi/config/config-romi-rover.json <span class="p">&amp;</span>
+/etc/rc.local, above the <code>exit 0</code> line:</p>
+<div class="highlight"><pre><span></span><code>/usr/local/bin/rclaunch /home/romi/config/config-romi-rover.json <span class="p">&amp;</span>
 </code></pre></div>
 
 <h3 id="configuring-the-image-uploads">Configuring the image uploads<a class="headerlink" href="#configuring-the-image-uploads" title="Permanent link">Link</a></h3>
 <h2 id="annex-the-apps-and-their-options">Annex: the apps and their options<a class="headerlink" href="#annex-the-apps-and-their-options" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="err">    &quot;fake_camera&quot;: {</span>
-<span class="err">        &quot;image&quot;: &quot;data/camera.jpg&quot;</span>
-<span class="err">    },</span>
+<div class="highlight"><pre><span></span><code>    &quot;fake_camera&quot;: {
+        &quot;image&quot;: &quot;data/camera.jpg&quot;
+    },
 </code></pre></div>
                 
                   

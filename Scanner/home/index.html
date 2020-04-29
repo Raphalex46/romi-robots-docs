@@ -1571,7 +1571,7 @@
 </ol>
 <h2 id="modular-architecture">Modular architecture<a class="headerlink" href="#modular-architecture" title="Permanent link">Link</a></h2>
 <p>As we don't want to always have to install every repository from the ROMI project, we need to properly organize our code to make it modular.
-For example, there is no point to install the <code class="codehilite"><span class="err">lettucethink-python</span></code> package on a server used to perform <em>plant reconstruction tasks</em> and that is not "attached" to the RPS.</p>
+For example, there is no point to install the <code>lettucethink-python</code> package on a server used to perform <em>plant reconstruction tasks</em> and that is not "attached" to the RPS.</p>
 <h3 id="modular-design">Modular design<a class="headerlink" href="#modular-design" title="Permanent link">Link</a></h3>
 <p>The following figure shows each independent module and the way they interact.</p>
 <p><img src="/assets/images/intract_plan.png" alt="Plant scanner overview" width="800" /></p>
@@ -1591,31 +1591,31 @@ For example, there is no point to install the <code class="codehilite"><span cla
 <td align="center"></td>
 <td>DB</td>
 <td>romi_db</td>
-<td><code class="codehilite"><span class="err">data-storage</span></code></td>
+<td><code>data-storage</code></td>
 </tr>
 <tr>
 <td align="center"></td>
 <td>PlantScanner</td>
 <td>romi_scan</td>
-<td><code class="codehilite"><span class="err">lettucethink-python</span></code>, <code class="codehilite"><span class="err">romiscanner</span></code></td>
+<td><code>lettucethink-python</code>, <code>romiscanner</code></td>
 </tr>
 <tr>
 <td align="center"></td>
 <td>SmartInterpreter</td>
 <td>romi_interpreter</td>
-<td><code class="codehilite"><span class="err">Scan3D</span></code>, <code class="codehilite"><span class="err">romiseg</span></code></td>
+<td><code>Scan3D</code>, <code>romiseg</code></td>
 </tr>
 <tr>
 <td align="center"></td>
 <td>Visualizer</td>
 <td>romi_viz</td>
-<td><code class="codehilite"><span class="err">3d-plantviewer</span></code></td>
+<td><code>3d-plantviewer</code></td>
 </tr>
 <tr>
 <td align="center"></td>
 <td>VirtualScanner</td>
 <td>romi_virtual</td>
-<td><code class="codehilite"><span class="err">VirtualPlants</span></code>, <code class="codehilite"><span class="err">romiscanner</span></code></td>
+<td><code>VirtualPlants</code>, <code>romiscanner</code></td>
 </tr>
 </tbody>
 </table>
@@ -1624,7 +1624,7 @@ For example, there is no point to install the <code class="codehilite"><span cla
 <p>The previous module container or package names, are still open to discussion!</p>
 </div>
 <h4 id="db">DB<a class="headerlink" href="#db" title="Permanent link">Link</a></h4>
-<p>Should be totally independent of the rest since it could be use with other projects trough the abstract class <code class="codehilite"><span class="err">DB</span></code> or even the local database class <code class="codehilite"><span class="err">FSDB</span></code>.</p>
+<p>Should be totally independent of the rest since it could be use with other projects trough the abstract class <code>DB</code> or even the local database class <code>FSDB</code>.</p>
 <h4 id="plantscanner">PlantScanner<a class="headerlink" href="#plantscanner" title="Permanent link">Link</a></h4>
 <p>It requires a physical connection to the hardware that is should control and needs a database to export acquired datasets (plant images).</p>
 <h4 id="smartinterpreter">SmartInterpreter<a class="headerlink" href="#smartinterpreter" title="Permanent link">Link</a></h4>
