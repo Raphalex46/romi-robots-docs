@@ -1457,55 +1457,55 @@
                 
                 <h1 id="how-to-use-the-romi-plantviewer">How to use the ROMI plantviewer?<a class="headerlink" href="#how-to-use-the-romi-plantviewer" title="Permanent link">Link</a></h1>
 <h2 id="ready-to-run-docker-image">Ready to run docker image<a class="headerlink" href="#ready-to-run-docker-image" title="Permanent link">Link</a></h2>
-<p>To use a ready to run docker image pointing toward the <code class="codehilite"><span class="err">db.romi-project.eu</span></code>, look <a href="/Scanner/Developer/docker/#visualizer">here</a>.</p>
+<p>To use a ready to run docker image pointing toward the <code>db.romi-project.eu</code>, look <a href="/Scanner/Developer/docker/#visualizer">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This requires <code class="codehilite"><span class="err">docker-ce</span></code> to be installed on your machine.</p>
+<p>This requires <code>docker-ce</code> to be installed on your machine.</p>
 </div>
 <h2 id="source-install">Source install<a class="headerlink" href="#source-install" title="Permanent link">Link</a></h2>
-<p>To follows this guide you should have a <code class="codehilite"><span class="err">conda</span></code> or a Python <code class="codehilite"><span class="err">venv</span></code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
+<p>To follows this guide you should have a <code>conda</code> or a Python <code>venv</code>, see <a href="/Scanner/how-to/#how-to-install-romi-packages">here</a></p>
 <h3 id="pre-requisite">Pre-requisite<a class="headerlink" href="#pre-requisite" title="Permanent link">Link</a></h3>
 <p>The plantviewer relies on:</p>
 <ul>
-<li><code class="codehilite"><span class="err">node</span></code></li>
-<li><code class="codehilite"><span class="err">npm</span></code></li>
+<li><code>node</code></li>
+<li><code>npm</code></li>
 </ul>
 <p>To clone the git repository, you will need: </p>
 <ul>
-<li><code class="codehilite"><span class="err">git</span></code></li>
-<li><code class="codehilite"><span class="err">ca-certificates</span></code></li>
+<li><code>git</code></li>
+<li><code>ca-certificates</code></li>
 </ul>
 <p>Start with these system dependencies:
-<div class="codehilite"><pre><span></span><code>sudo apt git ca-certificates
+<div class="highlight"><pre><span></span><code>sudo apt git ca-certificates
 </code></pre></div></p>
-<p>Install <code class="codehilite"><span class="err">node</span></code> and <code class="codehilite"><span class="err">npm</span></code>, on ubuntu:
-<div class="codehilite"><pre><span></span><code>sudo apt install npm
+<p>Install <code>node</code> and <code>npm</code>, on ubuntu:
+<div class="highlight"><pre><span></span><code>sudo apt install npm
 </code></pre></div>
-The packaged version ot <code class="codehilite"><span class="err">npm</span></code> is probably out of date (require <code class="codehilite"><span class="err">npm&gt;=5</span></code>), to update it:
-<div class="codehilite"><pre><span></span><code>npm install npm@latest -g
+The packaged version ot <code>npm</code> is probably out of date (require <code>npm&gt;=5</code>), to update it:
+<div class="highlight"><pre><span></span><code>npm install npm@latest -g
 </code></pre></div></p>
 <h3 id="install-romi-packages-their-dependencies">Install ROMI packages &amp; their dependencies:<a class="headerlink" href="#install-romi-packages-their-dependencies" title="Permanent link">Link</a></h3>
 <p>Clone the visualizer git repository :
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/3d-plantviewer.git
+<div class="highlight"><pre><span></span><code>git clone https://github.com/romi/3d-plantviewer.git
 <span class="nb">cd</span> 3d-plantviewer
 </code></pre></div>
 Install node packages and build the pages:
-<div class="codehilite"><pre><span></span><code>npm install
+<div class="highlight"><pre><span></span><code>npm install
 </code></pre></div></p>
 <h2 id="running-a-development-server-for-the-visualizer">Running a development server for the visualizer<a class="headerlink" href="#running-a-development-server-for-the-visualizer" title="Permanent link">Link</a></h2>
-<p>Set the DB location using the <code class="codehilite"><span class="err">DB_LOCATION</span></code> environment variable and launch the flask server:
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">DB_LOCATION</span><span class="o">=</span>/path/to/the/db
+<p>Set the DB location using the <code>DB_LOCATION</code> environment variable and launch the flask server:
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">DB_LOCATION</span><span class="o">=</span>/path/to/the/db
 romi_scanner_rest_api
 </code></pre></div>
-Finally, start the frontend visualization server (from <code class="codehilite"><span class="err">3d-plantviewer/</span></code> folder):
-<div class="codehilite"><pre><span></span><code>npm start
+Finally, start the frontend visualization server (from <code>3d-plantviewer/</code> folder):
+<div class="highlight"><pre><span></span><code>npm start
 </code></pre></div>
 You should now be able to access the visualizer on <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You need to add a file <code class="codehilite"><span class="na">.env.local</span></code> at project's root to set the API URL:
-<code class="codehilite"><span class="err">REACT_APP_API_URL=&#39;{`API URL}&#39;</span></code></p>
-<p>Without this, the app will use: <a href="http://localhost:5000">http://localhost:5000</a> which is the default for <code class="codehilite"><span class="err">romi_scanner_rest_api</span></code>.</p>
+<p>You need to add a file <code>.env.local</code> at project's root to set the API URL:
+<code>REACT_APP_API_URL='{`API URL}'</code></p>
+<p>Without this, the app will use: <a href="http://localhost:5000">http://localhost:5000</a> which is the default for <code>romi_scanner_rest_api</code>.</p>
 </div>
 <h2 id="running-a-production-server-for-the-visualizer">Running a production server for the visualizer<a class="headerlink" href="#running-a-production-server-for-the-visualizer" title="Permanent link">Link</a></h2>
 <div class="admonition warning">
