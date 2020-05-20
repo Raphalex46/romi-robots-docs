@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -1679,7 +1679,7 @@
  - [ ] VirtualScanner
  - [x] Visualizer</p>
 <h2 id="romidb">romidb<a class="headerlink" href="#romidb" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
 </code></pre></div>
 
 <div class="admonition warning">
@@ -1687,33 +1687,33 @@
 <p>This is not working YET, but almost!</p>
 </div>
 <h4 id="build-docker-image">Build docker image<a class="headerlink" href="#build-docker-image" title="Permanent link">Link</a></h4>
-<p>To build the image, clone the ROMI <code class="codehilite"><span class="err">docker</span></code> repository:
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/docker.git
+<p>To build the image, clone the ROMI <code>docker</code> repository:
+<div class="highlight"><pre><span></span><code>git clone https://github.com/romi/docker.git
 <span class="nb">cd</span> docker
 </code></pre></div>
 Then you can build the image with:
-<div class="codehilite"><pre><span></span><code>docker docker build -t romidb romiDB/
+<div class="highlight"><pre><span></span><code>docker docker build -t romidb romiDB/
 </code></pre></div>
 To run it, you need to have a local database first, look <a href="https://db.romi-project.eu/models/test_db.tar.gz">here</a> for an example.
-Assuming you extracted it in your home folder (<code class="codehilite"><span class="err">/home/$USER/integration_tests</span></code>), you can start the <code class="codehilite"><span class="err">romidb</span></code> docker image with:
-<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">5000</span>:5000 -v /home/<span class="nv">$USER</span>/integration_tests:/home/romi/integration_tests romidb
+Assuming you extracted it in your home folder (<code>/home/$USER/integration_tests</code>), you can start the <code>romidb</code> docker image with:
+<div class="highlight"><pre><span></span><code>docker run -it -p <span class="m">5000</span>:5000 -v /home/<span class="nv">$USER</span>/integration_tests:/home/romi/integration_tests romidb
 </code></pre></div>
 Once it's up, you should be able to access the REST API here: <a href="http://localhost:5000/">http://localhost:5000/</a></p>
 <p>For example to get a list of the scans: <a href="http://localhost:5000/scans">http://localhost:5000/scans</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="codehilite"><span class="err">-v /home/$USER/integration_tests:/home/romi/integration_tests</span></code> performs a <strong>bind mount</strong> to enable access to the local database by the docker image. See the official <a href="https://docs.docker.com/storage/bind-mounts/">documentation</a>.</p>
+<p><code>-v /home/$USER/integration_tests:/home/romi/integration_tests</code> performs a <strong>bind mount</strong> to enable access to the local database by the docker image. See the official <a href="https://docs.docker.com/storage/bind-mounts/">documentation</a>.</p>
 </div>
 <p>Push it ot docker hub:
-<div class="codehilite"><pre><span></span><code>docker push jlegrand62/romi_database:latest
+<div class="highlight"><pre><span></span><code>docker push jlegrand62/romi_database:latest
 </code></pre></div>
-This require a valid account, token and existing repository (<code class="codehilite"><span class="err">romi_database</span></code>) on docker hub!</p>
+This require a valid account, token and existing repository (<code>romi_database</code>) on docker hub!</p>
 <h4 id="use-pre-built-docker-image">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image" title="Permanent link">Link</a></h4>
 <p>First you need to pull the docker image:
-<div class="codehilite"><pre><span></span><code>docker pull jlegrand62/romi_database
+<div class="highlight"><pre><span></span><code>docker pull jlegrand62/romi_database
 </code></pre></div>
 Then you can run it with:
-<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_database
+<div class="highlight"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_database
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1723,75 +1723,75 @@ Then you can run it with:
 <p>The database container. </p>
 <h4 id="aim">Aim<a class="headerlink" href="#aim" title="Permanent link">Link</a></h4>
 <p>Gather the acquired images, reconstructed plants architectures &amp; quantitative data</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">continuumio/miniconda3</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">continuumio/miniconda3</span>
 </code></pre></div>
 
 <h4 id="dependencies">Dependencies:<a class="headerlink" href="#dependencies" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
- - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.</p>
+ - <code>data-storage</code>, the database API, as well as classes for data processing using luigi.</p>
 <p>External dependencies:
- - <code class="codehilite"><span class="err">lettucethink-python</span></code>, python tools and controllers for the <code class="codehilite"><span class="err">lettucethink</span></code> robot.</p>
+ - <code>lettucethink-python</code>, python tools and controllers for the <code>lettucethink</code> robot.</p>
 <h3 id="smartinterpreter">SmartInterpreter<a class="headerlink" href="#smartinterpreter" title="Permanent link">Link</a></h3>
 <p>The reconstruction and quantification container.</p>
 <h4 id="aim_1">Aim<a class="headerlink" href="#aim_1" title="Permanent link">Link</a></h4>
 <p>Gather the algorithms and processing pipelines to extract quantitative biological information on plants architecture from a set of photo acquisition.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">colmap/colmap</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">colmap/colmap</span>
 </code></pre></div>
 
 <h4 id="dependencies_1">Dependencies:<a class="headerlink" href="#dependencies_1" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
- - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.
- - <code class="codehilite"><span class="err">Segmentation</span></code>, virtual plant segmentation methods using 2D images generated from the virtual scanner and neural networks.
- - <code class="codehilite"><span class="err">cgal_bindings_skeletonization</span></code>, Python CGAL bindings for skeletonization.
- - <code class="codehilite"><span class="err">Scan3D</span></code>, the elements used to run 3D scan of individual plants.</p>
+ - <code>data-storage</code>, the database API, as well as classes for data processing using luigi.
+ - <code>Segmentation</code>, virtual plant segmentation methods using 2D images generated from the virtual scanner and neural networks.
+ - <code>cgal_bindings_skeletonization</code>, Python CGAL bindings for skeletonization.
+ - <code>Scan3D</code>, the elements used to run 3D scan of individual plants.</p>
 <p>External dependencies:
- - <code class="codehilite"><span class="err">Open3D</span></code> is mostly used for IO and data structures.
- - <code class="codehilite"><span class="err">Colmap</span></code> is used for <em>Structure From Motion</em> reconstruction.
- - <code class="codehilite"><span class="err">cgal</span></code> is used for skeletonization. TO REMOVE ?!</p>
+ - <code>Open3D</code> is mostly used for IO and data structures.
+ - <code>Colmap</code> is used for <em>Structure From Motion</em> reconstruction.
+ - <code>cgal</code> is used for skeletonization. TO REMOVE ?!</p>
 <h3 id="virtualscanner">VirtualScanner<a class="headerlink" href="#virtualscanner" title="Permanent link">Link</a></h3>
 <p>The virtual scanner container.</p>
 <h4 id="aim_2">Aim<a class="headerlink" href="#aim_2" title="Permanent link">Link</a></h4>
 <p>Gather the tools to create virtual plants and render realistic snapshots.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">alpine:3.10</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">alpine:3.10</span>
 </code></pre></div>
 
 <h4 id="dependencies_2">Dependencies:<a class="headerlink" href="#dependencies_2" title="Permanent link">Link</a></h4>
 <p>Internal dependencies:
- - <code class="codehilite"><span class="err">data-storage</span></code>, the database API, as well as classes for data processing using luigi.</p>
+ - <code>data-storage</code>, the database API, as well as classes for data processing using luigi.</p>
 <p>External dependencies:
- - <code class="codehilite"><span class="err">blender</span></code>
- - <code class="codehilite"><span class="err">lpy</span></code></p>
+ - <code>blender</code>
+ - <code>lpy</code></p>
 <h3 id="plantviewer">plantviewer<a class="headerlink" href="#plantviewer" title="Permanent link">Link</a></h3>
 <p>The plant visualizer is a webapp that dialog with the database to display images &amp; some quantitative traits.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
 </code></pre></div>
 
 <h4 id="build-docker-image_1">Build docker image<a class="headerlink" href="#build-docker-image_1" title="Permanent link">Link</a></h4>
-<p>To build the image, clone the ROMI <code class="codehilite"><span class="err">docker</span></code> repository:
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/romi/docker.git
+<p>To build the image, clone the ROMI <code>docker</code> repository:
+<div class="highlight"><pre><span></span><code>git clone https://github.com/romi/docker.git
 <span class="nb">cd</span> docker
 </code></pre></div>
 Then you can build the image with:
-<div class="codehilite"><pre><span></span><code>docker build -t visualizer Visualizer/
+<div class="highlight"><pre><span></span><code>docker build -t visualizer Visualizer/
 </code></pre></div>
 To run it:
-<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 visualizer
+<div class="highlight"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 visualizer
 </code></pre></div>
 Once it's up, you should be able to access the viewer here: <a href="http://localhost:3000/">http://localhost:3000/</a></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Use <code class="codehilite"><span class="err">chrome</span></code> as <code class="codehilite"><span class="err">firefox</span></code> has some issues with the used JavaScript libraries!</p>
+<p>Use <code>chrome</code> as <code>firefox</code> has some issues with the used JavaScript libraries!</p>
 </div>
 <p>Push it ot docker hub:
-<div class="codehilite"><pre><span></span><code>docker push jlegrand62/romi_plantviewer:latest
+<div class="highlight"><pre><span></span><code>docker push jlegrand62/romi_plantviewer:latest
 </code></pre></div>
-This require a valid account, token and existing repository (<code class="codehilite"><span class="err">romi_plantviewer</span></code>) on docker hub!</p>
+This require a valid account, token and existing repository (<code>romi_plantviewer</code>) on docker hub!</p>
 <h4 id="use-pre-built-docker-image_1">Use pre-built docker image<a class="headerlink" href="#use-pre-built-docker-image_1" title="Permanent link">Link</a></h4>
 <p>First you need to pull the docker image:
-<div class="codehilite"><pre><span></span><code>docker pull jlegrand62/romi_plantviewer
+<div class="highlight"><pre><span></span><code>docker pull jlegrand62/romi_plantviewer
 </code></pre></div>
 Then you can run it with:
-<div class="codehilite"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_plantviewer
+<div class="highlight"><pre><span></span><code>docker run -it -p <span class="m">3000</span>:3000 jlegrand62/romi_plantviewer
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1931,7 +1931,7 @@ Then you can run it with:
     
       <script src="../../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

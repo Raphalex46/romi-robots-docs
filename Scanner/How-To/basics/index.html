@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -1583,13 +1583,13 @@
 <p>This is a document centralizing all documentation for the 3D scanner.
 The 3D scanner software is composed of several python libraries organized in different packages:</p>
 <ul>
-<li><code class="codehilite"><span class="err">romidata</span></code>: the data processing module</li>
-<li><code class="codehilite"><span class="err">lettucethink</span></code>: the hardware interface</li>
-<li><code class="codehilite"><span class="err">romiscanner</span></code>: the scanner interface and the virtual scanner</li>
-<li><code class="codehilite"><span class="err">romiscan</span></code>: the computer vision algorithms</li>
-<li><code class="codehilite"><span class="err">romiseg</span></code>: the segmentation models</li>
+<li><code>romidata</code>: the data processing module</li>
+<li><code>lettucethink</code>: the hardware interface</li>
+<li><code>romiscanner</code>: the scanner interface and the virtual scanner</li>
+<li><code>romiscan</code>: the computer vision algorithms</li>
+<li><code>romiseg</code>: the segmentation models</li>
 </ul>
-<p>Additionally, some <a href="https://www.cgal.org/">CGAL</a> bindings are implemented in a separate python library: <code class="codehilite"><span class="err">cgal_bindings_skeletonization</span></code>.</p>
+<p>Additionally, some <a href="https://www.cgal.org/">CGAL</a> bindings are implemented in a separate python library: <code>cgal_bindings_skeletonization</code>.</p>
 <p>A separate repository is dedicated to the virtual scanner, which is available as a blender python (bpy) script.</p>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">Link</a></h2>
 <p>There are some requirements to use the different algorithms in the pipeline.
@@ -1600,75 +1600,75 @@ The most important part is <a href="https://colmap.github.io/">Colmap</a> (v3.6)
 <li><a href="https://colmap.github.io/">Colmap</a> (v3.6) for the structure from motion algorithms</li>
 <li><a href="https://www.blender.org/">Blender</a> (&gt;= 2.81) for the virtual scanner</li>
 </ul>
-<p>Preferably, create a virtual environment for python 3.7 or python 3.8 using <code class="codehilite"><span class="err">virtualenv</span></code> or a conda environment specific to the 3D Scanner.</p>
+<p>Preferably, create a virtual environment for python 3.7 or python 3.8 using <code>virtualenv</code> or a conda environment specific to the 3D Scanner.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If using python 3.8, Open3D binaries are not yet available on pip, therefore you have to build Open3D from sources!</p>
 </div>
 <h2 id="how-to-install-romi-packages">How to - Install ROMI packages<a class="headerlink" href="#how-to-install-romi-packages" title="Permanent link">Link</a></h2>
-<p>Choose between a Python <code class="codehilite"><span class="err">venv</span></code> or a <code class="codehilite"><span class="err">conda</span></code> environment (A or B).</p>
+<p>Choose between a Python <code>venv</code> or a <code>conda</code> environment (A or B).</p>
 <h3 id="a-create-a-virtual-environment">A - Create a virtual environment<a class="headerlink" href="#a-create-a-virtual-environment" title="Permanent link">Link</a></h3>
-<p>To create a <code class="codehilite"><span class="err">venv</span></code> named <code class="codehilite"><span class="err">scan3d</span></code> with Python 3.7:
-<div class="codehilite"><pre><span></span><code>virtualenv -p /usr/bin/python3.7 scan3d
+<p>To create a <code>venv</code> named <code>scan3d</code> with Python 3.7:
+<div class="highlight"><pre><span></span><code>virtualenv -p /usr/bin/python3.7 scan3d
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This should probably be replaced by:
-<div class="codehilite"><pre><span></span><code>python3.7 -m venv scan3d
+<div class="highlight"><pre><span></span><code>python3.7 -m venv scan3d
 </code></pre></div></p>
 </div>
 <p>Then activate it with:
-<div class="codehilite"><pre><span></span><code><span class="nb">source</span> scan3d/activate
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> scan3d/activate
 </code></pre></div>
-Now you can now easily install Python packages, for example <code class="codehilite"><span class="err">NumPy</span></code>, as follow:
-<div class="codehilite"><pre><span></span><code>pip install numpy
+Now you can now easily install Python packages, for example <code>NumPy</code>, as follow:
+<div class="highlight"><pre><span></span><code>pip install numpy
 </code></pre></div></p>
 <h3 id="b-create-a-conda-environment">B - Create a conda environment:<a class="headerlink" href="#b-create-a-conda-environment" title="Permanent link">Link</a></h3>
-<p>To create a conda environment named <code class="codehilite"><span class="err">scan3d</span></code> with Python 3.7:
-<div class="codehilite"><pre><span></span><code>conda create -n scan3d <span class="nv">python</span><span class="o">==</span><span class="m">3</span>.7
+<p>To create a conda environment named <code>scan3d</code> with Python 3.7:
+<div class="highlight"><pre><span></span><code>conda create -n scan3d <span class="nv">python</span><span class="o">==</span><span class="m">3</span>.7
 </code></pre></div>
 Then activate it:
-<div class="codehilite"><pre><span></span><code>conda activate scan3d
+<div class="highlight"><pre><span></span><code>conda activate scan3d
 </code></pre></div>
-Now you can now easily install Python packages, for example <code class="codehilite"><span class="err">NumPy</span></code>, as follow:
-<div class="codehilite"><pre><span></span><code>conda install numpy
+Now you can now easily install Python packages, for example <code>NumPy</code>, as follow:
+<div class="highlight"><pre><span></span><code>conda install numpy
 </code></pre></div></p>
 <h2 id="how-to-initialize-a-database">How to - Initialize a database<a class="headerlink" href="#how-to-initialize-a-database" title="Permanent link">Link</a></h2>
-<p>The <code class="codehilite"><span class="err">FSDB</span></code> class from the <code class="codehilite"><span class="err">romidata</span></code> module is used for data storage.
-A database is any folder which contains a file named <code class="codehilite"><span class="err">romidb</span></code>.
-To create an empty database, just create a new folder and an empty file named <code class="codehilite"><span class="err">romidb</span></code> in it.</p>
+<p>The <code>FSDB</code> class from the <code>romidata</code> module is used for data storage.
+A database is any folder which contains a file named <code>romidb</code>.
+To create an empty database, just create a new folder and an empty file named <code>romidb</code> in it.</p>
 <p>For example:
-<div class="codehilite"><pre><span></span><code>mkdir /path/to/my/db
+<div class="highlight"><pre><span></span><code>mkdir /path/to/my/db
 <span class="nb">cd</span> /path/to/my/db
 touch romidb
 </code></pre></div></p>
 <h2 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">Link</a></h2>
-<p>Every task on the scanner is launched through the <code class="codehilite"><span class="err">romi_run_task</span></code> command provided in
-the <code class="codehilite"><span class="err">romiscan</span></code> module. It is a wrapper for <code class="codehilite"><span class="err">luigi</span></code>, with preloaded tasks from
-the <code class="codehilite"><span class="err">romiscan</span></code> module.</p>
+<p>Every task on the scanner is launched through the <code>romi_run_task</code> command provided in
+the <code>romiscan</code> module. It is a wrapper for <code>luigi</code>, with preloaded tasks from
+the <code>romiscan</code> module.</p>
 <p>The general usage is as follows:
-<div class="codehilite"><pre><span></span><code>romi_run_task <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--config CONFIG<span class="o">]</span> <span class="o">[</span>--luigicmd LUIGICMD<span class="o">]</span> <span class="o">[</span>--module MODULE<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>romi_run_task <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--config CONFIG<span class="o">]</span> <span class="o">[</span>--luigicmd LUIGICMD<span class="o">]</span> <span class="o">[</span>--module MODULE<span class="o">]</span>
 <span class="o">[</span>--local-scheduler<span class="o">]</span> <span class="o">[</span>--log-level LOG_LEVEL<span class="o">]</span> task scan
 </code></pre></div></p>
 <ul>
-<li><code class="codehilite"><span class="err">CONFIG</span></code> is either a file or a folder. If a file, it must be <code class="codehilite"><span class="err">json</span></code> or <code class="codehilite"><span class="err">toml</span></code>
+<li><code>CONFIG</code> is either a file or a folder. If a file, it must be <code>json</code> or <code>toml</code>
 and contains the configuration of the task to run. If a folder, it will read all
-configuration files in <code class="codehilite"><span class="err">json</span></code> or <code class="codehilite"><span class="err">toml</span></code> format from the folder.</li>
-<li><code class="codehilite"><span class="err">LUIGICMD</span></code> is an optional parameter specifying an alternative command for
-<code class="codehilite"><span class="err">luigi</span></code>.</li>
-<li><code class="codehilite"><span class="err">MODULE</span></code> is an optional parameter for running task from external modules (see
+configuration files in <code>json</code> or <code>toml</code> format from the folder.</li>
+<li><code>LUIGICMD</code> is an optional parameter specifying an alternative command for
+<code>luigi</code>.</li>
+<li><code>MODULE</code> is an optional parameter for running task from external modules (see
 TODO).</li>
-<li><code class="codehilite"><span class="err">LOG_LEVEL</span></code> is the level of logging. Defaults to <code class="codehilite"><span class="err">INFO</span></code>, but can be set to
-<code class="codehilite"><span class="err">DEBUG</span></code> to increase verbosity.</li>
-<li><code class="codehilite"><span class="err">task</span></code> is the name of the class to run (see TODO)</li>
-<li><code class="codehilite"><span class="err">scan</span></code> is the location of the target <code class="codehilite"><span class="err">scan</span></code> on which to process the task. It
-is of the form <code class="codehilite"><span class="err">DB_LOCATION/SCAN_ID</span></code>, where <code class="codehilite"><span class="err">DB_LOCATION</span></code> is a path containing
-the <code class="codehilite"><span class="err">romidb</span></code> marker.</li>
+<li><code>LOG_LEVEL</code> is the level of logging. Defaults to <code>INFO</code>, but can be set to
+<code>DEBUG</code> to increase verbosity.</li>
+<li><code>task</code> is the name of the class to run (see TODO)</li>
+<li><code>scan</code> is the location of the target <code>scan</code> on which to process the task. It
+is of the form <code>DB_LOCATION/SCAN_ID</code>, where <code>DB_LOCATION</code> is a path containing
+the <code>romidb</code> marker.</li>
 </ul>
 <h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">Link</a></h2>
 <p>The configuration is in the form of a dictionary, in which each key is the ID of a given task.
-In <code class="codehilite"><span class="err">toml</span></code> format, it reads as follows:
-<div class="codehilite"><pre><span></span><code><span class="k">[FirstTask]</span>
+In <code>toml</code> format, it reads as follows:
+<div class="highlight"><pre><span></span><code><span class="k">[FirstTask]</span>
 <span class="n">parameter1</span> <span class="o">=</span> <span class="n">value1</span>
 <span class="n">parameter2</span> <span class="o">=</span> <span class="n">value2</span>
 <span class="k">[SecondTask]</span>
@@ -1677,7 +1677,7 @@ In <code class="codehilite"><span class="err">toml</span></code> format, it read
 </code></pre></div></p>
 <h2 id="pipelines">Pipelines<a class="headerlink" href="#pipelines" title="Permanent link">Link</a></h2>
 <p>This is a sample configuration for the <em>full reconstruction pipeline</em>:
-<div class="codehilite"><pre><span></span><code><span class="k">[Colmap]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Colmap]</span>
 <span class="n">matcher</span> <span class="o">=</span> <span class="s">&quot;exhaustive&quot;</span>
 <span class="n">compute_dense</span> <span class="o">=</span> <span class="kc">false</span>
 
@@ -1711,15 +1711,15 @@ In <code class="codehilite"><span class="err">toml</span></code> format, it read
 <span class="n">pcd_source</span> <span class="o">=</span> <span class="s">&quot;vox2pcd&quot;</span>
 <span class="n">mesh_source</span> <span class="o">=</span> <span class="s">&quot;delaunay&quot;</span>
 </code></pre></div></p>
-<p>To run the <em>full reconstruction pipeline</em> use this configuration file with <code class="codehilite"><span class="err">romi_run_task</span></code>:
-<div class="codehilite"><pre><span></span><code>romi_run_task --config scanner.json AnglesAndInternodes /path/to/db/scan_id/ --local-scheduler
+<p>To run the <em>full reconstruction pipeline</em> use this configuration file with <code>romi_run_task</code>:
+<div class="highlight"><pre><span></span><code>romi_run_task --config scanner.json AnglesAndInternodes /path/to/db/scan_id/ --local-scheduler
 </code></pre></div></p>
-<p>This will process all tasks up to the <code class="codehilite"><span class="err">AnglesAndInternodes</span></code> task.
-Every task produces a <code class="codehilite"><span class="err">Fileset</span></code>, a subdirectory in the scan directory whose name starts the same as the task name.
+<p>This will process all tasks up to the <code>AnglesAndInternodes</code> task.
+Every task produces a <code>Fileset</code>, a subdirectory in the scan directory whose name starts the same as the task name.
 The characters following are a hash of the configuration of the task, so that the outputs of the same task with different parameters can coexist in the same scan.
-Any change in the parameters will make the needed task to be recomputed with subsequent calls of <code class="codehilite"><span class="err">romi_run_task</span></code>.
+Any change in the parameters will make the needed task to be recomputed with subsequent calls of <code>romi_run_task</code>.
 Already computed tasks will be left untouched.</p>
-<p>To recompute a task, just delete the corresponding folder in the scan directory and rerun <code class="codehilite"><span class="err">romi_run_task</span></code>.</p>
+<p>To recompute a task, just delete the corresponding folder in the scan directory and rerun <code>romi_run_task</code>.</p>
 <h2 id="default-task-reference">Default task reference<a class="headerlink" href="#default-task-reference" title="Permanent link">Link</a></h2>
 <p>default_modules = {
     "Scan": "romiscan.tasks.scan",
@@ -1742,177 +1742,177 @@ Already computed tasks will be left untouched.</p>
 <p>This is for reference only, please update the changes in the code.**
 This will be later replaced by a reference doc generated from the code!</p>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Scan</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">scan</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">A</span> <span class="n">task</span> <span class="k">for</span> <span class="n">running</span> <span class="n">a</span> <span class="n">scan</span><span class="p">,</span> <span class="n">real</span> <span class="ow">or</span> <span class="n">virtual</span><span class="p">.</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">None</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">metadata</span> <span class="k">for</span> <span class="n">the</span> <span class="n">scan</span>
-    <span class="o">-</span> <span class="n">scanner</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">scanner</span> <span class="n">hardware</span> <span class="n">configuration</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">hardware</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">path</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">scanner</span> <span class="n">path</span> <span class="n">configuration</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">hardware</span> <span class="n">documentation</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>Class name: Scan
+Module: romiscan.tasks.scan
+Description: A task for running a scan, real or virtual.
+Default upstream tasks: None
+Parameters:
+    - metadata (DictParameter) : metadata for the scan
+    - scanner (DictParameter) : scanner hardware configuration (TODO: see hardware documentation)
+    - path (DictParameter) : scanner path configuration (TODO: see hardware documentation)
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">CalibrationScan</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">scan</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">A</span> <span class="n">task</span> <span class="k">for</span> <span class="n">running</span> <span class="n">a</span> <span class="n">scan</span><span class="p">,</span> <span class="n">real</span> <span class="ow">or</span> <span class="n">virtual</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">calibration</span> <span class="n">path</span><span class="p">.</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">to</span> <span class="n">calibrate</span>
-    <span class="n">Colmap</span> <span class="n">poses</span> <span class="k">for</span> <span class="n">subsequent</span> <span class="n">scans</span><span class="p">.</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">calibration</span> <span class="n">documentation</span><span class="p">)</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">None</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">metadata</span> <span class="k">for</span> <span class="n">the</span> <span class="n">scan</span>
-    <span class="o">-</span> <span class="n">scanner</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">scanner</span> <span class="n">hardware</span> <span class="n">configuration</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">hardware</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">path</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">scanner</span> <span class="n">path</span> <span class="n">configuration</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">hardware</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">n_line</span> <span class="p">:</span> <span class="n">number</span> <span class="k">of</span> <span class="n">shots</span> <span class="n">taken</span> <span class="k">on</span> <span class="n">the</span> <span class="n">orthogonal</span> <span class="n">calibration</span> <span class="n">lines</span>
+Class name: CalibrationScan
+Module: romiscan.tasks.scan
+Description: A task for running a scan, real or virtual, with a calibration path. It is used to calibrate
+    Colmap poses for subsequent scans. (TODO: see calibration documentation)
+Default upstream tasks: None
+Parameters:
+    - metadata (DictParameter) : metadata for the scan
+    - scanner (DictParameter) : scanner hardware configuration (TODO: see hardware documentation)
+    - path (DictParameter) : scanner path configuration (TODO: see hardware documentation)
+    - n_line : number of shots taken on the orthogonal calibration lines
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Clean</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">scan</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Cleanup</span> <span class="n">a</span> <span class="n">scan</span><span class="p">,</span> <span class="n">keeping</span> <span class="n">only</span> <span class="n">the</span> <span class="s">&quot;images&quot;</span> <span class="n">fileset</span> <span class="ow">and</span> <span class="n">removing</span> <span class="n">all</span> <span class="n">computed</span> <span class="n">pipelines</span><span class="p">.</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">None</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">no_confirm</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">False</span><span class="p">)</span> <span class="p">:</span> <span class="k">do</span> <span class="k">not</span> <span class="n">ask</span> <span class="k">for</span> <span class="n">confirmation</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">command</span> <span class="n">prompt</span><span class="p">.</span>
+Class name: Clean
+Module: romiscan.tasks.scan
+Description: Cleanup a scan, keeping only the &quot;images&quot; fileset and removing all computed pipelines.
+Default upstream tasks: None
+Parameters:
+    - no_confirm (BoolParameter, default=False) : do not ask for confirmation in the command prompt.
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Colmap</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">colmap</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Runs</span> <span class="n">colmap</span> <span class="k">on</span> <span class="n">a</span> <span class="n">given</span> <span class="n">scan</span><span class="p">.</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">Scan</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">image</span> <span class="n">files</span>
-<span class="n">Output</span> <span class="n">fileset</span> <span class="n">format</span><span class="p">:</span> <span class="n">images</span><span class="p">.</span><span class="n">json</span><span class="p">,</span> <span class="n">cameras</span><span class="p">.</span><span class="n">json</span><span class="p">,</span> <span class="n">points3D</span><span class="p">.</span><span class="n">json</span><span class="p">,</span> <span class="n">sparse</span><span class="p">.</span><span class="n">ply</span> <span class="o">[</span><span class="p">,</span> <span class="n">dense</span><span class="p">.</span><span class="n">ply</span><span class="o">]</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">matcher</span> <span class="p">(</span><span class="n">Parameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="s">&quot;exhaustive&quot;</span><span class="p">)</span> <span class="p">:</span> <span class="n">either</span> <span class="s">&quot;exhaustive&quot;</span> <span class="ow">or</span> <span class="s">&quot;sequential&quot;</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">colmap</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">compute_dense</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">whether</span> <span class="k">to</span> <span class="n">run</span> <span class="n">the</span> <span class="n">dense</span> <span class="n">colmap</span> <span class="k">to</span> <span class="n">obtain</span> <span class="n">a</span> <span class="n">dense</span> <span class="n">point</span> <span class="n">cloud</span>
-    <span class="o">-</span> <span class="n">cli_args</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">parameters</span> <span class="k">for</span> <span class="n">colmap</span> <span class="n">command</span> <span class="n">line</span> <span class="n">prompts</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">colmap</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">align_pcd</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">True</span><span class="p">)</span> <span class="p">:</span> <span class="n">align</span> <span class="n">point</span> <span class="n">cloud</span> <span class="k">on</span> <span class="n">calibrated</span> <span class="ow">or</span> <span class="n">metadata</span> <span class="n">poses</span> <span class="err">?</span>
-    <span class="o">-</span> <span class="n">calibration_scan_id</span> <span class="p">(</span><span class="n">Parameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">:</span> <span class="n">ID</span> <span class="k">of</span> <span class="n">the</span> <span class="n">calibration</span> <span class="n">scan</span><span class="p">.</span>
+Class name: Colmap
+Module: romiscan.tasks.colmap
+Description: Runs colmap on a given scan.
+Default upstream tasks: Scan
+Upstream task format: Fileset with image files
+Output fileset format: images.json, cameras.json, points3D.json, sparse.ply [, dense.ply]
+Parameters:
+    - matcher (Parameter, default=&quot;exhaustive&quot;) : either &quot;exhaustive&quot; or &quot;sequential&quot; (TODO: see colmap documentation)
+    - compute_dense (BoolParameter) : whether to run the dense colmap to obtain a dense point cloud
+    - cli_args (DictParameter) : parameters for colmap command line prompts (TODO: see colmap documentation)
+    - align_pcd (BoolParameter, default=True) : align point cloud on calibrated or metadata poses ?
+    - calibration_scan_id (Parameter, default=&quot;&quot;) : ID of the calibration scan.
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Undistorted</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc2d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Undistorts</span> <span class="n">images</span> <span class="k">using</span> <span class="n">computed</span> <span class="n">intrinsic</span> <span class="n">camera</span> <span class="n">parameters</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">Scan</span><span class="p">,</span> <span class="n">Colmap</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">image</span> <span class="n">files</span>
-<span class="n">Output</span> <span class="n">fileset</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">image</span> <span class="n">files</span>
+Class name: Undistorted
+Module: romiscan.tasks.proc2d
+Description: Undistorts images using computed intrinsic camera parameters
+Default upstream tasks: Scan, Colmap
+Upstream task format: Fileset with image files
+Output fileset format: Fileset with image files
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Masks</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc2d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">compute</span> <span class="n">masks</span> <span class="k">using</span> <span class="n">several</span> <span class="n">functions</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">Undistorted</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">image</span> <span class="n">files</span>
-<span class="n">Output</span> <span class="n">fileset</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">grayscale</span> <span class="ow">or</span> <span class="n">binary</span> <span class="n">image</span> <span class="n">files</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">type</span> <span class="p">(</span><span class="n">Parameter</span><span class="p">)</span> <span class="p">:</span> <span class="s">&quot;linear&quot;</span><span class="p">,</span> <span class="s">&quot;excess_green&quot;</span><span class="p">,</span> <span class="s">&quot;vesselness&quot;</span><span class="p">,</span> <span class="s">&quot;invert&quot;</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">see</span> <span class="n">segmentation</span> <span class="n">documentation</span><span class="p">)</span> 
-    <span class="o">-</span> <span class="n">parameters</span> <span class="p">(</span><span class="n">ListParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">list</span> <span class="k">of</span> <span class="n">scalar</span> <span class="n">parmeters</span><span class="p">,</span> <span class="n">depends</span> <span class="k">on</span> <span class="n">type</span>
-    <span class="o">-</span> <span class="n">dilation</span> <span class="p">(</span><span class="n">IntParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">by</span> <span class="n">how</span> <span class="n">much</span> <span class="k">to</span> <span class="n">dilate</span> <span class="n">masks</span> <span class="k">if</span> <span class="n">binary</span>
-    <span class="o">-</span> <span class="n">binarize</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">True</span><span class="p">)</span> <span class="p">:</span> <span class="n">binarize</span> <span class="n">the</span> <span class="n">masks</span>
-    <span class="o">-</span> <span class="n">threshold</span> <span class="p">(</span><span class="n">FloatParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span> <span class="p">:</span> <span class="n">threshold</span> <span class="k">for</span> <span class="n">binarization</span>
-    <span class="o">-</span> 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Segmentation2D</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc2d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">compute</span> <span class="n">masks</span> <span class="k">using</span> <span class="n">trained</span> <span class="n">deep</span> <span class="n">learning</span> <span class="n">models</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">Undistorted</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">image</span> <span class="n">files</span>
-<span class="n">Output</span> <span class="n">fileset</span> <span class="n">format</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">grayscale</span> <span class="n">image</span> <span class="n">files</span><span class="p">,</span> <span class="k">each</span> <span class="n">corresponding</span> <span class="k">to</span> <span class="n">a</span> <span class="n">given</span> <span class="n">input</span> <span class="n">image</span> <span class="ow">and</span> <span class="k">class</span>
-<span class="nc">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">query</span> <span class="p">(</span><span class="n">DictParameter</span><span class="p">)</span> <span class="p">:</span> <span class="n">query</span> <span class="k">to</span> <span class="n">pass</span> <span class="k">to</span> <span class="n">upstream</span> <span class="n">fileset</span><span class="p">.</span> <span class="n">It</span> <span class="n">filters</span> <span class="n">file</span> <span class="n">by</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span> <span class="p">{</span><span class="s">&quot;channel&quot;</span><span class="p">:</span> <span class="s">&quot;rgb&quot;</span><span class="p">}</span> <span class="n">will</span> <span class="n">process</span>
-        <span class="n">only</span> <span class="n">input</span> <span class="n">files</span> <span class="n">such</span> <span class="n">that</span> <span class="s">&quot;channel&quot;</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="n">equal</span> <span class="k">to</span> <span class="s">&quot;rgb&quot;</span><span class="p">.</span>
-    <span class="o">-</span> <span class="n">labels</span> <span class="p">(</span><span class="n">Parameter</span><span class="p">)</span> <span class="p">:</span> <span class="kt">string</span> <span class="k">of</span> <span class="n">the</span> <span class="n">form</span> <span class="s">&quot;a,b,c&quot;</span> <span class="n">such</span> <span class="n">that</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="n">are</span> <span class="n">the</span> <span class="n">identifiers</span> <span class="k">of</span> <span class="n">the</span> <span class="n">labels</span> <span class="n">produced</span> <span class="n">by</span> <span class="n">the</span> <span class="n">neural</span>
-        <span class="n">network</span>
-    <span class="o">-</span> <span class="n">Sx</span><span class="p">,</span> <span class="n">Sy</span> <span class="p">(</span><span class="n">IntParametr</span><span class="p">)</span> <span class="p">:</span> <span class="n">size</span> <span class="k">of</span> <span class="n">the</span> <span class="n">input</span> <span class="k">of</span> <span class="n">the</span> <span class="n">neural</span> <span class="n">network</span><span class="p">.</span> <span class="n">Input</span> <span class="n">pictures</span> <span class="n">are</span> <span class="n">cropped</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">center</span> <span class="k">to</span> <span class="n">this</span> <span class="n">size</span><span class="p">.</span>
-    <span class="o">-</span> <span class="n">model_segmentation_name</span> <span class="p">:</span> <span class="n">name</span> <span class="k">of</span> <span class="s">&quot;.pt&quot;</span> <span class="n">file</span>  <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="n">at</span>  <span class="err">`</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">db</span><span class="p">.</span><span class="n">romi</span><span class="o">-</span><span class="n">project</span><span class="p">.</span><span class="n">eu</span><span class="o">/</span><span class="n">models</span><span class="err">`</span>
-    <span class="o">-</span> 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">Voxels</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">cl</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Computes</span> <span class="n">a</span> <span class="n">volume</span> <span class="n">from</span> <span class="n">backprojection</span> <span class="k">of</span> <span class="mi">2D</span> <span class="n">segmented</span> <span class="n">images</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> 
-    <span class="o">-</span> <span class="n">upstream_mask</span><span class="p">:</span> <span class="n">Masks</span>
-    <span class="o">-</span> <span class="n">upstream_colmap</span><span class="p">:</span> <span class="n">Colmap</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">upstream_mask</span><span class="p">:</span> <span class="n">Fileset</span> <span class="k">with</span> <span class="n">grayscale</span> <span class="n">images</span>
-    <span class="o">-</span> <span class="n">upstream_colmap</span><span class="p">:</span> <span class="n">Output</span> <span class="k">of</span> <span class="n">Colmap</span> <span class="n">task</span>
-<span class="n">Output</span> <span class="n">fileset</span> <span class="n">format</span><span class="p">:</span> <span class="n">npz</span> <span class="n">file</span> <span class="k">with</span> <span class="ow">as</span> <span class="n">many</span> <span class="n">arrays</span> <span class="ow">as</span> <span class="n">classes</span>
-<span class="n">Parameters</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">use_colmap_poses</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">True</span><span class="p">):</span> <span class="n">Either</span> <span class="n">use</span> <span class="n">precomputed</span> <span class="n">camera</span> <span class="n">poses</span> <span class="ow">or</span> <span class="n">output</span> <span class="n">from</span> <span class="n">the</span> <span class="n">Colmap</span> <span class="n">task</span>
-    <span class="o">-</span> <span class="n">voxel_size</span> <span class="p">(</span><span class="n">FloatParameter</span><span class="p">):</span> <span class="n">size</span> <span class="k">of</span> <span class="n">one</span> <span class="n">side</span> <span class="k">of</span> <span class="n">voxels</span>
-    <span class="o">-</span> <span class="n">type</span> <span class="p">(</span><span class="n">Parameter</span><span class="p">):</span> <span class="s">&quot;carving&quot;</span> <span class="ow">or</span> <span class="s">&quot;averaging&quot;</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">See</span> <span class="mi">3D</span> <span class="n">documentation</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">multiclass</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">False</span><span class="p">):</span> <span class="n">whether</span> <span class="n">input</span> <span class="n">data</span> <span class="ow">is</span> <span class="k">single</span> <span class="k">class</span> <span class="nc">or</span> <span class="n">multiclass</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span> <span class="ow">as</span> <span class="n">an</span> <span class="n">output</span> <span class="k">of</span> <span class="n">Segmentation2D</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">log</span> <span class="p">(</span><span class="n">BoolParameter</span><span class="p">,</span> <span class="k">default</span><span class="o">=</span><span class="k">True</span><span class="p">),</span> <span class="ow">in</span> <span class="n">the</span> <span class="k">case</span> <span class="k">of</span> <span class="s">&quot;averaging&quot;</span> <span class="n">type</span><span class="p">,</span> <span class="n">whether</span> <span class="k">to</span> <span class="n">apply</span> <span class="n">log</span> <span class="k">when</span> <span class="n">averaging</span> <span class="n">values</span><span class="p">.</span>
+Class name: Masks
+Module: romiscan.tasks.proc2d
+Description: compute masks using several functions
+Default upstream tasks: Undistorted
+Upstream task format: Fileset with image files
+Output fileset format: Fileset with grayscale or binary image files
+Parameters:
+    - type (Parameter) : &quot;linear&quot;, &quot;excess_green&quot;, &quot;vesselness&quot;, &quot;invert&quot; (TODO: see segmentation documentation) 
+    - parameters (ListParameter) : list of scalar parmeters, depends on type
+    - dilation (IntParameter) : by how much to dilate masks if binary
+    - binarize (BoolParameter, default=True) : binarize the masks
+    - threshold (FloatParameter, default=0.0) : threshold for binarization
+    - 
+Class name: Segmentation2D
+Module: romiscan.tasks.proc2d
+Description: compute masks using trained deep learning models
+Default upstream tasks: Undistorted
+Upstream task format: Fileset with image files
+Output fileset format: Fileset with grayscale image files, each corresponding to a given input image and class
+Parameters:
+    - query (DictParameter) : query to pass to upstream fileset. It filters file by metadata, e.g {&quot;channel&quot;: &quot;rgb&quot;} will process
+        only input files such that &quot;channel&quot; metadata is equal to &quot;rgb&quot;.
+    - labels (Parameter) : string of the form &quot;a,b,c&quot; such that a, b, c are the identifiers of the labels produced by the neural
+        network
+    - Sx, Sy (IntParametr) : size of the input of the neural network. Input pictures are cropped in the center to this size.
+    - model_segmentation_name : name of &quot;.pt&quot; file  that can be found at  `https://db.romi-project.eu/models`
+    - 
+Class name: Voxels
+Module: romiscan.tasks.cl
+Description: Computes a volume from backprojection of 2D segmented images
+Default upstream tasks: 
+    - upstream_mask: Masks
+    - upstream_colmap: Colmap
+Upstream task format:
+    - upstream_mask: Fileset with grayscale images
+    - upstream_colmap: Output of Colmap task
+Output fileset format: npz file with as many arrays as classes
+Parameters:
+    - use_colmap_poses (BoolParameter, default=True): Either use precomputed camera poses or output from the Colmap task
+    - voxel_size (FloatParameter): size of one side of voxels
+    - type (Parameter): &quot;carving&quot; or &quot;averaging&quot; (TODO: See 3D documentation)
+    - multiclass (BoolParameter, default=False): whether input data is single class or multiclass (e.g as an output of Segmentation2D)
+    - log (BoolParameter, default=True), in the case of &quot;averaging&quot; type, whether to apply log when averaging values.
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">PointCloud</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc3d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Computes</span> <span class="n">a</span> <span class="n">point</span> <span class="n">cloud</span> <span class="n">from</span> <span class="n">volumetric</span> <span class="n">voxel</span> <span class="n">data</span> <span class="p">(</span><span class="n">either</span> <span class="k">single</span> <span class="ow">or</span> <span class="n">multiclass</span><span class="p">)</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">Voxels</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">npz</span> <span class="n">file</span> <span class="k">with</span> <span class="ow">as</span> <span class="n">many</span> <span class="mi">3D</span> <span class="n">array</span> <span class="ow">as</span> <span class="n">classes</span>
-<span class="n">Output</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="k">single</span> <span class="n">point</span> <span class="n">cloud</span> <span class="ow">in</span> <span class="n">ply</span><span class="p">.</span> <span class="n">Metadata</span> <span class="n">may</span> <span class="n">include</span> <span class="n">label</span> <span class="n">name</span> <span class="k">if</span> <span class="n">multiclass</span><span class="p">.</span>
+Class name: PointCloud
+Module: romiscan.tasks.proc3d
+Description: Computes a point cloud from volumetric voxel data (either single or multiclass)
+Default upstream tasks: Voxels
+Upstream task format: npz file with as many 3D array as classes
+Output task format: single point cloud in ply. Metadata may include label name if multiclass.
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">TriangleMesh</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc3d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Triangulates</span> <span class="n">input</span> <span class="n">point</span> <span class="n">cloud</span><span class="p">.</span> <span class="n">Currently</span> <span class="n">ignores</span> <span class="k">class</span> <span class="nc">data</span> <span class="ow">and</span> <span class="n">needs</span> <span class="n">only</span> <span class="n">one</span> <span class="n">connected</span> <span class="n">component</span><span class="p">.</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">PointCloud</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">ply</span> <span class="n">file</span>
-<span class="n">Output</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">ply</span> <span class="n">triangle</span> <span class="n">mesh</span> <span class="n">file</span>
+Class name: TriangleMesh
+Module: romiscan.tasks.proc3d
+Description: Triangulates input point cloud. Currently ignores class data and needs only one connected component.
+Default upstream tasks: PointCloud
+Upstream task format: ply file
+Output task format: ply triangle mesh file
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">CurveSkeleton</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">proc3d</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Creates</span> <span class="n">a</span> <span class="mi">3D</span> <span class="n">curve</span> <span class="n">skeleton</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">TriangleMesh</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">ply</span> <span class="n">triangle</span> <span class="n">mesh</span>
-<span class="n">Output</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">json</span> <span class="k">with</span> <span class="n">two</span> <span class="n">entries</span> <span class="s">&quot;points&quot;</span> <span class="ow">and</span> <span class="s">&quot;lines&quot;</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">precise</span><span class="p">)</span>
+Class name: CurveSkeleton
+Module: romiscan.tasks.proc3d
+Description: Creates a 3D curve skeleton
+Default upstream tasks: TriangleMesh
+Upstream task format: ply triangle mesh
+Output task format: json with two entries &quot;points&quot; and &quot;lines&quot; (TODO: precise)
 
-<span class="k">Class</span> <span class="nc">name</span><span class="p">:</span> <span class="n">TreeGraph</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">arabidopsis</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Creates</span> <span class="n">a</span> <span class="n">tree</span> <span class="n">graph</span> <span class="k">of</span> <span class="n">the</span> <span class="n">plant</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">CurveSkeleton</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">json</span>
-<span class="n">Output</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">json</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">precise</span><span class="p">)</span>
+Class name: TreeGraph
+Module: romiscan.tasks.arabidopsis
+Description: Creates a tree graph of the plant
+Default upstream tasks: CurveSkeleton
+Upstream task format: json
+Output task format: json (TODO: precise)
 
-<span class="k">Class</span> <span class="nc">name</span><span class="err">;</span> <span class="n">AnglesAndInternodes</span>
-<span class="n">Module</span><span class="p">:</span> <span class="n">romiscan</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="n">arabidopsis</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">Computes</span> <span class="n">angles</span> <span class="ow">and</span> <span class="n">internode</span>
-<span class="k">Default</span> <span class="n">upstream</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">TreeGraph</span>
-<span class="n">Upstream</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">json</span>
-<span class="n">Output</span> <span class="n">task</span> <span class="n">format</span><span class="p">:</span> <span class="n">json</span> <span class="p">(</span><span class="n">TODO</span><span class="p">:</span> <span class="n">precise</span><span class="p">)</span>
+Class name; AnglesAndInternodes
+Module: romiscan.tasks.arabidopsis
+Description: Computes angles and internode
+Default upstream tasks: TreeGraph
+Upstream task format: json
+Output task format: json (TODO: precise)
 </code></pre></div>
 
 <h2 id="scanner-api-reference">Scanner API reference<a class="headerlink" href="#scanner-api-reference" title="Permanent link">Link</a></h2>
 <h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="err">/objects</span></code> (GET): retrieve the list of <code class="codehilite"><span class="err">obj</span></code> files in the data folder that can be loaded.</li>
-<li><code class="codehilite"><span class="err">/load_object/&lt;object_id&gt;</span></code> (GET) load the given object in the scene. Takes a translation vector as URL parameters (<code class="codehilite"><span class="err">dx</span></code>, <code class="codehilite"><span class="err">dy</span></code>, <code class="codehilite"><span class="err">dz</span></code>)</li>
+<li><code>/objects</code> (GET): retrieve the list of <code>obj</code> files in the data folder that can be loaded.</li>
+<li><code>/load_object/&lt;object_id&gt;</code> (GET) load the given object in the scene. Takes a translation vector as URL parameters (<code>dx</code>, <code>dy</code>, <code>dz</code>)</li>
 </ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="err">/classes</span></code> (GET): retrieve the list of classes.</li>
+<li><code>/classes</code> (GET): retrieve the list of classes.</li>
 </ul>
 <h3 id="backgrounds">Backgrounds<a class="headerlink" href="#backgrounds" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="err">/backgrounds</span></code> (GET): retrieve the list of <code class="codehilite"><span class="err">hdr</span></code> files in the <code class="codehilite"><span class="err">hdri</span></code> folder that can be loaded.</li>
-<li><code class="codehilite"><span class="err">/load_background/&lt;background_id&gt;</span></code> (GET) load the given background in the scene.</li>
+<li><code>/backgrounds</code> (GET): retrieve the list of <code>hdr</code> files in the <code>hdri</code> folder that can be loaded.</li>
+<li><code>/load_background/&lt;background_id&gt;</code> (GET) load the given background in the scene.</li>
 </ul>
 <h3 id="camera">Camera<a class="headerlink" href="#camera" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="err">/camera_intrinsics</span></code> (POST): set camera intrinsics. Keys: <code class="codehilite"><span class="err">width</span></code>, <code class="codehilite"><span class="err">height</span></code>, <code class="codehilite"><span class="err">focal</span></code></li>
-<li><code class="codehilite"><span class="err">/camera_pose</span></code> (POST): set camera pose. Keys: <code class="codehilite"><span class="err">tx</span></code>, <code class="codehilite"><span class="err">ty</span></code>, <code class="codehilite"><span class="err">tz</span></code>, <code class="codehilite"><span class="err">rx</span></code>, <code class="codehilite"><span class="err">ry</span></code>, <code class="codehilite"><span class="err">rz</span></code></li>
+<li><code>/camera_intrinsics</code> (POST): set camera intrinsics. Keys: <code>width</code>, <code>height</code>, <code>focal</code></li>
+<li><code>/camera_pose</code> (POST): set camera pose. Keys: <code>tx</code>, <code>ty</code>, <code>tz</code>, <code>rx</code>, <code>ry</code>, <code>rz</code></li>
 </ul>
 <h3 id="rendering">Rendering<a class="headerlink" href="#rendering" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="err">/render</span></code> (GET): gets the rendering of the scene</li>
-<li><code class="codehilite"><span class="err">/render_class/&lt;class_id&gt;</span></code> (GET) renders the scene, with everything transparent except the given class</li>
+<li><code>/render</code> (GET): gets the rendering of the scene</li>
+<li><code>/render_class/&lt;class_id&gt;</code> (GET) renders the scene, with everything transparent except the given class</li>
 </ul>
 <p>TODO: missing endpoints</p>
 <p><a href="https://httpie.org/">httpie</a></p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Setup</span> <span class="n">camera</span>
-<span class="n">http</span> <span class="o">-</span><span class="n">f</span> <span class="n">post</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">camera_intrinsics</span> <span class="n">width</span><span class="o">=</span><span class="mi">1920</span> <span class="n">height</span><span class="o">=</span><span class="mi">1080</span> <span class="n">focal</span><span class="o">=</span><span class="mi">35</span>
+<div class="highlight"><pre><span></span><code># Setup camera
+http -f post http://localhost:5000/camera_intrinsics width=1920 height=1080 focal=35
 
-<span class="o">#</span> <span class="k">Load</span> <span class="n">arabidopsis_0</span>
-<span class="n">http</span> <span class="k">get</span> <span class="s1">&#39;http://localhost:5000/load_object/arabidopsis_0.obj?dx=10&amp;dy=20&amp;dz=1&#39;</span>
+# Load arabidopsis_0
+http get &#39;http://localhost:5000/load_object/arabidopsis_0.obj?dx=10&amp;dy=20&amp;dz=1&#39;
 
-<span class="o">#</span> <span class="k">Load</span> <span class="ss">&quot;old tree in the park&quot;</span> <span class="n">background</span>
-<span class="n">http</span> <span class="k">get</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">load_background</span><span class="o">/</span><span class="n">old_tree_in_city_park_8k</span><span class="p">.</span><span class="n">hdr</span>
+# Load &quot;old tree in the park&quot; background
+http get http://127.0.0.1:5000/load_background/old_tree_in_city_park_8k.hdr
 
-<span class="o">#</span> <span class="k">Move</span> <span class="n">camera</span>
-<span class="n">http</span> <span class="o">-</span><span class="n">f</span> <span class="n">post</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">camera_pose</span> <span class="n">tx</span><span class="o">=-</span><span class="mi">60</span> <span class="n">ty</span><span class="o">=</span><span class="mi">0</span> <span class="n">tz</span><span class="o">=</span><span class="mi">50</span> <span class="n">rx</span><span class="o">=</span><span class="mi">60</span> <span class="n">ry</span><span class="o">=</span><span class="mi">0</span> <span class="n">rz</span><span class="o">=-</span><span class="mi">90</span>
+# Move camera
+http -f post http://localhost:5000/camera_pose tx=-60 ty=0 tz=50 rx=60 ry=0 rz=-90
 
-<span class="o">#</span> <span class="n">Render</span> <span class="n">scene</span> <span class="k">and</span> <span class="n">download</span> <span class="n">image</span>
-<span class="n">http</span> <span class="c1">--download get http://localhost:5000/render</span>
+# Render scene and download image
+http --download get http://localhost:5000/render
 
-<span class="o">#</span> <span class="n">Render</span> <span class="k">only</span> <span class="n">leaves</span>
-<span class="n">http</span> <span class="c1">--download get http://localhost:5000/render_class/Color_7</span>
+# Render only leaves
+http --download get http://localhost:5000/render_class/Color_7
 </code></pre></div>
                 
                   
@@ -2042,7 +2042,7 @@ This will be later replaced by a reference doc generated from the code!</p>
     
       <script src="../../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
