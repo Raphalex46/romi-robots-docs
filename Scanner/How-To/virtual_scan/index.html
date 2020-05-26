@@ -1513,7 +1513,7 @@
 <h3 id="notice-for-using-the-virtual-scanner">Notice for using the virtual scanner<a class="headerlink" href="#notice-for-using-the-virtual-scanner" title="Permanent link">Link</a></h3>
 <p>If you want to use the virtual scanner, the blender and python version have to match.
 To obtain the python version bundled with your distribution of blender, type:
-<div class="highlight"><pre><span></span><code>blender -b --python-expr &quot;import sys; print(sys.version)&quot;
+<div class="highlight"><pre><span></span><code>blender -b --python-expr <span class="s2">&quot;import sys; print(sys.version)&quot;</span>
 </code></pre></div></p>
 <p>It will output something like:
 <div class="highlight"><pre><span></span><code>Blender 2.82 (sub 7) (hash 5b416ffb848e built 2020-02-14 16:19:45)
@@ -1523,28 +1523,26 @@ ALSA lib pcm_dmix.c:1089:(snd_pcm_dmix_open) unable to open slave
 
 Blender quit
 </code></pre></div>
-In this case, this means python is using Python 3.8 and you should use python 3.8.
-The blender binaries found on their website bundle Python 3.8.
-In the following, we will assume that you are using conda environments.
+In this case, this means Blender bundle Python 3.8 and you should too.</p>
+<p>In the following, we will assume that you are using conda environments.
 If not, adapt with corresponding virtualenv commands.</p>
 <h3 id="install-romi-packages-their-dependencies">Install ROMI packages &amp; their dependencies:<a class="headerlink" href="#install-romi-packages-their-dependencies" title="Permanent link">Link</a></h3>
 <h4 id="install-lpy-for-virtual-scans">Install LPY (for virtual scans)<a class="headerlink" href="#install-lpy-for-virtual-scans" title="Permanent link">Link</a></h4>
-<p>If you're using python 3.7 and conda, just install lpy from conda:
+<p>If you're using <code>python&gt;=3.7</code> and <code>conda</code>, just install <code>lpy</code> from conda:
 <div class="highlight"><pre><span></span><code>conda install -c conda-forge -c fredboudon openalea.lpy
 </code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you're using python 3.8, you must compile <a href="https://github.com/fredboudon/plantgl">plantgl</a> and <a href="https://github.com/fredboudon/lpy">lpy</a> from sources.</p>
-</div>
 <h2 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">Link</a></h2>
 <p>The virtual scanner works like an HTTP server using Blender.
 First, make sure you have <code>blender</code> (&gt;= 2.80) installed on your machine.</p>
-<p>Then, clone the directory and access it:
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED</strong>
+Then, clone the directory and access it:
 <div class="highlight"><pre><span></span><code>git clone git@github.com:romi/blender_virtual_scanner.git
 <span class="nb">cd</span> blender_virtual_scanner
 </code></pre></div></p>
-<p>You can obtain sample data for the scanner here, and put it in the data
-folder.
+</div>
+<p>You can obtain sample data for the scanner here, and put it in the data folder.
 <div class="highlight"><pre><span></span><code>wget https://db.romi-project.eu/models/arabidopsis_data.zip
 unzip arabidopsis_data.zip -d data
 </code></pre></div></p>
@@ -1553,14 +1551,22 @@ This mesh must have a single material whose name is the name of the organ.
 The data dir must contain the <code>obj</code> and <code>mtl</code> files.</p>
 <p>Additionally, background HDRI files can be downloaded from (hdri haven)[<a href="https://hdrihaven.com/">https://hdrihaven.com/</a>].
 Download <code>.hdr</code> files and put them in the <code>hdri</code> folder.</p>
-<p>To start the virtual scanner, run the following script in blender:
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED</strong>
+To start the virtual scanner, run the following script in blender:
 <div class="highlight"><pre><span></span><code>blender <span class="o">[</span>scene/texture.blend<span class="o">]</span> -b -P scan.py
-</code></pre></div></p>
-<p>It will start an HTTP server on port <code>5000</code>.</p>
+</code></pre></div>
+It will start an HTTP server on port <code>5000</code>.</p>
+</div>
 <h3 id="preparing-data">Preparing data<a class="headerlink" href="#preparing-data" title="Permanent link">Link</a></h3>
 <p>If you have 3D models with a single mesh</p>
 <h3 id="running-a-scan-with-romiscan-and-lettucethink">Running a scan (with <code>romiscan</code> and <code>lettucethink</code>)<a class="headerlink" href="#running-a-scan-with-romiscan-and-lettucethink" title="Permanent link">Link</a></h3>
-<p>The virtual scanner is integrated in lettucethink-python, so that it can be used directly with the <code>Scan</code> task in <code>romi_run_task</code>.</p>
+<p>The virtual scanner is integrated in <code>lettucethink-python</code>, so that it can be used directly with the <code>Scan</code> task in <code>romi_run_task</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>lettucethink-python</code> is <strong>DEPRECATED</strong></p>
+</div>
 <p>Here is a sample configuration for the virtual scanner creating 640x480 images with ground truth segmentation of organs.
 The server mentioned above must be running before running <code>romi_run_task</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Scan.scanner]</span>
