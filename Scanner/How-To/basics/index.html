@@ -1721,25 +1721,27 @@ Any change in the parameters will make the needed task to be recomputed with sub
 Already computed tasks will be left untouched.</p>
 <p>To recompute a task, just delete the corresponding folder in the scan directory and rerun <code>romi_run_task</code>.</p>
 <h2 id="default-task-reference">Default task reference<a class="headerlink" href="#default-task-reference" title="Permanent link">Link</a></h2>
-<p>default_modules = {
-    "Scan": "romiscan.tasks.scan",
-    "Clean": "romiscan.tasks.scan",
-    "CalibrationScan": "romiscan.tasks.scan",
-    "Colmap": "romiscan.tasks.colmap",
-    "Undistorted": "romiscan.tasks.proc2d",
-    "Masks": "romiscan.tasks.proc2d",
-    "Segmentation2D": "romiscan.tasks.proc2d",
-    "Voxels": "romiscan.tasks.cl",
-    "PointCloud": "romiscan.tasks.proc3d",
-    "TriangleMesh": "romiscan.tasks.proc3d",
-    "CurveSkeleton": "romiscan.tasks.proc3d",
-    "TreeGraph": "romiscan.tasks.arabidopsis",
-    "AnglesAndInternodes": "romiscan.tasks.arabidopsis",
-    "Visualization": "romiscan.tasks.visualization"
-}</p>
+<div class="highlight"><pre><span></span><code><span class="n">default_modules</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Scan&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.scan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Clean&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.scan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CalibrationScan&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.scan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Colmap&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.colmap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Undistorted&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc2d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Masks&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc2d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Segmentation2D&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc2d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Voxels&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PointCloud&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TriangleMesh&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CurveSkeleton&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.proc3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TreeGraph&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.arabidopsis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AnglesAndInternodes&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.arabidopsis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Visualization&quot;</span><span class="p">:</span> <span class="s2">&quot;romiscan.tasks.visualization&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is for reference only, please update the changes in the code.**
+<p>This is for reference only, please update the changes in the code.
 This will be later replaced by a reference doc generated from the code!</p>
 </div>
 <div class="highlight"><pre><span></span><code>Class name: Scan
